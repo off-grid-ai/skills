@@ -1,5 +1,5 @@
 # Make each code review raise your standard, so mistakes don't come back
-![](overview.png)
+![How never-twice works](../../assets/skills/never-twice.png)
 
 Your agent reads a pull request's review comments, keeps only the lessons that would apply to any PR in any repo, and writes each one into your engineering standard with a concrete signal to catch it next time. One-offs are thrown away, and every kept lesson is logged with where it came from.
 

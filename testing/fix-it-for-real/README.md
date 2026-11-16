@@ -1,6 +1,6 @@
 # Fix the real problem, not the symptom
 
-![](overview.png)
+![How fix-it-for-real works](../../assets/skills/fix-it-for-real.png)
 
 Your agent reproduces each bug with a failing probe, looks for who already solved the general problem, and fixes the system instead of patching one case. It commits small checked changes, safely, even when several agents share one folder.
 

@@ -1,6 +1,6 @@
 # Tests that prove what your users actually do
 
-![](overview.png)
+![How test-like-a-user works](../../assets/skills/test-like-a-user.png)
 
 Your agent writes and reviews tests that walk the real user journey through the real app, with fakes only at the edges you can't control. You get tests that fail when the product breaks, not tests that pass because they mocked everything.
 

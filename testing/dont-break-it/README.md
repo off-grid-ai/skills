@@ -1,6 +1,6 @@
 # Change code in small, safe, checked commits
 
-![](overview.png)
+![How dont-break-it works](../../assets/skills/dont-break-it.png)
 
 Your agent follows the project's own rules, keeps changes additive, checks once in the background, and commits one change at a time with hooks on.
 
