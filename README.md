@@ -1,6 +1,14 @@
 # Stop babysitting your AI. Make it build, test and ship like a senior team.
 
-42 free skills for Claude Code, Codex, Cursor and 60+ other agents. Install them with one line, and your AI starts checking its own work.
+I'm [Mac](https://github.com/alichherawalla), CTO and co-founder of Wednesday Solutions. I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) with these exact skills: an offline AI app on iPhone, Android and Mac with 3,382 stars on GitHub. In the last 4 months I put 193B tokens through Claude Code and Codex with them and shipped 22,809 GitHub contributions.
+
+[![Built with these skills: Off Grid AI, 3,382 GitHub stars, 22,809 contributions in 4 months, 193B tokens](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
+
+## What these skills do
+
+Vibe coding gets you a demo in an afternoon. Then your AI breaks things that already worked, every screen looks like every other AI app, and you're asked to approve 50 changed files you can't read.
+
+A skill is a short playbook your agent reads before it starts. These 42 give it the habits of a senior team. It maps everything a change will touch before it writes code, tests the real app the way a user taps through it, holds every screen to a design bar, and hands you one page with every screen before and after and only the calls that need you. They're free and work in Claude Code, Codex, Cursor and 60+ other agents.
 
 - **[Review like a senior engineer, without reading code](review)**. Your AI changes 50 files and you can't tell what broke. Now you get one page with every screen it touched, before and after, and only the calls that need you.
 - **[Your AI stops breaking things that already worked](testing)**. You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage.
@@ -10,8 +18,6 @@
 - **[Get users without ads](growth)**. Your landing page reads like ChatGPT wrote it and nobody can find you. Now your copy sounds human, sells, and gets you recommended in AI answers.
 - **[Know what makes you money](revenue)**. You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page.
 - **[Make a game like a studio would](games)**. Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.
-
-[![Built with these skills: 193B tokens, 22,809 GitHub contributions in 4 months](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
 
 ![How it works: you ask for a change, your agent maps everything it touches, makes it, checks it, and hands you one page with only the calls that need you](assets/how-it-works.png)
 
