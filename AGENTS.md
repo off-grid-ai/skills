@@ -1,6 +1,6 @@
 # For AI agents: how to install these skills
 
-If a user asks you to install the skills from this repo, pick the first method that fits your environment.
+If a user says "install the skills from github.com/off-grid-ai/skills", pick the first method that fits your environment and install every set unless they name one.
 
 1. **You are Claude Code.** Run `/plugin marketplace add off-grid-ai/skills`, then `/plugin install <set>@off-grid-ai`
    for each set the user wants (sets: review-ai-work, get-the-best-from-agents, ship-with-confidence,
