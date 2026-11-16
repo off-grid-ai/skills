@@ -1,5 +1,5 @@
 {
-  "name": "your-ai-stops-breaking-things",
+  "name": "testing",
   "version": "1.1.0",
   "description": "You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage.",
   "author": {

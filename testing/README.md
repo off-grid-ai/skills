@@ -18,7 +18,7 @@ You fix one bug and two old features break. Now every change is tested by tappin
 npx skills add off-grid-ai/skills --skill test-like-a-user bug-trap dont-break-it fix-it-for-real click-everything
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install your-ai-stops-breaking-things@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add your-ai-stops-breaking-things@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install testing@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add testing@off-grid-ai`.
 
 [All skills](../README.md)
