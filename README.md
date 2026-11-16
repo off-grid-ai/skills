@@ -22,12 +22,12 @@ Your agent writes code faster than you can read it. These show you only what cha
 | --- | --- |
 | [graph-engineering](1-review-ai-work/graph-engineering) | See every place one change touches, before it's made, then review it all on one page. |
 | [graph-engineering-loop](1-review-ai-work/graph-engineering-loop) | Make a few calls and it learns the rule behind them, applies it everywhere, and asks you less next time. |
-| [screen-review](1-review-ai-work/screen-review) | Get every screen of your app on one page and pin notes on the exact spot, like Figma comments. |
-| [review-loop](1-review-ai-work/review-loop) | Turn your screen notes into one design rule and have it applied to every screen. |
-| [pr-review](1-review-ai-work/pr-review) | Take a pull request from "diff exists" to "ready to merge", with every review comment answered. |
-| [hygiene](1-review-ai-work/hygiene) | Hold every change to one engineering standard, with a pass or fail before it merges. |
-| [hygiene-learn](1-review-ai-work/hygiene-learn) | Turn each PR review into a sharper standard, so the same mistake doesn't come back. |
-| [ui-module-sweep](1-review-ai-work/ui-module-sweep) | When there's nothing in the queue, test a web app one module at a time and fix what breaks. |
+| [review-every-screen](1-review-ai-work/review-every-screen) | Get every screen of your app on one page and pin notes on the exact spot, like Figma comments. |
+| [apply-feedback-everywhere](1-review-ai-work/apply-feedback-everywhere) | Turn your screen notes into one design rule and have it applied to every screen. |
+| [get-prs-merge-ready](1-review-ai-work/get-prs-merge-ready) | Take a pull request from "diff exists" to "ready to merge", with every review comment answered. |
+| [check-code-before-merge](1-review-ai-work/check-code-before-merge) | Hold every change to one engineering standard, with a pass or fail before it merges. |
+| [learn-from-every-review](1-review-ai-work/learn-from-every-review) | Turn each PR review into a sharper standard, so the same mistake doesn't come back. |
+| [test-every-page](1-review-ai-work/test-every-page) | When there's nothing in the queue, test a web app one module at a time and fix what breaks. |
 
 ## Ship releases you trust
 
@@ -35,18 +35,18 @@ Proof that it works on real devices before anyone else sees it.
 
 | Skill | What you get |
 | --- | --- |
-| [get-it-live](2-ship-with-confidence/get-it-live) | Take a piece of work all the way to release-ready: built, tested, seen working. |
-| [hand-test](2-ship-with-confidence/hand-test) | Check a release on real phones and computers, with a clear bar for what a good test is. |
-| [tests](2-ship-with-confidence/tests) | Write tests that prove the whole user journey, not just one function. |
-| [release-notes](2-ship-with-confidence/release-notes) | Turn review comments into release notes your users actually read. |
-| [oga-release](2-ship-with-confidence/oga-release) | Release branch rules: what gets pushed where, with screenshots on every PR. |
-| [oga-devices](2-ship-with-confidence/oga-devices) | Run and drive your app on a Mac, an iPhone and an Android phone from the agent. |
-| [oga-tests](2-ship-with-confidence/oga-tests) | How tests get written and fixed so they catch real bugs. |
-| [goc-get-it-live](2-ship-with-confidence/goc-get-it-live) | The same "get it live" flow for a game: built, seen working, pushed and shown. |
-| [goc-playtest](2-ship-with-confidence/goc-playtest) | Play through a game scene by scene and get a pass or fail with pictures. |
-| [goc-tests](2-ship-with-confidence/goc-tests) | Prove a game change works with compile checks and renders. |
-| [goc-run](2-ship-with-confidence/goc-run) | Start every part of a game stack in the right order. |
-| [goc-release](2-ship-with-confidence/goc-release) | Push, document and show game work. |
+| [get-it-live](3-ship-with-confidence/get-it-live) | Take a piece of work all the way to release-ready: built, tested, seen working. |
+| [test-on-real-phones](3-ship-with-confidence/test-on-real-phones) | Check a release on real phones and computers, with a clear bar for what a good test is. |
+| [tests](3-ship-with-confidence/tests-that-follow-the-user) | Write tests that prove the whole user journey, not just one function. |
+| [release-notes-people-read](3-ship-with-confidence/release-notes-people-read) | Turn review comments into release notes your users actually read. |
+| [ship-releases-cleanly](3-ship-with-confidence/ship-releases-cleanly) | Release branch rules: what gets pushed where, with screenshots on every PR. |
+| [run-on-real-devices](3-ship-with-confidence/run-on-real-devices) | Run and drive your app on a computer, an iPhone and an Android phone from the agent. |
+| [tests-that-catch-bugs](3-ship-with-confidence/tests-that-catch-bugs) | How tests get written and fixed so they catch real bugs. |
+| [finish-game-features](3-ship-with-confidence/finish-game-features) | The same "get it live" flow for a game: built, seen working, pushed and shown. |
+| [playtest-every-scene](3-ship-with-confidence/playtest-every-scene) | Play through a game scene by scene and get a pass or fail with pictures. |
+| [prove-game-changes](3-ship-with-confidence/prove-game-changes) | Prove a game change works with compile checks and renders. |
+| [start-your-game](3-ship-with-confidence/start-your-game) | Start every part of a game stack in the right order. |
+| [show-your-game-work](3-ship-with-confidence/show-your-game-work) | Push, document and show game work. |
 
 ## Run a product team of agents
 
@@ -54,16 +54,16 @@ Rules that make an agent work like a senior team member: what's urgent, what wai
 
 | Skill | What you get |
 | --- | --- |
-| [oga-cpto](3-run-a-product-team/oga-cpto) | Make your agent act like a CPTO: it decides what's urgent, does the clear work and asks only about real calls. |
-| [oga-ux](3-run-a-product-team/oga-ux) | A product and design bar every screen and flow has to clear. |
-| [oga-engineering](3-run-a-product-team/oga-engineering) | How code is changed, checked and committed, so nothing half-done ships. |
-| [oga-voice](3-run-a-product-team/oga-voice) | How the agent talks to you: short, result first, and it disagrees when it should. |
-| [offgrid-ui](3-run-a-product-team/offgrid-ui) | Reuse the shared component library instead of building one-off screens. |
-| [goc-cpto](3-run-a-product-team/goc-cpto) | The same CPTO rules, set up for building a game. |
-| [goc-ux](3-run-a-product-team/goc-ux) | A look-and-feel bar for every game screen, scene and animation. |
-| [goc-engineering](3-run-a-product-team/goc-engineering) | Fix the system, not the symptom: find who already solved it, never hack-fix. |
-| [goc-voice](3-run-a-product-team/goc-voice) | How the agent talks to you about game decisions. |
-| [goc-throughput](3-run-a-product-team/goc-throughput) | Keep several builder agents busy while a supervisor tests what landed every 12 minutes. |
+| [act-like-a-cto](4-run-a-product-team/act-like-a-cto) | Make your agent act like a CPTO: it decides what's urgent, does the clear work and asks only about real calls. |
+| [make-it-look-great](4-run-a-product-team/make-it-look-great) | A product and design bar every screen and flow has to clear. |
+| [change-code-safely](4-run-a-product-team/change-code-safely) | How code is changed, checked and committed, so nothing half-done ships. |
+| [short-straight-answers](2-get-the-best-from-agents/short-straight-answers) | How the agent talks to you: short, result first, and it disagrees when it should. |
+| [reuse-ui-components](4-run-a-product-team/reuse-ui-components) | Reuse the shared component library instead of building one-off screens. |
+| [act-like-a-game-director](4-run-a-product-team/act-like-a-game-director) | The same CPTO rules, set up for building a game. |
+| [make-the-game-look-great](4-run-a-product-team/make-the-game-look-great) | A look-and-feel bar for every game screen, scene and animation. |
+| [fix-the-real-problem](4-run-a-product-team/fix-the-real-problem) | Fix the system, not the symptom: find who already solved it, never hack-fix. |
+| [talk-game-decisions](4-run-a-product-team/talk-game-decisions) | How the agent talks to you about game decisions. |
+| [run-agents-in-parallel](2-get-the-best-from-agents/run-agents-in-parallel) | Keep several builder agents busy while a supervisor tests what landed every 12 minutes. |
 
 ## Write copy that sells
 
@@ -71,12 +71,12 @@ Plain, specific words that get read and acted on, without AI tells.
 
 | Skill | What you get |
 | --- | --- |
-| [mac-voice](4-write-copy-that-sells/mac-voice) | Write like a real person: outcome first, short sentences, no AI tells. |
-| [copywriting-rulebook](4-write-copy-that-sells/copywriting-rulebook) | Bly and Ogilvy's rules for headlines, landing pages and anything that has to sell. |
-| [write-as-mac](4-write-copy-that-sells/write-as-mac) | Draft outreach and posts in one founder's voice, with a hard check before you see them. |
-| [seo-aeo-geo](4-write-copy-that-sells/seo-aeo-geo) | Plan and write articles that rank in search and get quoted by AI answers. |
-| [linkedin-digest](4-write-copy-that-sells/linkedin-digest) | Find the LinkedIn posts worth commenting on and get two angles for each. |
-| [tajnees](4-write-copy-that-sells/tajnees) | Write short Hindi-Urdu lines built on sound-alike word pairs. |
+| [write-like-a-human](5-write-copy-that-sells/write-like-a-human) | Write like a real person: outcome first, short sentences, no AI tells. |
+| [copy-that-sells](5-write-copy-that-sells/copy-that-sells) | Bly and Ogilvy's rules for headlines, landing pages and anything that has to sell. |
+| [write-as-a-founder](5-write-copy-that-sells/write-as-a-founder) | Draft outreach and posts in one founder's voice, with a hard check before you see them. |
+| [get-found-by-ai-search](5-write-copy-that-sells/get-found-by-ai-search) | Plan and write articles that rank in search and get quoted by AI answers. |
+| [find-posts-worth-replying-to](5-write-copy-that-sells/find-posts-worth-replying-to) | Find the LinkedIn posts worth commenting on and get two angles for each. |
+| [urdu-wordplay](5-write-copy-that-sells/urdu-wordplay) | Write short Hindi-Urdu lines built on sound-alike word pairs. |
 
 ## Make decisions faster
 
@@ -84,9 +84,9 @@ The most important thing first, every claim sourced, options scored.
 
 | Skill | What you get |
 | --- | --- |
-| [ceo-report](5-make-decisions/ceo-report) | A one-page decision report a founder can approve from the first screen, fact-checked by separate reviewers. |
-| [partners-one-pager](5-make-decisions/partners-one-pager) | A weekly debrief of what worked and what didn't, for a partners meeting. |
-| [model-picks](5-make-decisions/model-picks) | Decide which AI models your app should ship for each device and memory size. |
+| [one-page-decision-report](6-make-decisions/one-page-decision-report) | A one-page decision report a founder can approve from the first screen, fact-checked by separate reviewers. |
+| [weekly-debrief](6-make-decisions/weekly-debrief) | A weekly debrief of what worked and what didn't, for a partners meeting. |
+| [pick-the-right-ai-models](6-make-decisions/pick-the-right-ai-models) | Decide which AI models your app should ship for each device and memory size. |
 
 ## Know what moves revenue
 
@@ -94,8 +94,8 @@ Pull every signal into one place and get the few moves that matter.
 
 | Skill | What you get |
 | --- | --- |
-| [ogai-insights](6-track-growth/ogai-insights) | Pull sales, analytics, store and search data, then get the three moves that grow revenue most. |
-| [argus](6-track-growth/argus) | Keep one dashboard of releases, bugs, ideas, replies and research current. |
+| [find-what-grows-revenue](7-track-growth/find-what-grows-revenue) | Pull sales, analytics, store and search data, then get the three moves that grow revenue most. |
+| [one-dashboard-for-everything](7-track-growth/one-dashboard-for-everything) | Keep one dashboard of releases, bugs, ideas, replies and research current. |
 
 ## Work better with agents
 
@@ -103,8 +103,8 @@ Small habits that make every agent session better.
 
 | Skill | What you get |
 | --- | --- |
-| [discuss](7-work-with-agents/discuss) | Make the agent argue like a peer: facts over tone, and it keeps the whole goal in mind. |
-| [get-context](7-work-with-agents/get-context) | Pick up a chat from another account on the same computer by its title. |
+| [push-back-with-facts](2-get-the-best-from-agents/push-back-with-facts) | Make the agent argue like a peer: facts over tone, and it keeps the whole goal in mind. |
+| [pick-up-any-chat](2-get-the-best-from-agents/pick-up-any-chat) | Pick up a chat from another account on the same computer by its title. |
 
 ## Install
 
@@ -119,15 +119,15 @@ cp -R skills/1-review-ai-work/graph-engineering ~/.claude/skills/
 - Codex: `~/.codex/skills/`, or `.agents/skills/` inside one repo.
 - Other agents: wherever they read skill folders from. The `SKILL.md` is plain Markdown, so you can also paste it into a system prompt.
 
-Skills call each other by name (graph-engineering uses screen-review, review-loop and the oga-* skills). Copy the ones they name too.
+Skills call each other by name (graph-engineering uses review-every-screen, apply-feedback-everywhere and the product-team skills). Copy the ones they name too.
 
 ## A few things to know
 
 **These come from real daily use.** They were written for building Off Grid AI and a game called Game of Crowns, so some mention those, our repos and our tools. Keep the method and swap the names and paths for yours. Some point at scripts in my product repos that aren't here. Those steps tell you what the script does, so you can write your own.
 
-**Some steps assume a page host.** graph-engineering, graph-engineering-loop, screen-review and review-loop publish a page with Claude's Artifact tools (`Artifact`, `ArtifactData`, `ArtifactComments`). Those steps need a host that serves a page with comments and a small database. Any other agent can use any equivalent: a static page plus a small database, or a review tool with pinned comments.
+**Some steps assume a page host.** graph-engineering, graph-engineering-loop, review-every-screen and apply-feedback-everywhere publish a page with Claude's Artifact tools (`Artifact`, `ArtifactData`, `ArtifactComments`). Those steps need a host that serves a page with comments and a small database. Any other agent can use any equivalent: a static page plus a small database, or a review tool with pinned comments.
 
-**Third-party parts keep their licenses.** ceo-report includes files from two other skill packs under `make-decisions/ceo-report/vendor/`. Their licenses and credits are in `make-decisions/ceo-report/NOTICE`.
+**Third-party parts keep their licenses.** one-page-decision-report includes files from two other skill packs under `make-decisions/ceo-report/vendor/`. Their licenses and credits are in `make-decisions/ceo-report/NOTICE`.
 
 ## License
 

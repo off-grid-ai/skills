@@ -1,0 +1,20 @@
+{
+  "name": "get-the-best-from-agents",
+  "version": "1.0.0",
+  "description": "get-the-best-from-agents",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "pick-up-any-chat",
+    "push-back-with-facts",
+    "run-agents-in-parallel",
+    "short-straight-answers"
+  ],
+  "skills": "./"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "off-grid-ai-skills",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agent skills that turn AI-written changes into one page you review in minutes. Claude Code, Codex, Cursor, Gemini CLI, Copilot and 60+ agents.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build-manifests.mjs"
+  }
+}

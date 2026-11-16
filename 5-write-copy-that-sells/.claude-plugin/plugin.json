@@ -1,0 +1,22 @@
+{
+  "name": "write-copy-that-sells",
+  "version": "1.0.0",
+  "description": "write-copy-that-sells",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "copy-that-sells",
+    "find-posts-worth-replying-to",
+    "get-found-by-ai-search",
+    "urdu-wordplay",
+    "write-as-a-founder",
+    "write-like-a-human"
+  ],
+  "skills": "./"
+}

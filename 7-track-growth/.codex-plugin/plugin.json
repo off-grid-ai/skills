@@ -1,0 +1,18 @@
+{
+  "name": "track-growth",
+  "version": "1.0.0",
+  "description": "track-growth",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "find-what-grows-revenue",
+    "one-dashboard-for-everything"
+  ],
+  "skills": "./"
+}

@@ -1,0 +1,92 @@
+{
+  "name": "off-grid-ai",
+  "interface": {
+    "displayName": "Off Grid AI skills"
+  },
+  "plugins": [
+    {
+      "name": "review-ai-work",
+      "source": {
+        "source": "local",
+        "path": "./1-review-ai-work"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "get-the-best-from-agents",
+      "source": {
+        "source": "local",
+        "path": "./2-get-the-best-from-agents"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "ship-with-confidence",
+      "source": {
+        "source": "local",
+        "path": "./3-ship-with-confidence"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "run-a-product-team",
+      "source": {
+        "source": "local",
+        "path": "./4-run-a-product-team"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "write-copy-that-sells",
+      "source": {
+        "source": "local",
+        "path": "./5-write-copy-that-sells"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "make-decisions",
+      "source": {
+        "source": "local",
+        "path": "./6-make-decisions"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "track-growth",
+      "source": {
+        "source": "local",
+        "path": "./7-track-growth"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

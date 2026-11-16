@@ -1,0 +1,19 @@
+{
+  "name": "make-decisions",
+  "version": "1.0.0",
+  "description": "make-decisions",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "one-page-decision-report",
+    "pick-the-right-ai-models",
+    "weekly-debrief"
+  ],
+  "skills": "./"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "run-a-product-team",
+  "version": "1.0.0",
+  "description": "run-a-product-team",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "act-like-a-cto",
+    "act-like-a-game-director",
+    "change-code-safely",
+    "fix-the-real-problem",
+    "make-it-look-great",
+    "make-the-game-look-great",
+    "reuse-ui-components",
+    "talk-game-decisions"
+  ],
+  "skills": "./"
+}
