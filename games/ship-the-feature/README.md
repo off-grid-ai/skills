@@ -1,6 +1,6 @@
 # Finish your game features, all the way to done
 
-![](overview.png)
+![How ship-the-feature works](../../assets/skills/ship-the-feature.png)
 
 Your agent works out what is left, builds each piece, proves it on screen, commits and pushes it, and shows you screenshots. You get a short status: done, in progress, left, and what needs your hands.
 

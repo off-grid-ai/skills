@@ -1,6 +1,6 @@
 # Run several agents at once without them waiting on each other
 
-![](overview.png)
+![How build-while-you-sleep works](../../assets/skills/build-while-you-sleep.png)
 
 Builders write code in one shared tree and never stop to test. A supervisor tests everything that landed together every few minutes, sends failures back to their owners, and removes the biggest bottleneck each round.
 

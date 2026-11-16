@@ -1,6 +1,6 @@
 # Hold every screen to the bar of a mature consumer app
 
-![](overview.png)
+![How make-it-look-expensive works](../../assets/skills/make-it-look-expensive.png)
 
 An eleven-point product bar your agent applies to every screen, flow and feature: nothing lost, no dead ends, smart defaults, and instant feedback on every tap.
 

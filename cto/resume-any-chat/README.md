@@ -1,6 +1,6 @@
 # Pick up any chat where it stopped
 
-![](overview.png)
+![How resume-any-chat works](../../assets/skills/resume-any-chat.png)
 
 Name an old chat and your agent finds it, from any Claude Code account or Codex on your computer, reads how it ended, and tells you in two sentences. Then it carries on, or asks you the one open question.
 

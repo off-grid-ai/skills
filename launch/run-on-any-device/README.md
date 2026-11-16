@@ -1,6 +1,6 @@
 # Run your app on real devices, safely
 
-![](overview.png)
+![How run-on-any-device works](../../assets/skills/run-on-any-device.png)
 
 Your agent runs the dev build on phones, simulators and desktop, drives it one tap at a time, and uses only test data. It keeps the machine healthy and never mixes up a dev build with a signed release.
 

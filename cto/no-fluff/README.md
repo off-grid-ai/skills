@@ -1,6 +1,6 @@
 # Get short, straight answers from your agent
 
-![](overview.png)
+![How no-fluff works](../../assets/skills/no-fluff.png)
 
 Your agent answers in three or four plain lines with the result first, does clear work without asking, and treats only real emergencies as urgent.
 

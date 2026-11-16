@@ -1,6 +1,6 @@
 # Tests that catch real bugs
 
-![](overview.png)
+![How bug-trap works](../../assets/skills/bug-trap.png)
 
 A short checklist your agent follows every time it touches a test. You get tests that break when behaviour breaks, not when a button moves, and failures that get fixed at the cause.
 

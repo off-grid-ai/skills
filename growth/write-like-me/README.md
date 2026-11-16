@@ -1,6 +1,6 @@
 # Get emails and posts that sound like you wrote them
 
-![](overview.png)
+![How write-like-me works](../../assets/skills/write-like-me.png)
 
 Your agent learns your voice from your own past writing, then drafts outreach in it: the right posture for the message, your sentence habits, and a hard audit for AI tells and needy asks before you see a word.
 

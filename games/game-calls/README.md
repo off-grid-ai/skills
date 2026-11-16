@@ -1,6 +1,6 @@
 # Short updates, clear calls, fewer questions
 
-![](overview.png)
+![How game-calls works](../../assets/skills/game-calls.png)
 
 Your agent reports in three or four short bullets with the result first, sends pictures instead of descriptions, and keeps working on its own. It only stops to ask at a real fork.
 

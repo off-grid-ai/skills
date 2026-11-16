@@ -1,6 +1,6 @@
 # Pick the right AI models for your app
 
-![](overview.png)
+![How pick-the-best-ai-model works](../../assets/skills/pick-the-best-ai-model.png)
 
 Your agent reads which models your app uses today, researches what else could ship for each kind of model and each device, and hands you a sourced table of Add, Replace, Keep, Later and Remove calls. Once you approve, it writes the picks into your app's model list.
 

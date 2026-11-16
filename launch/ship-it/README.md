@@ -1,6 +1,6 @@
 # Take a change all the way to release-ready
 
-![](overview.png)
+![How ship-it works](../../assets/skills/ship-it.png)
 
 Your agent finishes the work, reviews every screen and test as it goes, gets CI green, puts a screen review page in the PR and hands you one short report. It never merges or ships without your yes.
 

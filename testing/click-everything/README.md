@@ -1,5 +1,5 @@
 # Test your app one module at a time, the way a user sees it
-![](overview.png)
+![How click-everything works](../../assets/skills/click-everything.png)
 
 Your agent lists every route from your router, screenshots every page and state, presses the buttons, makes the app produce real output and reads it, fixes what doesn't make sense, and adds end-to-end tests so each fix stays fixed. You get a report per module with real counts.
 

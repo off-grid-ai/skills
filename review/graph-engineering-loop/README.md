@@ -1,5 +1,5 @@
 # Make a few calls, and have the rule applied everywhere
-![](overview.png)
+![How graph-engineering-loop works](../../assets/skills/graph-engineering-loop.png)
 
 Decide a few calls on a change review page. Your agent works out the rule behind them, writes it down, applies it to every app the change touches, shows you the result before and after, and asks you less on the next change.
 

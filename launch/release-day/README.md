@@ -1,6 +1,6 @@
 # Keep release branches and PRs clean
 
-![](overview.png)
+![How release-day works](../../assets/skills/release-day.png)
 
 Your agent follows one set of release rules across every repo: one branch name, a passing tree, one push at a time, captioned screenshots and a screen review link in every PR. Nothing merges or ships until you say yes.
 

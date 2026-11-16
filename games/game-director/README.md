@@ -1,6 +1,6 @@
 # Run your game project like a director who holds the bar
 
-![](overview.png)
+![How game-director works](../../assets/skills/game-director.png)
 
 Your agent works to a written bar for how the game plays and looks, never drops a feature to fix a bug, and builds on engine parts instead of hand-made systems. It loads the other game skills as the work needs them.
 

@@ -1,5 +1,5 @@
 # Turn a few screen notes into one rule applied to every screen
-![](overview.png)
+![How fix-it-everywhere works](../../assets/skills/fix-it-everywhere.png)
 
 Leave notes on a few screens. Your agent works out the design rule behind them, writes it into your design docs once you agree, applies it to every screen, and shows you the result before and after.
 

@@ -1,6 +1,6 @@
 # Have your agent run your product like a careful CTO
 
-![](overview.png)
+![How be-my-cto works](../../assets/skills/be-my-cto.png)
 
 Your agent learns how the project works, keeps all code changes in one thread, refuses to drop existing features, and loads the right skill for each kind of work.
 

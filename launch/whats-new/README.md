@@ -1,6 +1,6 @@
 # Release notes your users will actually read
 
-![](overview.png)
+![How whats-new works](../../assets/skills/whats-new.png)
 
 Your agent turns the notes from your screen review into short release notes, grouped by how people use the app and written for them, not for engineers. It saves them in the repo and puts them at the top of the release PR.
 

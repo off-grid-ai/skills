@@ -1,6 +1,6 @@
 # See everything in flight across your repos on one page
 
-![](overview.png)
+![How mission-control works](../../assets/skills/mission-control.png)
 
 Your agent builds one local page from git and GitHub: every branch, PR, CI run and release across your repos, with
 what needs you at the top. It also keeps short notes per feature (goal, next step, blockers, due date) and can triage

@@ -1,5 +1,5 @@
 # Hold every change to one standard, with a pass or fail before it merges
-![](overview.png)
+![How code-check works](../../assets/skills/code-check.png)
 
 One engineering bar for your agent's code: separation of concerns, one owner for every fact, one shared seam across platforms, and tests that prove what the user sees. Your agent plans against it, audits each diff against it dimension by dimension, and can install the quality gates that enforce it.
 

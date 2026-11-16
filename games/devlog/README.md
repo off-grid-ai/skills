@@ -1,6 +1,6 @@
 # Show your game work: small commits, screenshots, true docs
 
-![](overview.png)
+![How devlog works](../../assets/skills/devlog.png)
 
 Your agent commits and pushes in small proven steps, sends you a captioned screenshot of every new scene, and keeps the README and design doc true. Nothing goes public without your yes.
 

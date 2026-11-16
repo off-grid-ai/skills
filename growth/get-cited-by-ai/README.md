@@ -1,6 +1,6 @@
 # Get your articles found and quoted by search and AI answers
 
-![](overview.png)
+![How get-cited-by-ai works](../../assets/skills/get-cited-by-ai.png)
 
 Your agent plans and writes articles that answer the question a reader would actually type, with the answer up top, facts checked against the source, and one clear next step. The same structure helps Google and AI answer engines understand and quote the page.
 

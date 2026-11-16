@@ -1,6 +1,6 @@
 # Prove your game changes work, on screen
 
-![](overview.png)
+![How prove-it works](../../assets/skills/prove-it.png)
 
 Your agent proves each change with something you can see: a render, a clip, a debug reply or a log line. A compile pass alone never counts.
 

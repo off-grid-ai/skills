@@ -1,6 +1,6 @@
 # Run your game and take screenshots from the command line
 
-![](overview.png)
+![How boot-game works](../../assets/skills/boot-game.png)
 
 Your agent finds how your game starts, runs it on the right engine build, and takes screenshot renders of any scene. It shares the GPU safely with you and other agent sessions.
 

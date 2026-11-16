@@ -1,6 +1,6 @@
 # Get a one-page decision report you can approve from the first screen
 
-![](overview.png)
+![How help-me-decide works](../../assets/skills/help-me-decide.png)
 
 Your agent writes one page with the answer first, every claim linked to a source, at least three options scored on points you set, and separate reviewers checking the facts and the reasoning before you see it.
 

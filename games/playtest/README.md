@@ -1,6 +1,6 @@
 # Playtest every scene of your game, with pictures
 
-![](overview.png)
+![How playtest works](../../assets/skills/playtest.png)
 
 Your agent builds a checklist of every screen and scene, renders and checks each one, and reports pass or fail with a screenshot. It also scores how fun a real session is against the last run.
 

@@ -1,6 +1,6 @@
 # Get a one-page debrief of this week against last week
 
-![](overview.png)
+![How weekly-wins works](../../assets/skills/weekly-wins.png)
 
 Your agent reads your git history, your agent chats and whatever metrics you track, then writes one page: the bottom line first, what went right, the experiments and how each went, with last week's numbers beside this week's.
 

@@ -1,6 +1,6 @@
 # Check a release by hand on real phones
 
-![](overview.png)
+![How try-it-on-my-phone works](../../assets/skills/try-it-on-my-phone.png)
 
 Your agent writes a do-this, see-this checklist from the release diff, runs it one device at a time, and reports every check as pass, fail or not run. Every failure becomes a fix with a test or a logged item.
 

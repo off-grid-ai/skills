@@ -1,6 +1,6 @@
 # Get an agent that pushes back with facts, not one that just agrees
 
-![](overview.png)
+![How argue-with-me works](../../assets/skills/argue-with-me.png)
 
 Your agent stops folding when you sound sure. It checks your claim against the data, tells you which part is fact and which is a guess, and disagrees in one line before it gets on with the work.
 

@@ -1,6 +1,6 @@
 # Make your game look and feel like a polished shipped game
 
-![](overview.png)
+![How art-director works](../../assets/skills/art-director.png)
 
 Your agent holds every screen, scene and animation to the bar you set from reference games. No half-built menus, no characters looping one clip, no robotic copy.
 

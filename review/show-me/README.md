@@ -1,5 +1,5 @@
 # Review what your agent changed, one screen at a time
-![](overview.png)
+![How show-me works](../../assets/skills/show-me.png)
 
 Every screen of your app on one page. Click a spot, write a note, and it is pinned there like a Figma comment. Your agent reads the notes, makes the changes, and shows each screen before and after with a reply under every note.
 

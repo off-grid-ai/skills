@@ -1,6 +1,6 @@
 # Find the three changes that will grow your revenue
 
-![](overview.png)
+![How grow-my-revenue works](../../assets/skills/grow-my-revenue.png)
 
 Your agent pulls every source you have (payments, analytics, app stores, search), lines it up against what you
 shipped, and gives you three ranked moves with the money math. You get one dashboard page: the moves on top, the

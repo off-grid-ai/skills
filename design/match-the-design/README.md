@@ -1,6 +1,6 @@
 # Build every UI change from your own component library
 
-![](overview.png)
+![How match-the-design works](../../assets/skills/match-the-design.png)
 
 Your agent finds your design doc and component library, picks the best existing primitive for the job, and extends the library instead of adding one-off components.
 

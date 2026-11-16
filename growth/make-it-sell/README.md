@@ -1,6 +1,6 @@
 # Get copy that sells, not copy that just sounds nice
 
-![](overview.png)
+![How make-it-sell works](../../assets/skills/make-it-sell.png)
 
 Your agent writes headlines, landing pages and CTAs with the direct-response rules of Robert Bly and David Ogilvy: research first, benefits over features, the Four U's for headlines, and real proof behind every claim.
 
