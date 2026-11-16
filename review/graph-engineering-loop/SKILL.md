@@ -74,7 +74,7 @@ Stop. Change nothing until the user says yes or corrects you. On a correction, r
 
 A change review is not a one-off. Once it is published, the loop can run on a schedule until the user stops it.
 
-- **Start it** when the page is first published, if your agent can schedule work (Claude Code's scheduled tasks, `/loop`, cron, or your CI): one turn every two hours. Tell the user its name and how to stop it. With no scheduler, run a turn each time the user says so.
+- **Offer it, never start it unasked.** When the page is first published, ask the user whether to run the loop on a schedule (one turn every two hours, through Claude Code's scheduled tasks, `/loop`, cron or CI). Start it only on a yes, and tell them its name and how to stop it. Otherwise run a turn each time the user says so.
 - **Each turn:** rescan the changed files, update the page, apply standing rules, raise new suspects as calls with context, and answer new notes, choices and questions. Fix only what an approved rule or choice covers; propose the rest.
 - **Each turn, report** two or three lines: what improved, what is still open, what waits on the user. Stay silent when nothing changed.
 
