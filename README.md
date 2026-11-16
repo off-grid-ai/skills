@@ -8,6 +8,8 @@ Your AI agent writes code faster than anyone can check it. These skills fix that
 
 When you change one thing, you see every place it touches, every changed screen before and after, and only the calls that need you. Make those calls and it learns the rule behind them, applies it everywhere, and asks you less the next time.
 
+![What your AI agent hands you after every change: every app it touches, the newest version, checks from 5 angles, every changed screen, before and after, notes, and only the decisions that need you.](assets/review-page.png)
+
 ## Review AI work in minutes, not days
 
 Your agent writes code faster than you can read it. These show you only what changed and only the calls that need you.
