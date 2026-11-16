@@ -10,4 +10,4 @@ Leave notes on a few screens. Your agent works out the design rule behind them, 
 
 Try it: "I've added comments on the screen review. Apply them everywhere."
 
-Works on pages made by [show-me](../../01-review-like-a-senior-engineer/show-me).
+Works on pages made by [show-me](../../review/show-me).

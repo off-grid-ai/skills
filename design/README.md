@@ -16,7 +16,7 @@ Vibe-coded apps all look the same. Now every screen clears a real design bar, re
 npx skills add off-grid-ai/skills --skill make-it-look-expensive match-the-design fix-it-everywhere
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install ui-that-looks-like-stripe-made-it@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add ui-that-looks-like-stripe-made-it@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install design@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add design@off-grid-ai`.
 
 [All skills](../README.md)
