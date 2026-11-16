@@ -1,13 +1,17 @@
-# hygiene SETUP - the quality-as-code spine
+# check-code-before-merge SETUP: the quality-as-code spine
 
-Run this in a repo to install the whole Off Grid quality spine in one shot: the
+Run this in a JavaScript or TypeScript repo to install the whole quality spine in one shot: the
 libraries, plugins, configs, gates, the pre-push hook, and the CI workflow. Every
 repo that runs it inherits the same standard, so quality is code, not memory.
 
 ```bash
-bash ~/.claude/skills/hygiene/setup/bootstrap.sh          # from the target repo root
-bash ~/.claude/skills/hygiene/setup/bootstrap.sh /path    # or pass the repo path
+bash <skill-folder>/setup/bootstrap.sh          # from the target repo root
+bash <skill-folder>/setup/bootstrap.sh /path    # or pass the repo path
 ```
+
+`<skill-folder>` is wherever your agent installed this skill, for example
+`.claude/skills/check-code-before-merge`. Set `HYGIENE_SKIP_INSTALL=1` to place the
+configs without running `npm install`.
 
 `bootstrap.sh` is idempotent and non-destructive. Re-run it any time; it skips what
 is already in place and never silently clobbers an edited config (it backs the old
@@ -18,7 +22,7 @@ one up to `<file>.hygiene.bak` first).
 | Artifact | Gate it powers |
 | --- | --- |
 | `.prettierrc` | Formatting baseline (web: 120 cols, RN: 80 cols). |
-| `.eslintrc.json` | Typed lint + the AI-dead-code rules, with the Wednesday house plugin set for the stack. |
+| `.eslintrc.json` | Typed lint + the AI-dead-code rules, with a plugin set for the stack. |
 | `.dependency-cruiser.js` | No eager-value circular imports (the load-bearing rule) + architecture boundaries. |
 | `.jscpd.json` | DRY copy/paste detector, baseline-then-ratchet threshold. |
 | `.c8rc.json` | `>=85%` coverage on the pure-logic layer; I/O glue excluded and documented. |
@@ -119,8 +123,7 @@ Also: the coverage scripts wrap `npm test`, so define your test runner (`node --
 
 ## Provenance
 
-Generalized from the Off Grid Console's proven, gate-green artifacts
-(`.dependency-cruiser.js`, `.jscpd.json`, `.c8rc.json`, `.githooks/pre-push`,
-`.github/workflows/ci.yml`, `package.json` scripts) and the two Wednesday house
-baselines: `wednesday-solutions/react-template` (web) and
-`wednesday-solutions/react-native-template` (RN).
+Generalized from the gate-green configs of a production web app (`.dependency-cruiser.js`,
+`.jscpd.json`, `.c8rc.json`, `.githooks/pre-push`, `.github/workflows/ci.yml`,
+`package.json` scripts) and two public baselines: `wednesday-solutions/react-template`
+(web) and `wednesday-solutions/react-native-template` (React Native).

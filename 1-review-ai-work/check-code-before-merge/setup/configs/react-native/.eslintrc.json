@@ -1,5 +1,5 @@
 {
-  "//": "Wednesday house REACT-NATIVE baseline (from wednesday-solutions/react-native-template) + the Off Grid AI-dead-code typed rules. This is the BASELINE eslint config for a React Native repo. eslintrc (legacy) format so airbnb + the full plugin set compose. The RULES are the contract, not the file format.",
+  "//": "REACT-NATIVE baseline (from the public wednesday-solutions/react-native-template) + the AI-dead-code typed rules. This is the BASELINE eslint config for a React Native repo. eslintrc (legacy) format so airbnb + the full plugin set compose. The RULES are the contract, not the file format.",
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -37,7 +37,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "//── Wednesday RN baseline (prettier drives formatting) ──": 0,
+    "//── RN baseline (prettier drives formatting) ──": 0,
     "prettier/prettier": "error",
     "no-console": ["error", { "allow": ["error"] }],
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".tsx"] }],

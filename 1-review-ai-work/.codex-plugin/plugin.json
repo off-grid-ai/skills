@@ -1,7 +1,7 @@
 {
   "name": "review-ai-work",
   "version": "1.0.0",
-  "description": "**[graph-engineering](graph-engineering)** and **[graph-engineering-loop](graph-engineering-loop)**. Think of them as the PR review of the AI age.",
+  "description": "Your agent writes code faster than you can read it. See only what changed, and make only the calls that need you.",
   "author": {
     "name": "Off Grid AI",
     "url": "https://github.com/off-grid-ai"

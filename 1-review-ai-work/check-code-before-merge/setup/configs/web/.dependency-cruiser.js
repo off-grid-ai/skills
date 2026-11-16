@@ -1,6 +1,6 @@
 // dependency-cruiser ruleset - WEB / Next.js baseline.
 //
-// Generalized from the Off Grid Console's proven, gate-green config. Two classes
+// Generalized from a production web app's gate-green config. Two classes
 // of defect that neither typecheck nor tests catch:
 //
 //   1. Circular imports that break the PROD build only. An eager-VALUE import cycle

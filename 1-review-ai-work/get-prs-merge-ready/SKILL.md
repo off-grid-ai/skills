@@ -1,6 +1,6 @@
 ---
 name: get-prs-merge-ready
-description: Take a pull request from "the diff exists" to "ready to merge" and keep it there. Your agent audits its own diff, gathers every review signal (bots, coverage, CI, human comments), answers each comment, fixes behind the checks, pushes and re-reviews until nothing blocks, then feeds the lessons back into your standard. Use when you say "review this PR", "get this PR merge-ready", "/get-prs-merge-ready", "address the review comments", or after pushing to a PR with open comments.
+description: Take a pull request from "the diff exists" to "ready to merge" and keep it there. Your agent audits its diff, gathers every review signal, answers each comment, fixes behind the checks and re-reviews until nothing blocks. Use when you say "review this PR", "get this PR merge-ready", "/get-prs-merge-ready", "address the review comments", or after pushing to a PR with open comments.
 ---
 
 # Get PRs merge-ready

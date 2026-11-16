@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Quality-as-code pre-push gate - WEB. Generalized from the Off Grid Console.
+# Quality-as-code pre-push gate - WEB. Generalized from a production app.
 #
 # THE PRE-PUSH vs CI SPLIT (deliberate):
 #   Pre-push runs the FAST subset so local pushes stay snappy - format check,
