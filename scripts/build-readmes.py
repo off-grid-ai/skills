@@ -56,11 +56,17 @@ hooks = "\n".join(f"- **[{s['title']}]({s['dir']})**. {s['pitch']}" for s in set
 
 readme = f"""# Stop babysitting your AI. Make it build, test and ship like a senior team.
 
-{total} free skills for Claude Code, Codex, Cursor and 60+ other agents. Install them with one line, and your AI starts checking its own work.
+I'm [Mac](https://github.com/alichherawalla), CTO and co-founder of Wednesday Solutions. I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) with these exact skills: an offline AI app on iPhone, Android and Mac with 3,382 stars on GitHub. In the last 4 months I put 193B tokens through Claude Code and Codex with them and shipped 22,809 GitHub contributions.
+
+[![Built with these skills: Off Grid AI, 3,382 GitHub stars, 22,809 contributions in 4 months, 193B tokens](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
+
+## What these skills do
+
+Vibe coding gets you a demo in an afternoon. Then your AI breaks things that already worked, every screen looks like every other AI app, and you're asked to approve 50 changed files you can't read.
+
+A skill is a short playbook your agent reads before it starts. These {total} give it the habits of a senior team. It maps everything a change will touch before it writes code, tests the real app the way a user taps through it, holds every screen to a design bar, and hands you one page with every screen before and after and only the calls that need you. They're free and work in Claude Code, Codex, Cursor and 60+ other agents.
 
 {hooks}
-
-[![Built with these skills: 193B tokens, 22,809 GitHub contributions in 4 months](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
 
 {hero}## Install in one line
 
