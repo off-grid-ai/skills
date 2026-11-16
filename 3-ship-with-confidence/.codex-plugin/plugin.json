@@ -1,7 +1,7 @@
 {
   "name": "ship-with-confidence",
   "version": "1.0.0",
-  "description": "ship-with-confidence",
+  "description": "Proof it works on real devices before anyone else sees it.",
   "author": {
     "name": "Off Grid AI",
     "url": "https://github.com/off-grid-ai"
@@ -11,15 +11,10 @@
   "license": "MIT",
   "keywords": [
     "agent-skills",
-    "finish-game-features",
     "get-it-live",
-    "playtest-every-scene",
-    "prove-game-changes",
     "release-notes-people-read",
     "run-on-real-devices",
     "ship-releases-cleanly",
-    "show-your-game-work",
-    "start-your-game",
     "test-on-real-phones",
     "tests-that-catch-bugs",
     "tests-that-follow-the-user"

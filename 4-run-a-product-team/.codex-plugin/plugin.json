@@ -1,7 +1,7 @@
 {
   "name": "run-a-product-team",
   "version": "1.0.0",
-  "description": "run-a-product-team",
+  "description": "Your agent works like a senior team: it knows what's urgent, what good looks like, and when to ask.",
   "author": {
     "name": "Off Grid AI",
     "url": "https://github.com/off-grid-ai"
@@ -12,13 +12,10 @@
   "keywords": [
     "agent-skills",
     "act-like-a-cto",
-    "act-like-a-game-director",
     "change-code-safely",
     "fix-the-real-problem",
     "make-it-look-great",
-    "make-the-game-look-great",
-    "reuse-ui-components",
-    "talk-game-decisions"
+    "reuse-ui-components"
   ],
   "skills": "./"
 }
