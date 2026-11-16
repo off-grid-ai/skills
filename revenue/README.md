@@ -18,7 +18,7 @@ You have Stripe, analytics and store numbers and no idea what to change. Now you
 npx skills add off-grid-ai/skills --skill grow-my-revenue help-me-decide weekly-wins pick-the-best-ai-model mission-control
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install know-what-makes-you-money@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add know-what-makes-you-money@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install revenue@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add revenue@off-grid-ai`.
 
 [All skills](../README.md)
