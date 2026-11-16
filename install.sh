@@ -6,8 +6,8 @@
 #   bash install.sh --uninstall remove the links this script made
 #
 # It keeps one copy in ~/.off-grid-skills (git pull to update) and links each skill into the skills folder of
-# every agent it finds: Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, Windsurf, OpenCode, Kiro, Cline,
-# Warp, Zed and any agent that reads ~/.agents/skills.
+# every agent it finds: Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, Windsurf, OpenCode, Kiro, and any
+# agent that reads ~/.agents/skills.
 set -euo pipefail
 
 REPO="${OFF_GRID_SKILLS_REPO:-https://github.com/off-grid-ai/skills.git}"
