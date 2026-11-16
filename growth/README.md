@@ -18,7 +18,7 @@ Your landing page reads like ChatGPT wrote it and nobody can find you. Now your 
 npx skills add off-grid-ai/skills --skill make-it-sell sound-human write-like-me get-cited-by-ai find-threads-to-join
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install get-users-without-ads@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add get-users-without-ads@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install growth@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add growth@off-grid-ai`.
 
 [All skills](../README.md)
