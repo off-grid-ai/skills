@@ -18,7 +18,7 @@ It worked on your laptop and broke on your phone. Now every release is tested on
 npx skills add off-grid-ai/skills --skill ship-it try-it-on-my-phone run-on-any-device release-day whats-new
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install launch-like-a-real-startup@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add launch-like-a-real-startup@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install launch@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add launch@off-grid-ai`.
 
 [All skills](../README.md)
