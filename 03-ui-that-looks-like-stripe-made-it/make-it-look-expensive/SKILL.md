@@ -1,5 +1,5 @@
 ---
-name: make-it-look-great
+name: make-it-look-expensive
 description: Every screen, flow and feature your agent builds meets the bar of a mature consumer app, with no lost features, no dead ends and instant feedback on every action. Use before designing, building or reviewing any UI, or when you say "make it look great", "polish this", "no shoddy work", "product bar" or "review this screen".
 ---
 
@@ -32,5 +32,5 @@ Apply all eleven points to every screen, flow or feature you design, build or re
     choice shows as chosen at once), then a done state. Never a silent gap, then a jump. Review every screen and
     test for it.
 
-When the change touches UI components, also load `reuse-ui-components`. To review many screens with the user,
-use `review-every-screen`.
+When the change touches UI components, also load `match-the-design`. To review many screens with the user,
+use `show-me`.

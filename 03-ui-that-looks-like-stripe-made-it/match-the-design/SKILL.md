@@ -1,5 +1,5 @@
 ---
-name: reuse-ui-components
+name: match-the-design
 description: Every UI change your agent makes is built from your shared component library and design doc, by reusing or extending a primitive instead of inventing a one-off component. Use for any UI, UX, layout, navigation, loading, empty or error state, styling or frontend component change, or when you say "use our components", "reuse the design system" or "don't make a new component".
 ---
 
@@ -76,7 +76,7 @@ a small library folder before building new UI.
 
 ## Verify the whole state space
 
-Apply the repository's own quality and test standards (`check-code-before-merge` and `tests-that-catch-bugs` if
+Apply the repository's own quality and test standards (`code-check` and `bug-trap` if
 you use them). At minimum verify:
 
 - unit behavior for the shared primitive or adapter;

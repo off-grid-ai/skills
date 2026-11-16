@@ -1,4 +1,4 @@
 interface:
   display_name: "Reuse UI components"
   short_description: "Build UI from your shared components and design doc"
-  default_prompt: "Use $reuse-ui-components to select and implement the best shared component for this UI change."
+  default_prompt: "Use $match-the-design to select and implement the best shared component for this UI change."
