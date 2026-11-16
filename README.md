@@ -1,10 +1,10 @@
 # Stop babysitting your AI. Make it build, test and ship like a senior team.
 
-I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) on my own, with nothing but these skills. It's private AI that runs offline on 7 platforms, and it has 250,000+ downloads. The [EFF names it](https://www.eff.org/pages/i-want-opt-out-ai-tools-or-training-made-big-tech) as a way to use AI without Big Tech, it went to #1 on Hacker News, and [GIGAZINE](https://www.gigazine.net/gsc_news/en/20260401-off-grid-mobile-ai) and [DigitalToday](https://www.digitaltoday.co.kr/en/view/44847/free-off-grid-local-ai-app-runs-llms-and-image-generation-on-your-phone) reviewed it. In the last 4 months these skills turned 193B tokens of Claude Code and Codex into 22,809 GitHub contributions.
+These are the skills I use every day. I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) on my own with them, and it now has 250,000+ downloads on 7 platforms. Install them and your AI works the way mine does.
 
-I'm [Mac](https://github.com/alichherawalla), also CTO and co-founder of [Wednesday Solutions](https://mobile.wednesday.is). We build apps for American Express, Visa, Discover, EY and Kalshi, and for fast-growing companies across Asia like Zalora, Ninja Van and PayU. We cut one commerce company's mobile spend from $2.7M to $0.9M a year, and shipped a payments app with zero broken releases in its first quarter. Across [Off Grid AI](https://github.com/off-grid-ai), [Wednesday](https://github.com/wednesday-solutions) and [my own repos](https://github.com/alichherawalla), our open source has 5,036 stars and 853 forks on GitHub.
+Off Grid went to [#1 on Hacker News](https://news.ycombinator.com/item?id=47019133), and the [EFF lists it](https://www.eff.org/pages/i-want-opt-out-ai-tools-or-training-made-big-tech) as a way to use AI without Big Tech. I'm also CTO at [Wednesday Solutions](https://mobile.wednesday.is), where we build apps for American Express, Visa, Discover and EY, so these habits hold up on apps that can't afford to break.
 
-[![Built by one person with these skills: Off Grid AI, 250,000+ downloads on 7 platforms, named by the EFF, 5,036 GitHub stars and 853 forks across Off Grid AI and Wednesday Solutions, #1 on Hacker News, 22,809 contributions in 4 months, 193B tokens](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
+[![Off Grid AI, built by one person with these skills: 250,000+ downloads on 7 platforms](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
 
 ## What these skills do
 
