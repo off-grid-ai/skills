@@ -56,6 +56,8 @@ hooks = "\n".join(f"- [{s['title']}]({s['dir']})" for s in sets)
 
 readme = f"""# Stop babysitting your AI. Make it build, test and ship like a senior team.
 
+[![graph-engineering on a real change: one ask, mapped across 7 apps, 105 screens before and after on one page, and only the calls that need you](assets/graph-engineering-demo.gif)](assets/graph-engineering-demo.mp4)
+
 These are the skills I use every day. I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) on my own with them, and it reached 250,000+ downloads on 7 platforms without spending a dollar on ads. Install them and your AI works the way mine does.
 
 [![Off Grid AI, built by one person with these skills: 250,000+ organic downloads on 7 platforms](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
