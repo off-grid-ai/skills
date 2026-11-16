@@ -1,4 +1,4 @@
-# check-code-before-merge SETUP: the quality-as-code spine
+# code-check SETUP: the quality-as-code spine
 
 Run this in a JavaScript or TypeScript repo to install the whole quality spine in one shot: the
 libraries, plugins, configs, gates, the pre-push hook, and the CI workflow. Every
@@ -10,7 +10,7 @@ bash <skill-folder>/setup/bootstrap.sh /path    # or pass the repo path
 ```
 
 `<skill-folder>` is wherever your agent installed this skill, for example
-`.claude/skills/check-code-before-merge`. Set `HYGIENE_SKIP_INSTALL=1` to place the
+`.claude/skills/code-check`. Set `HYGIENE_SKIP_INSTALL=1` to place the
 configs without running `npm install`.
 
 `bootstrap.sh` is idempotent and non-destructive. Re-run it any time; it skips what

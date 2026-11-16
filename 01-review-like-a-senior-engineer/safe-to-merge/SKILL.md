@@ -1,15 +1,15 @@
 ---
-name: get-prs-merge-ready
-description: Take a pull request from "the diff exists" to "ready to merge" and keep it there. Your agent audits its diff, gathers every review signal, answers each comment, fixes behind the checks and re-reviews until nothing blocks. Use when you say "review this PR", "get this PR merge-ready", "/get-prs-merge-ready", "address the review comments", or after pushing to a PR with open comments.
+name: safe-to-merge
+description: Take a pull request from "the diff exists" to "ready to merge" and keep it there. Your agent audits its diff, gathers every review signal, answers each comment, fixes behind the checks and re-reviews until nothing blocks. Use when you say "review this PR", "get this PR merge-ready", "/safe-to-merge", "address the review comments", or after pushing to a PR with open comments.
 ---
 
 # Get PRs merge-ready
 
 A pull request is not done when the code is written. It is done when it is **verified and clean under review**. This skill is the loop that gets it there and keeps it there. It is iterative on purpose: review, triage, fix behind the gates, push, re-review, until the exit criteria hold. Then it feeds what it learned back into the standard.
 
-The rubric for "good" is the **`check-code-before-merge`** skill. This loop does not re-derive quality; it applies that skill's AUDIT mode to a live PR and manages the round trip with reviewers.
+The rubric for "good" is the **`code-check`** skill. This loop does not re-derive quality; it applies that skill's AUDIT mode to a live PR and manages the round trip with reviewers.
 
-**First, find the repo and the PR.** `gh pr view --json number,headRefName,baseRefName,title,url` (or your git host's CLI). If several PRs are open, confirm which one. Note which repo and stack it is: the gates and tokens differ per repo (`check-code-before-merge`, Mechanical gates).
+**First, find the repo and the PR.** `gh pr view --json number,headRefName,baseRefName,title,url` (or your git host's CLI). If several PRs are open, confirm which one. Note which repo and stack it is: the gates and tokens differ per repo (`code-check`, Mechanical gates).
 
 **Posting is outward-facing.** Replying to a reviewer, pushing commits and merging are visible to others. Draft first. Post replies and push freely on the PR's own branch (that is the loop), but never merge without an explicit go from the user, and never push to the main branch.
 
@@ -19,7 +19,7 @@ The rubric for "good" is the **`check-code-before-merge`** skill. This loop does
 
 ### Phase 1: Self-audit (before you read anyone else's comments)
 
-Run **`check-code-before-merge` in AUDIT mode** against `git diff <base>...HEAD`. Produce the per-dimension PASS / FAIL / N/A verdict with evidence (run the mechanical gates, paste the output). Fix your own blocking issues *before* inviting review: a reviewer's time is not your linter. Record the AUDIT verdict; it is half of the exit criteria.
+Run **`code-check` in AUDIT mode** against `git diff <base>...HEAD`. Produce the per-dimension PASS / FAIL / N/A verdict with evidence (run the mechanical gates, paste the output). Fix your own blocking issues *before* inviting review: a reviewer's time is not your linter. Record the AUDIT verdict; it is half of the exit criteria.
 
 ### Phase 2: Gather every review signal
 
@@ -40,11 +40,11 @@ For every comment, choose exactly one, with a one-line reason:
 
 **Reply to each comment on its own thread.** Reviewers and threads resolve one by one, never with one blanket comment. A bot comment you fixed gets a short "fixed in <sha>".
 
-Watch for the trap: a bot flags a symptom, and the real defect is a standard broken underneath (a caller branching on a concrete type, a duplicated constant, a mock asserting itself). Fix the seam (`check-code-before-merge`: Separation of concerns, SOLID), not the symptom the bot happened to see.
+Watch for the trap: a bot flags a symptom, and the real defect is a standard broken underneath (a caller branching on a concrete type, a duplicated constant, a mock asserting itself). Fix the seam (`code-check`: Separation of concerns, SOLID), not the symptom the bot happened to see.
 
 ### Phase 4: Fix behind the mechanical gates
 
-Make the accepted fixes on the PR branch. Every fix clears the repo's mechanical gates before it is pushed: formatter, linter, type check, the fix's own tests, coverage against the repo's bar, and a production build if native code, dependencies, config or imports changed. New behaviour ships with a test that proves it (`check-code-before-merge`: Testing). Never skip hooks (`--no-verify`). Never bundle a repo-wide reformat: format only the lines you touched. A whole-file reformat that trips a size or complexity rule, or bloats the diff, is its own defect: revert it and re-apply minimally.
+Make the accepted fixes on the PR branch. Every fix clears the repo's mechanical gates before it is pushed: formatter, linter, type check, the fix's own tests, coverage against the repo's bar, and a production build if native code, dependencies, config or imports changed. New behaviour ships with a test that proves it (`code-check`: Testing). Never skip hooks (`--no-verify`). Never bundle a repo-wide reformat: format only the lines you touched. A whole-file reformat that trips a size or complexity rule, or bloats the diff, is its own defect: revert it and re-apply minimally.
 
 Commit per concern with a real message, and push. Reply "fixed in <sha>" on each thread you closed.
 
@@ -53,7 +53,7 @@ Commit per concern with a real message, and push. Reply "fixed in <sha>" on each
 After the push, CI runs again. Go back to **Phase 2**: pull the new signal, triage new and repeated comments, fix, push. Repeat until the exit criteria hold. Each pass should shrink the open list. If it grows, a fix brought a regression: treat it as a Phase 1 miss.
 
 **Exit criteria (all must hold):**
-1. `check-code-before-merge` AUDIT: overall PASS, zero blocking issues.
+1. `code-check` AUDIT: overall PASS, zero blocking issues.
 2. Every review thread resolved (fixed, answered, or deferred with a link). None left open.
 3. All CI checks green: no AI reviewer blocker left unaddressed, patch coverage meets the repo's bar, the static analysis gate passes, the build is clean.
 4. Evidence attached to the PR: for UI changes, a screenshot per changed surface (read each one and confirm it matches the claim) and a video for any interaction; for every change, the pasted test output and the test that proves the new behaviour; on mobile, the journey run on a device.
@@ -63,7 +63,7 @@ State the exit verdict as one of three gates: **code / wired / verified**. Only 
 
 ### Phase 6: Distill (feed the standard)
 
-The review just taught you something. Before closing out, run **`learn-from-every-review`** (`/learn-from-every-review`, or ask your agent to use learn-from-every-review) on this PR's review comments. The *generic* lessons sharpen `check-code-before-merge`; the *specific* ones are discarded. A review whose lessons evaporate is re-learned the hard way on the next PR. This phase is not optional: it is how the loop compounds.
+The review just taught you something. Before closing out, run **`never-twice`** (`/never-twice`, or ask your agent to use never-twice) on this PR's review comments. The *generic* lessons sharpen `code-check`; the *specific* ones are discarded. A review whose lessons evaporate is re-learned the hard way on the next PR. This phase is not optional: it is how the loop compounds.
 
 ---
 

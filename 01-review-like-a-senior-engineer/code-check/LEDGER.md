@@ -1,7 +1,7 @@
 # Lessons ledger
 
 Provenance for every rule or tell folded into `SKILL.md` from a pull request review, through
-`learn-from-every-review`. One line per accepted lesson. This is the audit trail: it lets anyone
+`never-twice`. One line per accepted lesson. This is the audit trail: it lets anyone
 see why a rule exists and revert a bad addition. The lesson's content lives in `SKILL.md`, not here.
 
 Format: `YYYY-MM-DD · <repo> PR #<n> · <section> · <the one-line lesson>`

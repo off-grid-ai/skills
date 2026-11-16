@@ -1,6 +1,6 @@
 ---
-name: check-code-before-merge
-description: Hold every change to one engineering standard and get a pass or fail with evidence before it merges. SETUP installs quality gates in a repo, PLAN designs a task against the bar (separation of concerns, SOLID, DRY, tests), AUDIT reviews a diff dimension by dimension. Use when you say "audit this diff", "is this ready to merge", "/check-code-before-merge", "plan this subsystem", or "set up quality gates". Not for small fixes.
+name: code-check
+description: Hold every change to one engineering standard and get a pass or fail with evidence before it merges. SETUP installs quality gates in a repo, PLAN designs a task against the bar (separation of concerns, SOLID, DRY, tests), AUDIT reviews a diff dimension by dimension. Use when you say "audit this diff", "is this ready to merge", "/code-check", "plan this subsystem", or "set up quality gates". Not for small fixes.
 ---
 
 # Check code before merge
@@ -67,4 +67,4 @@ End with an overall verdict and a list of blocking issues.
 
 # Evolving this standard
 
-`get-prs-merge-ready` ends with `learn-from-every-review`, which folds *generic* review lessons into the right section above and logs each in `LEDGER.md`. Keep this file lean: tighten and merge rules, never bloat.
+`safe-to-merge` ends with `never-twice`, which folds *generic* review lessons into the right section above and logs each in `LEDGER.md`. Keep this file lean: tighten and merge rules, never bloat.

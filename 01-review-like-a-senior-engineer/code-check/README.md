@@ -8,6 +8,6 @@ One engineering bar for your agent's code: separation of concerns, one owner for
 - You are designing a new subsystem and want it right the first time.
 - A JavaScript or TypeScript repo has no linting, coverage or pre-push checks yet.
 
-Try it: "Use check-code-before-merge to audit this branch against main."
+Try it: "Use code-check to audit this branch against main."
 
-Gets sharper over time through [learn-from-every-review](../learn-from-every-review).
+Gets sharper over time through [never-twice](../never-twice).
