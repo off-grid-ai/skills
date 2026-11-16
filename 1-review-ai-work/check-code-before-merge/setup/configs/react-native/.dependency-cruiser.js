@@ -1,6 +1,6 @@
 // dependency-cruiser ruleset - REACT NATIVE baseline.
 //
-// Generalized from the Off Grid Console's proven config, adapted to a React
+// Generalized from a production app's gate-green config, adapted to a React
 // Native layout (no Next.js routes). Two classes of defect neither typecheck nor
 // tests catch:
 //

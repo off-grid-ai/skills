@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# hygiene SETUP (bootstrap) - install the quality-as-code spine into a repo.
+# check-code-before-merge SETUP (bootstrap) - install the quality-as-code spine into a repo.
 #
 # Runs from the TARGET repo root (or pass it as $1). Idempotent and non-destructive:
 #   - detects the stack (Next/React web vs React Native vs plain TS lib),
@@ -216,7 +216,7 @@ $(ok "hygiene spine installed for a '$STACK' repo.")
 
 WHAT LANDED
   .prettierrc              formatting baseline ($([ "$STACK" = react-native ] && echo '80 cols' || echo '120 cols'))
-  .eslintrc.json           typed lint + AI-dead-code rules (Wednesday $STACK plugin set)
+  .eslintrc.json           typed lint + AI-dead-code rules ($STACK plugin set)
   .dependency-cruiser.js   no eager-value circular imports + architecture boundaries
   .jscpd.json              DRY copy/paste detector (baseline-then-ratchet threshold)
   .c8rc.json               >=85% coverage on the pure-logic layer (I/O glue excluded, documented)

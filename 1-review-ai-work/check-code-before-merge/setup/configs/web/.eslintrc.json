@@ -1,5 +1,5 @@
 {
-  "//": "Wednesday house WEB/REACT baseline (from wednesday-solutions/react-template) + the Off Grid AI-dead-code typed rules. This is the BASELINE eslint config for a Next.js / React web repo. It uses the eslintrc (legacy) format so the full Wednesday plugin set (sonarjs / security / github) and typed typescript-eslint rules compose cleanly. If your repo is eslint 9 flat-config-only, port these same extends/plugins/rules into eslint.config.js - the RULES are the contract, not the file format.",
+  "//": "WEB/REACT baseline (from the public wednesday-solutions/react-template) + the AI-dead-code typed rules. This is the BASELINE eslint config for a Next.js / React web repo. It uses the eslintrc (legacy) format so the full Wednesday plugin set (sonarjs / security / github) and typed typescript-eslint rules compose cleanly. If your repo is eslint 9 flat-config-only, port these same extends/plugins/rules into eslint.config.js - the RULES are the contract, not the file format.",
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -32,7 +32,7 @@
     "immutable"
   ],
   "rules": {
-    "//── Wednesday web baseline ──": 0,
+    "//── web baseline ──": 0,
     "no-console": ["error", { "allow": ["error"] }],
     "complexity": ["error", 8],
     "max-lines": ["error", { "max": 300, "skipBlankLines": true, "skipComments": true }],
