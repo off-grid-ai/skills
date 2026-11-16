@@ -11,4 +11,4 @@ The PR review of the AI age. Change one thing and your agent maps every place it
 
 Try it: "Use graph-engineering to add a dark mode toggle to settings in the web, mobile and desktop apps."
 
-Works with [graph-engineering-loop](../graph-engineering-loop), which learns from your calls. Needs [review-every-screen](../review-every-screen) for the page.
+Works with [graph-engineering-loop](../graph-engineering-loop), which learns from your calls. Needs [show-me](../show-me) for the page.

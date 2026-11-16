@@ -9,11 +9,11 @@ A code diff shows lines. It does not show that the same rule also lives in the m
 
 The change map is the graph: each feature links to every place that makes it real (web, mobile, desktop, extension, server, shared packages, the website). For one change, the agent maps the graph first, makes the change in the right order, and hands the user **one change review page**: every place touched, every changed screen before and after with notes, and, next to each screen, only the calls that need the user. Everything else the agent settles itself.
 
-It is a superset of `review-every-screen`: the same page, plus the change map and the calls. `graph-engineering-loop` then reads the user's calls, learns the rule behind them and applies it everywhere, so each review asks less.
+It is a superset of `show-me`: the same page, plus the change map and the calls. `graph-engineering-loop` then reads the user's calls, learns the rule behind them and applies it everywhere, so each review asks less.
 
 It works on any project with more than one app or surface. A project with one app still gets the map, the principles and the calls; the map is just short.
 
-Use alongside `act-like-a-cto`, `change-code-safely`, `tests-that-catch-bugs`, `make-it-look-great`, `run-on-real-devices` and `short-straight-answers` if you have them. This skill adds the graph; it repeats none of their rules.
+Use alongside `be-my-cto`, `dont-break-it`, `bug-trap`, `make-it-look-expensive`, `run-on-any-device` and `no-fluff` if you have them. This skill adds the graph; it repeats none of their rules.
 
 ## What lives where
 
@@ -23,7 +23,7 @@ Everything sits in the user's project, under `docs/change-review/`:
 | --- | --- |
 | `concepts.json` | Saved concepts: the search terms and paths for each feature, so the map stays true over time |
 | `learned.json` | What the loop has learned: standing rules and cleared suspects (see `graph-engineering-loop`) |
-| `<change>/index.html` | The page: a copy of `review-every-screen/template/index.html` |
+| `<change>/index.html` | The page: a copy of `show-me/template/index.html` |
 | `<change>/screens.json`, `screens/` | The changed screens with before and after versions |
 | `<change>/change.json` | The change map, the checks and the calls |
 | `<change>/ARTIFACT_URL` | Where the page was published, when it was |
@@ -68,7 +68,7 @@ The last two stop and ask the user. "Done" without a passing check never counts.
 
 ## 4. Build the change review page
 
-1. **Screens.** For every app the change touches, capture each screen it changes, before and after, as in `review-every-screen` steps 1 and 2. Reuse shots that already exist in `docs/review/` and capture only what is missing. Before is the screen on the base branch; After is the screen with the change. Give each screen `"app": "<app id>"` and `"group": "<app name>"`, so the list groups by app. A change with no visible screen still gets a page: the map and the calls show on their own.
+1. **Screens.** For every app the change touches, capture each screen it changes, before and after, as in `show-me` steps 1 and 2. Reuse shots that already exist in `docs/review/` and capture only what is missing. Before is the screen on the base branch; After is the screen with the change. Give each screen `"app": "<app id>"` and `"group": "<app name>"`, so the list groups by app. A change with no visible screen still gets a page: the map and the calls show on their own.
 2. **Change map and checks.** Write `change.json`:
    ```json
    {
@@ -105,7 +105,7 @@ The last two stop and ask the user. "Done" without a passing check never counts.
      ```
      `what` is what the code does, `risk` is what goes wrong for a user, `rec` is what you would do, all in plain words. `screen` puts the call next to that screen; leave it out for a call with no screen. `kind` names the type of call (`copy-of-shared-rule`, `backward-arrow`, `second-writer`, `many-jobs-in-one-file`, `design`, `product`, or your own): the loop learns per kind.
    - A call is a decision for the user. It carries enough context to decide without opening the code. Anything the agent can settle by the principles, it settles; only real decisions become calls.
-4. **The page.** Copy `review-every-screen/template/index.html` into `docs/change-review/<change>/`, and set its `<title>` and `.brand h1` to the change's name. The page reads `screens.json` and `change.json` beside it. It shows a **Change map** button (places in order, checks, collisions, every call, rules learned) and puts each call above the notes of its screen, with its options and an Ask box.
+4. **The page.** Copy `show-me/template/index.html` into `docs/change-review/<change>/`, and set its `<title>` and `.brand h1` to the change's name. The page reads `screens.json` and `change.json` beside it. It shows a **Change map** button (places in order, checks, collisions, every call, rules learned) and puts each call above the notes of its screen, with its options and an Ask box.
 
 ## 5. Publish
 
@@ -118,7 +118,7 @@ Put the page's link in each pull request body for the change.
 ## 6. Read it back
 
 Run `graph-engineering-loop` (`/graph-engineering-loop`, or ask your agent to use graph-engineering-loop). It reads:
-- **Notes** in `comments` (as in `review-every-screen` step 4).
+- **Notes** in `comments` (as in `show-me` step 4).
 - **Choices** in `calls`: doc id = call id, `{screen, choice, at, by}`.
 - **Questions** in `asks`: `{call, text, created, author}`. Answer each one in its `reply` field, in plain short lines. A question that turns into a decision becomes a call.
 
@@ -134,4 +134,4 @@ It acts on the choices and learns from them (`learned.json`), so each round asks
 
 - The user decides product calls, existing breaches and merges. Ask; never assume.
 - Never lose behaviour to tidy the graph. If something must move, move it first, then remove the old place.
-- Plain words in every call, note and reply (`write-like-a-human`).
+- Plain words in every call, note and reply (`sound-human`).

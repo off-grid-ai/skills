@@ -1,6 +1,6 @@
 ---
-name: review-every-screen
-description: Get every screen of your app on one page and pin notes on the exact spot, like Figma comments; your agent reads them, makes the changes and shows each screen before and after with its replies. Works for web, mobile, desktop and games. Use when you say "screen review", "/review-every-screen", "screenshot all the screens", "let me give feedback on every screen", "read my screen comments", or "show me before and after".
+name: show-me
+description: Get every screen of your app on one page and pin notes on the exact spot, like Figma comments; your agent reads them, makes the changes and shows each screen before and after with its replies. Works for web, mobile, desktop and games. Use when you say "screen review", "/show-me", "screenshot all the screens", "let me give feedback on every screen", "read my screen comments", or "show me before and after".
 ---
 
 # Screen review
@@ -65,7 +65,7 @@ Optionally, do one functional check: an `ArtifactData` `list` of `comments` (it 
 
 **B. Local mode** (any agent, no account needed). Serve the folder, for example `python3 -m http.server 8000` in `docs/review/`, and give the user `http://localhost:8000` (the page loads `screens.json`, so opening the file directly from disk will not work). With no shared database, the page keeps the user's notes in that browser and shows an **Export notes** button. It saves `review-feedback.json` with what the user wrote (`comments`, plus `calls` and `asks` on a change review). The agent's own notes, replies and marks go in `docs/review/comments.json` (an array of the same documents as below, each with an `id`); the page reads it on load. To share the page, commit `docs/review/` or put it on any static host; each viewer's notes stay in their own browser until they export them.
 
-On a release branch, also commit the shots and `docs/review/` and put a **Screen review** line with the link in the PR body (`ship-releases-cleanly`).
+On a release branch, also commit the shots and `docs/review/` and put a **Screen review** line with the link in the PR body (`release-day`).
 
 ## 4. Read the feedback
 
@@ -114,6 +114,6 @@ When you find what is wrong with a screen, or the user asks what you mean, never
 4. In chat, give the link and the screen name, one line for each mark, and then ask the one question (for example "Build the fix?"). Also send the marked-up image (the Pillow copy) in chat, or give its path, so the user sees it without opening the page.
 5. When a mark is fixed: add the new version, `update` the mark with `reply` and `done: true` (only after the device shows it), as in section 5.
 
-To turn comments into a philosophy update and a pass over every screen, use the `apply-feedback-everywhere` skill; this skill is the page and its data.
+To turn comments into a philosophy update and a pass over every screen, use the `fix-it-everywhere` skill; this skill is the page and its data.
 
 The same page also serves `graph-engineering`: when a `change.json` sits beside `screens.json`, it adds a Change map button and shows each call above the notes of its screen. Without `change.json`, none of that shows.

@@ -8,6 +8,6 @@ Your agent reads a pull request's review comments, keeps only the lessons that w
 - The same kind of review comment keeps coming back.
 - A bug shipped even though the tests were green.
 
-Try it: "Use learn-from-every-review on the comments from PR 42."
+Try it: "Use never-twice on the comments from PR 42."
 
-Feeds [check-code-before-merge](../check-code-before-merge). Runs as the last step of [get-prs-merge-ready](../get-prs-merge-ready).
+Feeds [code-check](../code-check). Runs as the last step of [safe-to-merge](../safe-to-merge).

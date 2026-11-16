@@ -1,15 +1,15 @@
 ---
-name: learn-from-every-review
-description: Turn each pull request review into a sharper engineering standard, so the same mistake doesn't come back. Your agent keeps only the general lessons from a review, writes each into check-code-before-merge with a signal a grep can catch, and logs its source. Use when you say "learn from this review", "/learn-from-every-review", "update the standard from these comments", or at the end of get-prs-merge-ready.
+name: never-twice
+description: Turn each pull request review into a sharper engineering standard, so the same mistake doesn't come back. Your agent keeps only the general lessons from a review, writes each into code-check with a signal a grep can catch, and logs its source. Use when you say "learn from this review", "/never-twice", "update the standard from these comments", or at the end of safe-to-merge.
 ---
 
 # Learn from every review
 
-The `check-code-before-merge` skill is only as good as the mistakes it has learned to catch. Every review is a free lesson. This skill decides which lessons are worth keeping, and folds those, and only those, back into `check-code-before-merge` so the next PR starts from a higher bar. The discipline is as much about what you REFUSE to add as what you add: a bloated standard is an ignored standard.
+The `code-check` skill is only as good as the mistakes it has learned to catch. Every review is a free lesson. This skill decides which lessons are worth keeping, and folds those, and only those, back into `code-check` so the next PR starts from a higher bar. The discipline is as much about what you REFUSE to add as what you add: a bloated standard is an ignored standard.
 
-**Where the standard lives.** `check-code-before-merge/SKILL.md` (its PLAN, AUDIT and Standards sections) and its provenance log `check-code-before-merge/LEDGER.md`, wherever your agent installed the skill (for example `.claude/skills/`, `.agents/skills/`, or the project's own skills folder). If the team keeps its standard elsewhere (a `CONTRIBUTING.md`, an engineering handbook), fold lessons there instead and keep the same ledger beside it.
+**Where the standard lives.** `code-check/SKILL.md` (its PLAN, AUDIT and Standards sections) and its provenance log `code-check/LEDGER.md`, wherever your agent installed the skill (for example `.claude/skills/`, `.agents/skills/`, or the project's own skills folder). If the team keeps its standard elsewhere (a `CONTRIBUTING.md`, an engineering handbook), fold lessons there instead and keep the same ledger beside it.
 
-**Input.** The review comments for a PR: from `get-prs-merge-ready` Phase 2, or `gh pr view <n> --comments` plus `gh api repos/{owner}/{repo}/pulls/{n}/comments`, or a set the user pastes. Include your own AUDIT findings and any bug that slipped past the test suite: a shipped regression is the highest-signal lesson there is ("why did the suite stay green?").
+**Input.** The review comments for a PR: from `safe-to-merge` Phase 2, or `gh pr view <n> --comments` plus `gh api repos/{owner}/{repo}/pulls/{n}/comments`, or a set the user pastes. Include your own AUDIT findings and any bug that slipped past the test suite: a shipped regression is the highest-signal lesson there is ("why did the suite stay green?").
 
 ---
 
@@ -38,9 +38,9 @@ For each GENERIC lesson:
 
 ## Step 3: Show the diff, apply, log
 
-- Show the exact before and after edit to `check-code-before-merge/SKILL.md` for each accepted lesson. Keep edits surgical (a tightened sentence, an added tell); never rewrite a section.
+- Show the exact before and after edit to `code-check/SKILL.md` for each accepted lesson. Keep edits surgical (a tightened sentence, an added tell); never rewrite a section.
 - Apply the edits.
-- **Log provenance** in `check-code-before-merge/LEDGER.md`, one line per accepted lesson:
+- **Log provenance** in `code-check/LEDGER.md`, one line per accepted lesson:
   `YYYY-MM-DD · <repo> PR #<n> · <section> · <the one-line lesson>`.
   The ledger is the audit trail: it lets anyone see why a rule exists and revert a bad addition. Use absolute dates. Keep only the one-liner in the ledger; the content lives in the skill.
 - Report: N comments reviewed, M generic (folded into which sections), N minus M specific (discarded, with why in one phrase). If M is 0, say so plainly. A review with no general lesson is normal and honest; do not invent one to justify an edit.

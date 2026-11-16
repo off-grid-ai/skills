@@ -7,14 +7,14 @@ description: Make a few calls on a change review and your agent learns the rule 
 
 The user decides a few calls and leaves a few notes on a change review page. The goal is not to settle those few. It is to learn the rule behind them, write it down once, and carry it to every place the change map shows, so the next review asks the user less.
 
-Each run is one turn of the loop. The page comes from `graph-engineering` (read it first for the files, `change.json` and the calls). Notes and before/after work as in `review-every-screen` and `apply-feedback-everywhere`. Use the user's other working skills at each step if they have them; this skill adds the learning.
+Each run is one turn of the loop. The page comes from `graph-engineering` (read it first for the files, `change.json` and the calls). Notes and before/after work as in `show-me` and `fix-it-everywhere`. Use the user's other working skills at each step if they have them; this skill adds the learning.
 
 ## 1. Read
 
 Find the page in `docs/change-review/<change>/`. Then read three things:
 
 - **Choices** on calls: collection `calls`, doc id = call id, `{screen, choice, at, by}`. Read each choice next to its call in `change.json`.
-- **Notes** on screens: collection `comments`, the user's open ones (`done: false`, `author` not the agent). Open each note's shot and pin, as in `apply-feedback-everywhere` step 1.
+- **Notes** on screens: collection `comments`, the user's open ones (`done: false`, `author` not the agent). Open each note's shot and pin, as in `fix-it-everywhere` step 1.
 - **Questions**: collection `asks`, the ones with no `reply`. Answer each in its `reply` field, plain and short. A question that turns into a decision becomes a new call.
 
 Where to read them:
@@ -65,8 +65,8 @@ Stop. Change nothing until the user says yes or corrects you. On a correction, r
 
 ## 5. Verify and show
 
-1. Run the tests for every touched app. Check the changed screens on the real platforms they ship on (`test-on-real-phones`, `run-on-real-devices`, or the project's own way).
-2. Recapture only the screens that changed, as new versions (`review-every-screen` step 5). Update `change.json` (places, checks, new calls, `standing`) and republish to the same place, so notes and choices stay.
+1. Run the tests for every touched app. Check the changed screens on the real platforms they ship on (`try-it-on-my-phone`, `run-on-any-device`, or the project's own way).
+2. Recapture only the screens that changed, as new versions (`show-me` step 5). Update `change.json` (places, checks, new calls, `standing`) and republish to the same place, so notes and choices stay.
 3. Reply under each of the user's notes. Mark each decided call with what was done: update its `calls` doc with `result` (in local mode, write it to `calls.json`). Set `done: true` on a note only once it is verified.
 4. Tell the user in two or three lines: what changed, what the loop learned, and how many calls the next round should no longer need.
 
@@ -80,10 +80,10 @@ A change review is not a one-off. Once it is published, the loop can run on a sc
 
 ## 7. Before a merge
 
-On a release pull request, run one turn while CI runs, refresh the page, and keep its link in each pull request body (`ship-releases-cleanly`).
+On a release pull request, run one turn while CI runs, refresh the page, and keep its link in each pull request body (`release-day`).
 
 ## Rules
 
 - The user decides product calls, standing rules and merges. Ask; never assume.
 - A standing rule never removes behaviour. If it would, it becomes a call.
-- Plain words in every call, reply and note (`write-like-a-human`).
+- Plain words in every call, reply and note (`sound-human`).

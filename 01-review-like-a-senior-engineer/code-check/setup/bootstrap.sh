@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# check-code-before-merge SETUP (bootstrap) - install the quality-as-code spine into a repo.
+# code-check SETUP (bootstrap) - install the quality-as-code spine into a repo.
 #
 # Runs from the TARGET repo root (or pass it as $1). Idempotent and non-destructive:
 #   - detects the stack (Next/React web vs React Native vs plain TS lib),

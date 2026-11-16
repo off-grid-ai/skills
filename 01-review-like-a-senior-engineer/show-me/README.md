@@ -9,6 +9,6 @@ Every screen of your app on one page. Click a spot, write a note, and it is pinn
 - Your agent changed the UI and you want before and after, side by side.
 - You want the agent to mark what it thinks is wrong on the screen itself.
 
-Try it: "Use review-every-screen to capture every screen of the web app so I can leave notes."
+Try it: "Use show-me to capture every screen of the web app so I can leave notes."
 
 Works for web, iOS, Android, desktop and game projects. Without Claude Artifacts, the page runs locally and you export your notes to hand back.

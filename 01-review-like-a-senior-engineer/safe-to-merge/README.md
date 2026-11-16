@@ -8,6 +8,6 @@ Your agent audits its own diff, collects every review signal (AI review bots, co
 - You pushed to a PR and want the new feedback handled.
 - You want a clear verdict: code, wired or verified.
 
-Try it: "Use get-prs-merge-ready on PR 42."
+Try it: "Use safe-to-merge on PR 42."
 
-Uses [check-code-before-merge](../check-code-before-merge) as its bar and [learn-from-every-review](../learn-from-every-review) to keep the bar rising.
+Uses [code-check](../code-check) as its bar and [never-twice](../never-twice) to keep the bar rising.
