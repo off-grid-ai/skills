@@ -19,7 +19,7 @@ Your AI changes 50 files and you can't tell what broke. Now you get one page wit
 npx skills add off-grid-ai/skills --skill graph-engineering graph-engineering-loop show-me safe-to-merge code-check never-twice
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install review-like-a-senior-engineer@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add review-like-a-senior-engineer@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install review@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add review@off-grid-ai`.
 
 [All skills](../README.md)
