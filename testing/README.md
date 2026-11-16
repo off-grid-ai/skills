@@ -1,6 +1,6 @@
 # Your AI stops breaking things that already worked
 
-You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage.
+You fix one bug and two old features break. Every change gets tested by tapping through your app like a real user, with no mocks hiding the breakage.
 
 ![How your ai stops breaking things that already worked works](how-it-works.png)
 

@@ -1,6 +1,6 @@
 # Launch like a real startup
 
-It worked on your laptop and broke on your phone. Now every release is tested on real phones, shipped cleanly, and announced in notes people read.
+It worked on your laptop and broke on your phone. Every release gets tried on real phones first, then ships with notes people actually read.
 
 ![How launch like a real startup works](how-it-works.png)
 

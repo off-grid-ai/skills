@@ -1,7 +1,7 @@
 {
   "name": "design",
   "version": "1.1.0",
-  "description": "Vibe-coded apps all look the same. Now every screen clears a real design bar, reuses your best components, and one fix lands on every screen.",
+  "description": "Most vibe-coded apps look the same. Every screen has to clear a real design bar and reuse your best components, and a note on one screen fixes all of them.",
   "author": {
     "name": "Off Grid AI",
     "url": "https://github.com/off-grid-ai"

@@ -1,6 +1,6 @@
 # Make a game like a studio would
 
-Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.
+Making a game alone with AI? You get a director, an art director and a QA team that playtests every scene.
 
 ![How make a game like a studio would works](how-it-works.png)
 

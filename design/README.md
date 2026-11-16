@@ -1,6 +1,6 @@
 # UI that looks like Stripe's designers made it
 
-Vibe-coded apps all look the same. Now every screen clears a real design bar, reuses your best components, and one fix lands on every screen.
+Most vibe-coded apps look the same. Every screen has to clear a real design bar and reuse your best components, and a note on one screen fixes all of them.
 
 ![How ui that looks like stripe's designers made it works](how-it-works.png)
 

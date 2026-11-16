@@ -1,6 +1,6 @@
 # Know what makes you money
 
-You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page.
+You have Stripe, analytics and store numbers but no idea what to change. You get the three moves that should grow revenue most, and big calls laid out on one page.
 
 ![How know what makes you money works](how-it-works.png)
 

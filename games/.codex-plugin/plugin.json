@@ -1,7 +1,7 @@
 {
   "name": "games",
   "version": "1.1.0",
-  "description": "Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.",
+  "description": "Making a game alone with AI? You get a director, an art director and a QA team that playtests every scene.",
   "author": {
     "name": "Off Grid AI",
     "url": "https://github.com/off-grid-ai"

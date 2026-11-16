@@ -52,7 +52,7 @@ hero = ("![How it works: you ask for a change, your agent maps everything it tou
         if os.path.exists(os.path.join(ROOT, "assets", "how-it-works.png")) else "")
 
 where = {n: f"{s['dir']}/{n}" for s in sets for n, _ in s["skills"]}
-hooks = "\n".join(f"- **[{s['title']}]({s['dir']})**. {s['pitch']}" for s in sets)
+hooks = "\n".join(f"- [{s['title']}]({s['dir']})" for s in sets)
 
 readme = f"""# Stop babysitting your AI. Make it build, test and ship like a senior team.
 
@@ -64,7 +64,7 @@ These are the skills I use every day. I built [Off Grid AI](https://github.com/o
 
 Vibe coding gets you a demo in an afternoon. Then your AI breaks things that already worked, every screen looks like every other AI app, and you're asked to approve 50 changed files you can't read.
 
-A skill is a short playbook your agent reads before it starts. These {total} give it the habits of a senior team. It maps everything a change will touch before it writes code, tests the real app the way a user taps through it, holds every screen to a design bar, and hands you one page with every screen before and after and only the calls that need you. They're free and work in Claude Code, Codex, Cursor and 60+ other agents.
+Each skill is a short playbook your agent reads before it starts, so it tests every change in your real app and checks the design before you see anything. What you get back is one page with every screen before and after, and only the decisions that need you. They're free, MIT licensed, and work in Claude Code, Codex, Cursor and 60+ other agents.
 
 {hooks}
 
@@ -130,6 +130,14 @@ It links every skill into each agent it finds on your machine. Run it again to u
 ## All {total} skills
 
 {sections}
+
+## Get all {total}
+
+```bash
+npx skills add off-grid-ai/skills
+```
+
+Or paste "Install the skills from github.com/off-grid-ai/skills" into your agent.
 
 ## Good to know
 

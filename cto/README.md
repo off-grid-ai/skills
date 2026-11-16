@@ -1,6 +1,6 @@
 # An AI that thinks like your CTO
 
-No CTO? Your AI becomes one. It decides what's urgent, argues back when you're wrong, builds while you sleep, and never loses where you left off.
+No CTO? Your AI picks what's urgent, tells you when you're wrong, keeps building overnight and picks up any old chat where you left it.
 
 ![How an ai that thinks like your cto works](how-it-works.png)
 
