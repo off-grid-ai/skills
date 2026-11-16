@@ -8,4 +8,4 @@ Your agent lists every route from your router, screenshots every page and state,
 - You want a module checked by eye, not just by passing tests.
 - Pages look fine but the answers, reports or results inside them might not be.
 
-Try it: "Use test-every-page on the billing module."
+Try it: "Use click-everything on the billing module."
