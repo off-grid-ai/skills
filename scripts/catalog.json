@@ -1,101 +1,227 @@
 {
   "sets": [
     {
-      "dir": "01-review-like-a-senior-engineer",
+      "dir": "review",
       "title": "Review like a senior engineer, without reading code",
       "pitch": "Your AI changes 50 files and you can't tell what broke. Now you get one page with every screen it touched, before and after, and only the calls that need you.",
       "skills": [
-        ["graph-engineering", "Ask for one change. See every place it touches, every screen before and after, on one page."],
-        ["graph-engineering-loop", "Answer a few calls once. It learns your rule, applies it everywhere, and asks you less next time."],
-        ["show-me", "Every screen of your app on one page. Pin a note on the exact spot, like Figma comments."],
-        ["safe-to-merge", "Your pull request gets every review comment answered and fixed until it's safe to merge."],
-        ["code-check", "A pass or fail on every change before it ships, against one clear bar."],
-        ["never-twice", "Every review teaches your AI, so the same mistake never comes back."]
+        [
+          "graph-engineering",
+          "Ask for one change. See every place it touches, every screen before and after, on one page."
+        ],
+        [
+          "graph-engineering-loop",
+          "Answer a few calls once. It learns your rule, applies it everywhere, and asks you less next time."
+        ],
+        [
+          "show-me",
+          "Every screen of your app on one page. Pin a note on the exact spot, like Figma comments."
+        ],
+        [
+          "safe-to-merge",
+          "Your pull request gets every review comment answered and fixed until it's safe to merge."
+        ],
+        [
+          "code-check",
+          "A pass or fail on every change before it ships, against one clear bar."
+        ],
+        [
+          "never-twice",
+          "Every review teaches your AI, so the same mistake never comes back."
+        ]
       ]
     },
     {
-      "dir": "02-your-ai-stops-breaking-things",
+      "dir": "testing",
       "title": "Your AI stops breaking things that already worked",
       "pitch": "You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage.",
       "skills": [
-        ["test-like-a-user", "Tests that open the real screen, tap the real button and check what you'd see. No mocks of your own code."],
-        ["bug-trap", "Every bug gets a test that fails first, so it can't sneak back in."],
-        ["dont-break-it", "Your AI changes, checks and saves code so nothing half-done ships."],
-        ["fix-it-for-real", "It fixes the cause, not the symptom, and reuses what someone already solved."],
-        ["click-everything", "It clicks through every page of your web app and fixes what breaks."]
+        [
+          "test-like-a-user",
+          "Tests that open the real screen, tap the real button and check what you'd see. No mocks of your own code."
+        ],
+        [
+          "bug-trap",
+          "Every bug gets a test that fails first, so it can't sneak back in."
+        ],
+        [
+          "dont-break-it",
+          "Your AI changes, checks and saves code so nothing half-done ships."
+        ],
+        [
+          "fix-it-for-real",
+          "It fixes the cause, not the symptom, and reuses what someone already solved."
+        ],
+        [
+          "click-everything",
+          "It clicks through every page of your web app and fixes what breaks."
+        ]
       ]
     },
     {
-      "dir": "03-ui-that-looks-like-stripe-made-it",
+      "dir": "design",
       "title": "UI that looks like Stripe's designers made it",
       "pitch": "Vibe-coded apps all look the same. Now every screen clears a real design bar, reuses your best components, and one fix lands on every screen.",
       "skills": [
-        ["make-it-look-expensive", "A design bar every screen has to clear before you see it: spacing, states, motion, polish."],
-        ["match-the-design", "It builds from your component library with its animations, so no screen looks one-off."],
-        ["fix-it-everywhere", "Leave notes on 3 screens. It turns them into one rule and fixes every screen."]
+        [
+          "make-it-look-expensive",
+          "A design bar every screen has to clear before you see it: spacing, states, motion, polish."
+        ],
+        [
+          "match-the-design",
+          "It builds from your component library with its animations, so no screen looks one-off."
+        ],
+        [
+          "fix-it-everywhere",
+          "Leave notes on 3 screens. It turns them into one rule and fixes every screen."
+        ]
       ]
     },
     {
-      "dir": "04-an-ai-that-thinks-like-a-cto",
+      "dir": "cto",
       "title": "An AI that thinks like your CTO",
       "pitch": "No CTO? Your AI becomes one. It decides what's urgent, argues back when you're wrong, builds while you sleep, and never loses where you left off.",
       "skills": [
-        ["be-my-cto", "Your AI decides what's urgent, does the clear work, and only asks you the real calls."],
-        ["build-while-you-sleep", "Several AI builders work at once while one checks everything that lands."],
-        ["argue-with-me", "Your AI argues back with facts instead of agreeing with your worst ideas."],
-        ["resume-any-chat", "Pick up any past chat by its name and carry on. Works across Claude Code accounts and Codex."],
-        ["no-fluff", "Short answers, result first, no essays."]
+        [
+          "be-my-cto",
+          "Your AI decides what's urgent, does the clear work, and only asks you the real calls."
+        ],
+        [
+          "build-while-you-sleep",
+          "Several AI builders work at once while one checks everything that lands."
+        ],
+        [
+          "argue-with-me",
+          "Your AI argues back with facts instead of agreeing with your worst ideas."
+        ],
+        [
+          "resume-any-chat",
+          "Pick up any past chat by its name and carry on. Works across Claude Code accounts and Codex."
+        ],
+        [
+          "no-fluff",
+          "Short answers, result first, no essays."
+        ]
       ]
     },
     {
-      "dir": "05-launch-like-a-real-startup",
+      "dir": "launch",
       "title": "Launch like a real startup",
       "pitch": "It worked on your laptop and broke on your phone. Now every release is tested on real phones, shipped cleanly, and announced in notes people read.",
       "skills": [
-        ["ship-it", "Take any feature all the way to live: built, tested, seen working."],
-        ["try-it-on-my-phone", "Your AI checks every release on real phones before your users do."],
-        ["run-on-any-device", "Your AI runs and taps through your app on a computer, an iPhone and an Android phone."],
-        ["release-day", "Clean releases with screenshots on every pull request."],
-        ["whats-new", "Release notes your users actually read."]
+        [
+          "ship-it",
+          "Take any feature all the way to live: built, tested, seen working."
+        ],
+        [
+          "try-it-on-my-phone",
+          "Your AI checks every release on real phones before your users do."
+        ],
+        [
+          "run-on-any-device",
+          "Your AI runs and taps through your app on a computer, an iPhone and an Android phone."
+        ],
+        [
+          "release-day",
+          "Clean releases with screenshots on every pull request."
+        ],
+        [
+          "whats-new",
+          "Release notes your users actually read."
+        ]
       ]
     },
     {
-      "dir": "06-get-users-without-ads",
+      "dir": "growth",
       "title": "Get users without ads",
       "pitch": "Your landing page reads like ChatGPT wrote it and nobody can find you. Now your copy sounds human, sells, and gets you recommended in AI answers.",
       "skills": [
-        ["make-it-sell", "Headlines and landing pages that sell, on the rules of the best ad writers ever."],
-        ["sound-human", "Copy that sounds like a person wrote it, with zero AI tells."],
-        ["write-like-me", "Posts and emails in your own voice, learned from what you've already written."],
-        ["get-cited-by-ai", "Articles that rank on Google and get you named in ChatGPT-style answers."],
-        ["find-threads-to-join", "The posts worth your reply each day, with two angles ready for each."]
+        [
+          "make-it-sell",
+          "Headlines and landing pages that sell, on the rules of the best ad writers ever."
+        ],
+        [
+          "sound-human",
+          "Copy that sounds like a person wrote it, with zero AI tells."
+        ],
+        [
+          "write-like-me",
+          "Posts and emails in your own voice, learned from what you've already written."
+        ],
+        [
+          "get-cited-by-ai",
+          "Articles that rank on Google and get you named in ChatGPT-style answers."
+        ],
+        [
+          "find-threads-to-join",
+          "The posts worth your reply each day, with two angles ready for each."
+        ]
       ]
     },
     {
-      "dir": "07-know-what-makes-you-money",
+      "dir": "revenue",
       "title": "Know what makes you money",
       "pitch": "You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page.",
       "skills": [
-        ["grow-my-revenue", "Connect Stripe and your analytics. Get the three moves that grow revenue most."],
-        ["help-me-decide", "Any big decision on one page: the answer first, every claim sourced, options scored."],
-        ["weekly-wins", "What you shipped this week against last week, and what's next."],
-        ["pick-the-best-ai-model", "The best AI models for your app on every device, backed by public benchmarks."],
-        ["mission-control", "One page of everything in flight across your projects, with what needs you on top."]
+        [
+          "grow-my-revenue",
+          "Connect Stripe and your analytics. Get the three moves that grow revenue most."
+        ],
+        [
+          "help-me-decide",
+          "Any big decision on one page: the answer first, every claim sourced, options scored."
+        ],
+        [
+          "weekly-wins",
+          "What you shipped this week against last week, and what's next."
+        ],
+        [
+          "pick-the-best-ai-model",
+          "The best AI models for your app on every device, backed by public benchmarks."
+        ],
+        [
+          "mission-control",
+          "One page of everything in flight across your projects, with what needs you on top."
+        ]
       ]
     },
     {
-      "dir": "08-make-a-game-like-a-studio",
+      "dir": "games",
       "title": "Make a game like a studio would",
       "pitch": "Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.",
       "skills": [
-        ["game-director", "Your AI runs the game like a director: what's fun, what's urgent, what waits."],
-        ["art-director", "Every screen, scene and animation held to one look."],
-        ["playtest", "It plays through every scene and hands you a pass or fail with pictures."],
-        ["ship-the-feature", "Any game feature taken all the way: built, seen working, pushed, shown."],
-        ["prove-it", "Proof a change works, with compile checks and renders."],
-        ["boot-game", "Your whole game stack started in the right order, every time."],
-        ["devlog", "Push, document and show off your progress."],
-        ["game-calls", "Straight answers when you're making game decisions."]
+        [
+          "game-director",
+          "Your AI runs the game like a director: what's fun, what's urgent, what waits."
+        ],
+        [
+          "art-director",
+          "Every screen, scene and animation held to one look."
+        ],
+        [
+          "playtest",
+          "It plays through every scene and hands you a pass or fail with pictures."
+        ],
+        [
+          "ship-the-feature",
+          "Any game feature taken all the way: built, seen working, pushed, shown."
+        ],
+        [
+          "prove-it",
+          "Proof a change works, with compile checks and renders."
+        ],
+        [
+          "boot-game",
+          "Your whole game stack started in the right order, every time."
+        ],
+        [
+          "devlog",
+          "Push, document and show off your progress."
+        ],
+        [
+          "game-calls",
+          "Straight answers when you're making game decisions."
+        ]
       ]
     }
   ]

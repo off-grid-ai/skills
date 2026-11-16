@@ -15,11 +15,10 @@ const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'))
 const version = pkg.version;
 const owner = { name: 'Off Grid AI', url: 'https://github.com/off-grid-ai' };
 
-const sets = fs.readdirSync(root)
-  .filter((d) => /^\d+-/.test(d) && fs.statSync(path.join(root, d)).isDirectory())
-  .sort()
-  .map((dir) => {
-    const name = dir.replace(/^\d+-/, '');
+const catalog = JSON.parse(fs.readFileSync(path.join(root, 'scripts', 'catalog.json'), 'utf8'));
+const sets = catalog.sets
+  .map(({ dir }) => {
+    const name = dir;
     const skills = fs.readdirSync(path.join(root, dir))
       .filter((s) => fs.existsSync(path.join(root, dir, s, 'SKILL.md')))
       .sort();

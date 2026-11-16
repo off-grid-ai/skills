@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "review-like-a-senior-engineer",
+      "name": "review",
       "source": {
         "source": "local",
-        "path": "./01-review-like-a-senior-engineer"
+        "path": "./review"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -18,10 +18,10 @@
       "description": "Your AI changes 50 files and you can't tell what broke. Now you get one page with every screen it touched, before and after, and only the calls that need you."
     },
     {
-      "name": "your-ai-stops-breaking-things",
+      "name": "testing",
       "source": {
         "source": "local",
-        "path": "./02-your-ai-stops-breaking-things"
+        "path": "./testing"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -31,10 +31,10 @@
       "description": "You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage."
     },
     {
-      "name": "ui-that-looks-like-stripe-made-it",
+      "name": "design",
       "source": {
         "source": "local",
-        "path": "./03-ui-that-looks-like-stripe-made-it"
+        "path": "./design"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -44,10 +44,10 @@
       "description": "Vibe-coded apps all look the same. Now every screen clears a real design bar, reuses your best components, and one fix lands on every screen."
     },
     {
-      "name": "an-ai-that-thinks-like-a-cto",
+      "name": "cto",
       "source": {
         "source": "local",
-        "path": "./04-an-ai-that-thinks-like-a-cto"
+        "path": "./cto"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -57,10 +57,10 @@
       "description": "No CTO? Your AI becomes one. It decides what's urgent, argues back when you're wrong, builds while you sleep, and never loses where you left off."
     },
     {
-      "name": "launch-like-a-real-startup",
+      "name": "launch",
       "source": {
         "source": "local",
-        "path": "./05-launch-like-a-real-startup"
+        "path": "./launch"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -70,10 +70,10 @@
       "description": "It worked on your laptop and broke on your phone. Now every release is tested on real phones, shipped cleanly, and announced in notes people read."
     },
     {
-      "name": "get-users-without-ads",
+      "name": "growth",
       "source": {
         "source": "local",
-        "path": "./06-get-users-without-ads"
+        "path": "./growth"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -83,10 +83,10 @@
       "description": "Your landing page reads like ChatGPT wrote it and nobody can find you. Now your copy sounds human, sells, and gets you recommended in AI answers."
     },
     {
-      "name": "know-what-makes-you-money",
+      "name": "revenue",
       "source": {
         "source": "local",
-        "path": "./07-know-what-makes-you-money"
+        "path": "./revenue"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -96,10 +96,10 @@
       "description": "You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page."
     },
     {
-      "name": "make-a-game-like-a-studio",
+      "name": "games",
       "source": {
         "source": "local",
-        "path": "./08-make-a-game-like-a-studio"
+        "path": "./games"
       },
       "policy": {
         "installation": "AVAILABLE",
