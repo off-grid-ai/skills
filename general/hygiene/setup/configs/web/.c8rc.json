@@ -1,0 +1,26 @@
+{
+  "//": "c8 coverage config - WEB baseline. Enforces the >=85% bar on the UNIT-TESTABLE LOGIC LAYER only (pure logic in src/lib + adapters' pure paths). Philosophy: coverage thresholds apply to logic you CAN unit-test, not to I/O glue that genuinely needs live services. That glue is excluded from the denominator and verified by integration tests + a production build instead. Excluding it is NOT gaming coverage: each excluded file must be a thin adapter whose PURE decision half lives in a separate, tested sibling module.",
+  "//exclusion-rule": "The rule for adding a file to `exclude`: it must be a THIN adapter (DB/network/FS/socket/crypto client, worker orchestration, or a Next.js request-surface guard) whose decision half already lives in a tested pure sibling (a *-policy / *-shape / *-plan / *-rules module). If a file has branching logic and no pure sibling, DO NOT exclude it: extract the pure half and test it.",
+  "//exclusion-categories": "Categories seen in practice (adapt to your repo): db-stores (raw Drizzle/pg CRUD, covered by *.integration.test.ts against a real DB); network-fetchers (fetch/HTTP clients, ok/!ok fallbacks only, shaping lives in *-shape siblings); worker-glue (multi-step orchestrators, scheduling decisions are pure in *-plan siblings); request-surface (server-only guards touching next/navigation | next/server | auth); adapter-ports (the I/O half of a ports-and-adapters seam); static-content (hand-authored data arrays).",
+  "reporter": ["text-summary", "text", "json-summary", "lcov"],
+  "all": true,
+  "src": ["src/lib"],
+  "include": ["src/lib/**/*.ts"],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.d.ts",
+    "test/**",
+    "src/**/*.tsx",
+    "EDIT: replace the three examples below with YOUR real I/O-glue files (see the //exclusion-rule note above). This string itself matches nothing; delete it once you have your own list.",
+    "src/lib/store.ts",
+    "src/lib/redis.ts",
+    "src/lib/adapters/**/*.ts"
+  ],
+  "excludeNodeModules": true,
+  "skip-full": false,
+  "lines": 85,
+  "functions": 85,
+  "branches": 85,
+  "statements": 85,
+  "check-coverage": true
+}

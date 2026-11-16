@@ -1,0 +1,74 @@
+{
+  "//": "Wednesday house REACT-NATIVE baseline (from wednesday-solutions/react-native-template) + the Off Grid AI-dead-code typed rules. This is the BASELINE eslint config for a React Native repo. eslintrc (legacy) format so airbnb + the full plugin set compose. The RULES are the contract, not the file format.",
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "//project": "TYPED LINTING - point at the RN tsconfig so no-unnecessary-condition has type info. Keep typed linting in CI if it is slow locally (see README).",
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  },
+  "env": { "es2022": true, "node": true, "jest": true, "react-native/react-native": true },
+  "settings": { "react": { "version": "detect" } },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react-native/all",
+    "plugin:jsx-a11y/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:security/recommended-legacy",
+    "plugin:fp/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "github",
+    "immutable",
+    "sonarjs",
+    "security",
+    "react-native",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "fp",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "//── Wednesday RN baseline (prettier drives formatting) ──": 0,
+    "prettier/prettier": "error",
+    "no-console": ["error", { "allow": ["error"] }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".tsx"] }],
+    "react/react-in-jsx-scope": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "error",
+
+    "//── AI-dead-code detectors (the founder-wanted set) ──": 0,
+    "//no-unnecessary-condition": "THE STAR - always-true / always-false branch detector. BASELINE-THEN-RATCHET: start at \"warn\" on a repo with a backlog, ratchet to \"error\" once clean.",
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "no-unreachable": "error",
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "no-constant-binary-expression": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }
+    ]
+  },
+  "overrides": [
+    {
+      "//": "Tests may use console + relax fp/immutable purity.",
+      "files": ["**/*.test.ts", "**/*.test.tsx", "**/__tests__/**"],
+      "env": { "jest": true },
+      "rules": {
+        "no-console": "off",
+        "fp/no-mutation": "off",
+        "fp/no-let": "off",
+        "immutable/no-mutation": "off"
+      }
+    }
+  ]
+}

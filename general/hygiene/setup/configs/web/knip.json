@@ -1,0 +1,21 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "//": "knip - MODULE-LEVEL dead-code detector (unused files, exports, dependencies) for a Next.js app. This complements dependency-cruiser (which finds cycles + boundary breaks) and the eslint no-unnecessary-condition rule (which finds dead BRANCHES inside a file). knip finds whole files/exports nothing uses.",
+  "//next-plugin": "The Next.js plugin auto-detects app-router entry points (page/layout/route/loading/error/not-found/template/default), server actions, middleware, next.config, and generateStaticParams/generateMetadata so they are NOT reported as unused. Keep it enabled.",
+  "next": true,
+  "entry": [
+    "next.config.{js,mjs,ts}",
+    "src/middleware.ts",
+    "src/instrumentation.ts",
+    "src/app/**/{page,layout,route,loading,error,not-found,template,default,global-error}.{ts,tsx}",
+    "scripts/**/*.{ts,mts,mjs,js}"
+  ],
+  "project": ["src/**/*.{ts,tsx}", "scripts/**/*.{ts,mts,mjs,js}"],
+  "//ignore": "IMPORTANT PER-REPO TUNING. knip cannot see modules reached ONLY through a dynamic import(), a string-keyed registry, or a runtime plugin table - it will flag them as unused (false positive). The workflow is ANNOTATE, DO NOT DELETE: when knip flags an entry point that is actually reached dynamically, add it here (or tag the export with a `// knip-ignore` comment) rather than deleting it. Deleting a real dynamic entry point is how knip breaks a build.",
+  "ignore": [
+    "src/**/*.d.ts",
+    "src/components/ui/**"
+  ],
+  "ignoreDependencies": [],
+  "ignoreExportsUsedInFile": true
+}

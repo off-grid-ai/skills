@@ -1,0 +1,4 @@
+interface:
+  display_name: "Off Grid UI"
+  short_description: "Choose branded shared UI components"
+  default_prompt: "Use $offgrid-ui to select and implement the best branded component for this UI change."

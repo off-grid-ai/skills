@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/kucherenko/jscpd/master/packages/jscpd/schema.json",
+  "//": "jscpd (copy/paste detector) - WEB baseline. Mechanically enforces DRY ('duplicated logic that drifts is a defect'). EDIT the path/ignore globs to your layout.",
+  "path": ["src/lib", "src/app", "src/components"],
+  "ignore": [
+    "test/**",
+    "**/*.d.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    ".next/**",
+    "node_modules/**",
+    "coverage/**",
+    "**/*.generated.*"
+  ],
+  "format": ["typescript", "tsx", "javascript"],
+  "//min": "Detection floor tuned to flag real shared logic, not trivial boilerplate. 8 lines / 70 tokens is jscpd's sensible mid-range: below it you catch import blocks and JSX scaffolding (noise); above it you miss genuinely duplicated helpers.",
+  "minLines": 8,
+  "minTokens": 70,
+  "reporters": ["console", "json", "html"],
+  "output": "./coverage/jscpd/",
+  "//threshold": "BASELINE-THEN-RATCHET. Set at or JUST ABOVE the current REAL duplication %% so hygiene can only improve, never regress. NOT zero (that fails immediately on any existing code). On a FRESH repo the real baseline is ~0, so 0.5 is a fine start; on an existing repo run `npx jscpd` once, read the reported %%, and set this just above it. Ratchet DOWN as clones are extracted.",
+  "threshold": 0.5,
+  "absolute": true,
+  "gitignore": true
+}

@@ -1,0 +1,692 @@
+<title>Model Picks</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a modality switcher on top. Chat: new models | the two catalog files | what every device picks.
+   Every other modality: what each app lists | what each phone tier gets | what each desktop tier gets. */
+:root {
+  --bg: #f3f4f6; --panel: #ffffff; --ink: #14171f; --muted: #5b6272; --line: #d9dce3;
+  --accent: #2346d8; --accent-soft: #e6ebff; --new: #1f7a4d; --new-bg: #e3f4ea;
+  --easy: #1f7a4d; --easy-bg: #e3f4ea; --fits: #2346d8; --fits-bg: #e6ebff;
+  --tight: #9a5b00; --tight-bg: #fdf0d9; --wont: #b3261e; --wont-bg: #fbe3e1;
+  --og: #6b3fb8; --og-bg: #efe8fb;
+  --sans: "IBM Plex Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1218; --panel: #171b23; --ink: #e8eaf0; --muted: #9aa1b2; --line: #2a303c;
+  --accent: #8ea2ff; --accent-soft: #222b4d; --new: #6fd3a0; --new-bg: #13301f;
+  --easy: #6fd3a0; --easy-bg: #13301f; --fits: #8ea2ff; --fits-bg: #222b4d;
+  --tight: #f0b45a; --tight-bg: #3a2a10; --wont: #ff8a80; --wont-bg: #3d1a18;
+  --og: #c4a6ff; --og-bg: #2c2240; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f1218; --panel: #171b23; --ink: #e8eaf0; --muted: #9aa1b2; --line: #2a303c;
+  --accent: #8ea2ff; --accent-soft: #222b4d; --new: #6fd3a0; --new-bg: #13301f;
+  --easy: #6fd3a0; --easy-bg: #13301f; --fits: #8ea2ff; --fits-bg: #222b4d;
+  --tight: #f0b45a; --tight-bg: #3a2a10; --wont: #ff8a80; --wont-bg: #3d1a18;
+  --og: #c4a6ff; --og-bg: #2c2240; color-scheme: dark }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--sans); }
+.wrap { padding-block: 20px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); max-width: 1800px; margin: 0 auto; display: grid; gap: 14px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; }
+h1 { font-size: 22px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
+.sub { color: var(--muted); font-size: 13px; max-width: 90ch; }
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; width: fit-content; max-width: 100%; }
+.tab { font: 500 13px var(--sans); padding: 6px 14px; border-radius: 7px; border: 0; background: transparent; color: var(--muted); cursor: pointer; display: flex; gap: 6px; align-items: baseline; }
+.tab span { font: 11px var(--mono); opacity: .8; }
+.tab[aria-selected=true] { background: var(--accent-soft); color: var(--accent); }
+.tab:hover { color: var(--ink); }
+.grid { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr) minmax(0, 1.1fr); gap: 16px; align-items: start; }
+.mgrid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1.45fr); gap: 16px; align-items: start; }
+@media (max-width: 1300px) { .mgrid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .mgrid > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 1200px) { .grid { grid-template-columns: minmax(0, 340px) minmax(0, 1fr); } .preview { grid-column: 1 / -1; } }
+@media (max-width: 760px) { .grid, .mgrid { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; min-width: 0; }
+h2 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0; }
+.ph { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.tools { display: grid; gap: 8px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+input[type=search] { width: 100%; box-sizing: border-box; font: inherit; padding: 7px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 500 12px var(--sans); padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; }
+.chip[aria-pressed=true] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.list { max-height: 70vh; overflow: auto; padding: 8px; display: grid; gap: 6px; align-content: start; }
+.model { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: var(--panel); cursor: grab; display: grid; gap: 3px; }
+.model[aria-selected=true] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.mrow { display: flex; justify-content: space-between; gap: 8px; align-items: center; min-width: 0; }
+.mname { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.mmeta { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.src { font: 11px var(--mono); color: var(--muted); }
+.tag { font: 500 11px var(--mono); padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
+.tag.in { color: var(--accent); background: var(--accent-soft); }
+.tag.og { color: var(--og); background: var(--og-bg); }
+.tag.ok { color: var(--easy); background: var(--easy-bg); }
+.tag.warn { color: var(--tight); background: var(--tight-bg); }
+.tag.bad { color: var(--wont); background: var(--wont-bg); }
+.tag.dim { color: var(--muted); background: var(--bg); }
+.cats { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; padding: 12px; }
+.drop { border: 1.5px dashed var(--line); border-radius: 10px; min-height: 220px; max-height: 70vh; overflow: auto; display: grid; align-content: start; gap: 6px; padding: 10px; background: var(--bg); }
+.drop.over { border-color: var(--accent); background: var(--accent-soft); }
+.drop h3 { margin: 0 0 4px; font-size: 14px; font-weight: 600; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.drop h3 span { font: 12px var(--mono); color: var(--muted); font-weight: 400; }
+.hint { color: var(--muted); font-size: 13px; margin: 0; }
+.notes { display: grid; gap: 4px; padding: 10px 14px; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+.notes b { color: var(--ink); font-weight: 500; }
+.qual { display: flex; gap: 6px; align-items: center; font: 12px var(--mono); color: var(--muted); }
+.qual input { width: 56px; font: 12px var(--mono); padding: 2px 4px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); }
+.x { background: none; border: 0; color: var(--muted); cursor: pointer; font-size: 15px; padding: 0 2px; line-height: 1; }
+.matrix { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 600 11px var(--sans); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); white-space: nowrap; }
+td.dev { white-space: nowrap; font-weight: 500; } td small { display: block; font: 11px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+td.none { color: var(--muted); }
+td.fromcat { background: var(--new-bg); } td.fromcat small { color: var(--new); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono); font-size: 12px; white-space: nowrap; }
+td .tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 2px; }
+td .tags .tag { white-space: normal; }
+.budget { font: 11px var(--mono); color: var(--muted); font-weight: 400; display: block; }
+pre { margin: 0; padding: 12px 14px; font: 12px/1.5 var(--mono); overflow: auto; max-height: 260px; }
+.btn { font: 500 12px var(--sans); padding: 5px 11px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; }
+.status { font: 12px var(--mono); color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; font-size: 12px; color: var(--muted); padding: 10px 14px; }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--new-bg); border: 1px solid var(--new); vertical-align: -2px; margin-right: 4px; }
+.scroll { max-height: 72vh; overflow: auto; }
+.nrow { display: inline-flex; align-items: baseline; gap: 6px; min-width: 0; flex-wrap: wrap; }
+.cname { font-weight: 500; }
+.date { font: 11px var(--mono); color: var(--muted); white-space: nowrap; }
+.score { font: 500 11px var(--mono); color: var(--accent); white-space: nowrap; text-decoration: none; border-bottom: 1px dotted var(--accent); font-variant-numeric: tabular-nums; }
+.score.none { color: var(--muted); border: 0; }
+.legend a { color: var(--accent); }
+.tag.sug { color: var(--og); background: var(--og-bg); margin-left: 6px; }
+.plats { display: inline-flex; flex-wrap: nowrap; gap: 3px; }
+#decisions td:nth-child(6) { white-space: nowrap; }
+.arrow { font: 11px var(--mono); color: var(--muted); margin: 2px 0; }
+td a { color: var(--accent); }
+small.why { color: var(--ink); font-family: var(--sans); font-size: 12px; }
+#decisions td { font-size: 12.5px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Model Picks</h1>
+    <span class="sub" id="sub">Which models Off Grid AI Mobile and Off Grid AI Desktop offer, per device, for every kind of model. Chat models can be dragged into a catalog; the other kinds show the apps' own rules over their bundled models plus their <code>catalog/models.json</code>.</span>
+    <span class="status" id="status">Connecting…</span>
+    <span class="status" id="syncmeta"></span>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Kind of model" id="tabs"></div>
+
+  <section class="panel" id="decisions" aria-labelledby="dech" hidden>
+    <div class="ph"><h2 id="dech">Decisions</h2><span class="chips" id="decsort" role="group" aria-label="Sort decisions"></span></div>
+    <div class="matrix"><table><thead><tr><th>Model</th><th>Recommendation</th><th>Gain</th><th>Cost to the person</th><th>Effort for us</th><th>Platforms today → after</th><th>Licence · risks</th><th>Sources</th></tr></thead><tbody id="dec"></tbody></table></div>
+  </section>
+
+  <div class="grid" id="view-chat" role="tabpanel" aria-labelledby="tab-chat">
+    <section class="panel" aria-labelledby="poolh">
+      <div class="ph"><h2 id="poolh">New models</h2><span class="status" id="poolmeta">Waiting for the pool</span></div>
+      <div class="tools">
+        <input type="search" id="q" placeholder="Search name or maker" aria-label="Search models">
+        <div class="chips" id="srcchips" role="group" aria-label="Source"></div>
+      </div>
+      <div class="list" id="pool" aria-label="Models"><p class="hint">The pool fills when Claude runs the Model Picks sync: Argus launches, Hugging Face trending, both catalog files and the bundled catalog.</p></div>
+    </section>
+
+    <section class="panel" aria-labelledby="cath">
+      <div class="ph"><h2 id="cath">What each app offers</h2><span class="status" id="selhint"></span></div>
+      <div class="cats" id="cats"></div>
+      <div class="ph" style="border-top:1px solid var(--line)"><h2>What ships</h2><button class="btn" id="copy">Copy JSON</button></div>
+      <pre id="export"></pre>
+    </section>
+
+    <section class="panel preview" aria-labelledby="prevh">
+      <div class="ph"><h2 id="prevh">What each device picks</h2></div>
+      <div class="legend" id="cbench"></div>
+      <div class="legend"><span><span class="sw"></span>from a catalog entry</span><span>size is the download, vision file included</span></div>
+      <div class="matrix"><table><thead><tr><th>Device</th><th>Fast · Lean</th><th>Balanced</th><th>Best · Extreme</th></tr></thead><tbody id="matrix"></tbody></table></div>
+    </section>
+  </div>
+
+  <div class="mgrid" id="view-media" role="tabpanel" hidden>
+    <section class="panel" aria-labelledby="mlisth">
+      <div class="ph"><h2 id="mlisth">What each app lists</h2><span class="status" id="mlistmeta"></span></div>
+      <div class="legend" id="mbench"></div>
+      <div class="legend"><span class="tag og">Off Grid</span><span>Off Grid AI's own build</span><span><span class="sw"></span>from catalog/models.json</span><span class="tag dim">code</span><span>kept in the app's code</span></div>
+      <div class="matrix scroll"><table><thead><tr><th>Model</th><th class="num">Size</th><th class="num">RAM</th><th>Mobile</th><th>Desktop</th></tr></thead><tbody id="mlist"></tbody></table></div>
+    </section>
+    <section class="panel" aria-labelledby="mmobh">
+      <div class="ph"><h2 id="mmobh">Off Grid AI Mobile</h2></div>
+      <div class="notes" id="mmobnotes"></div>
+      <div class="matrix"><table><thead id="mmobhead"></thead><tbody id="mmob"></tbody></table></div>
+    </section>
+    <section class="panel" aria-labelledby="mdeskh">
+      <div class="ph"><h2 id="mdeskh">Off Grid AI Desktop</h2></div>
+      <div class="notes" id="mdesknotes"></div>
+      <div class="matrix"><table><thead id="mdeskhead"></thead><tbody id="mdesk"></tbody></table></div>
+    </section>
+  </div>
+</div>
+
+<script id="rules">
+// The apps' own rules, ported from @offgrid/models (model-fit.ts, recommend-image.ts) and the app code
+// each function names. Pure: the sync script's node check runs this same block against the real ones.
+const BUDGET = { android: { soft: 0.52, ceil: 0.62 }, ios: { soft: 0.6, ceil: 0.7 }, desktop: { soft: 0.65, ceil: 0.82 } };
+const FAST_ACTIVE_B = 4;
+const PHONES = [
+  ...[6, 8, 12, 16].map((ram) => ({ label: `Android ${ram} GB`, platform: 'android', ram })),
+  ...[6, 8, 12].map((ram) => ({ label: `iPhone ${ram} GB`, platform: 'ios', ram })),
+];
+const DESKTOPS = [8, 16, 24, 32, 64, 128].map((ram) => ({ label: `Desktop ${ram} GB`, platform: 'desktop', ram }));
+const isOurs = (id) => /^off-?grid-ai\//i.test(id);
+
+function fitTier(gb, ram, b) {
+  const soft = ram * b.soft, ceil = ram * b.ceil;
+  return gb < soft * 0.6 ? 'easy' : gb < soft ? 'fits' : gb < ceil ? 'tight' : 'wontFit';
+}
+const speed = (m) => m.activeParams ?? m.params ?? m.sizeBytes / 0.6e9;
+const byQuality = (a, b) => (b.quality ?? 0) - (a.quality ?? 0) || a.sizeBytes - b.sizeBytes;
+/** model-fit.ts pickModelsForDevice; returns the candidate objects instead of ids. */
+function pickModelsForDevice(cands, ram, budget, pool) {
+  const ours = new Set(cands.filter((m) => m.sourceModelId && isOurs(m.id)).map((m) => m.sourceModelId));
+  const builds = cands.filter((m) => !m.sourceModelId || isOurs(m.id) || !ours.has(m.sourceModelId));
+  const usable = (tiers) => builds.filter((m) => m.sizeBytes > 0 && !m.supersededBy && tiers.includes(fitTier(m.sizeBytes / 1e9, ram, budget)));
+  const runsWell = usable(['easy', 'fits']);
+  const roomy = pool === 'roomy' ? usable(['easy']) : runsWell;
+  if (runsWell.some((m) => m.quality != null)) {
+    const best = [...runsWell].sort(byQuality)[0] ?? null;
+    const rest0 = roomy.filter((m) => m !== best);
+    const [second = null, ...rest] = [...rest0].sort(byQuality);
+    const quick = (second && rest.find((m) => speed(m) <= FAST_ACTIVE_B && speed(m) < speed(second))) ?? rest[0] ?? null;
+    const [fast, balanced] = quick && second && speed(quick) > speed(second) ? [second, quick] : [quick, second];
+    return { fast, balanced, best };
+  }
+  const bySize = [...roomy].sort((a, b) => a.sizeBytes - b.sizeBytes || (a.params ?? 0) - (b.params ?? 0));
+  const best = bySize.at(-1) ?? null, rest = bySize.filter((m) => m !== best);
+  const fast = rest.find((m) => (m.params ?? 0) >= 2) ?? rest[0] ?? null;
+  const mid = fast && best ? Math.sqrt(fast.sizeBytes * best.sizeBytes) : 0;
+  const middle = rest.filter((m) => m !== fast).sort((a, b) => Math.abs(Math.log(a.sizeBytes / mid)) - Math.abs(Math.log(b.sizeBytes / mid)))[0] ?? null;
+  const [small, large] = fast && middle && fast.sizeBytes > middle.sizeBytes ? [middle, fast] : [fast, middle];
+  return { fast: small, balanced: large, best };
+}
+
+/** Which pool docs an app lists for a kind: bundled catalog + its catalog file + its own code. */
+/** A doc the last sync wrote. A model dropped from a catalog keeps its old doc; it no longer counts as listed. */
+let isFresh = () => true;
+function listedOn(pool, target, test) {
+  return pool.filter((m) => test(m) && isFresh(m) && (m.sources.includes('bundled') || m.sources.includes(`catalog-${target}`) || m.sources.includes(`${target}-code`)))
+    .sort((a, b) => mergeRank(a, target) - mergeRank(b, target));
+}
+/** The app's merged order: the catalog file's entries first, then the bundled ones (mergeCatalogEntries);
+ *  Desktop puts its in-code entries before both (desktopCatalog). Ties in size keep this order. */
+function mergeRank(m, target) {
+  const o = m.order ?? {}, code = o[`${target}-code`], cat = o[`catalog-${target}`];
+  if (cat != null) return 1e4 + cat;
+  if (o.bundled != null) return 2e4 + o.bundled;
+  return code != null ? (target === 'desktop' ? code : 3e4 + code) : 4e4;
+}
+const cand = (m) => ({ id: m.id, name: m.name, params: m.params ?? undefined, quality: m.quality ?? undefined, activeParams: m.activeParams ?? undefined,
+  supersededBy: m.supersededBy ?? undefined, sourceModelId: m.sourceModelId ?? undefined, sizeBytes: m.totalBytes ?? (m.totalGB ?? m.sizeGB) * 1e9, doc: m });
+
+// ── Image ──
+/** Mobile getSDImageModels (huggingFaceModelBrowser.ts): sd.cpp single-file packs from the merged catalog. */
+function mobileSdImages(pool, platform) {
+  // The sync applies getSDImageModels / getOfferedSDImageModels with the shared package's pack and platform rules.
+  return listedOn(pool, 'mobile', (m) => m.kind === 'image' && !!m.mobileSd?.[platform]);
+}
+const imageFamily = (name) => name.replace(/\s*\([^)]*\)/g, '').trim();
+/** ImagePicksRow.tsx imagePicks: one variant per family (the recommended one), shared rule, phone budget. */
+function mobileImagePicks(pool, ram, platform) {
+  const recommended = (m) => !m.minRamGb || m.minRamGb <= ram;
+  const fam = new Map();
+  for (const m of mobileSdImages(pool, platform)) {
+    const f = imageFamily(m.name), kept = fam.get(f);
+    if (!kept || (!recommended(kept) && recommended(m))) fam.set(f, m);
+  }
+  // picksAmong passes only id + size, PHONE_FIT_BUDGET (the Android budget, on iPhone too), runsWell.
+  return pickModelsForDevice([...fam.values()].map((m) => ({ id: m.id, name: m.name, sizeBytes: m.totalBytes ?? m.totalGB * 1e9, doc: m })), ram, BUDGET.android, 'runsWell');
+}
+/** model-fit.ts desktopImagePicks: set by product in shared code; the sync runs it per desktop tier and
+ *  stores the answer in meta/sync (imagePicks), so this page never carries a copy of the ids. */
+let IMAGE_PICKS = {};
+const desktopImagePickIds = (ram) => IMAGE_PICKS[ram] ?? { fast: null, balanced: null, best: null };
+/** recommend-image.ts recommendedImageModelId: the "Recommended" badge (Light at 16 GB and under). */
+function recommendedImageId(images, ram) {
+  const light = (m) => (m.tags ?? []).some((t) => /^light$/i.test(t)), versatile = (m) => (m.tags ?? []).some((t) => /^versatile$/i.test(t));
+  const key = (m) => m.id.replace(/-Q\d[\w]*$/i, '');
+  const first = (xs) => xs.find(versatile) ?? xs[0];
+  if (!images.length) return null;
+  const lights = images.filter(light), fams = new Set(lights.map(key));
+  if (ram <= 16) return (first(lights) ?? images[0]).id;
+  return (first(images.filter((m) => !light(m) && fams.has(key(m)))) ?? images.find((m) => !light(m)) ?? images[0]).id;
+}
+
+// ── Video ──
+/** VideoModelsTab.tsx useCatalogVideo: catalog video entries this phone platform supports. */
+const mobileVideos = (pool, platform) => listedOn(pool, 'mobile', (m) => m.kind === 'video').filter((m) => (m.video?.support?.[platform] ?? 'unsupported') !== 'unsupported');
+/** ModelsScreen.tsx picks on the Video tab: shared rule, by size (no quality), roomy, full builds only. */
+const desktopVideoPicks = (pool, ram) => pickModelsForDevice(listedOn(pool, 'desktop', (m) => m.kind === 'video' && !m.quantOf && m.availability !== 'coming_soon').map(cand), ram, BUDGET.desktop, 'roomy');
+/** setup.ts getSetupPlan: Configure for me offers the smallest complete video pack, whatever the RAM. */
+const desktopSetupVideo = (pool) => listedOn(pool, 'desktop', (m) => m.kind === 'video' && m.availability !== 'coming_soon' && m.video?.packOk).sort((a, b) => a.totalGB - b.totalGB)[0] ?? null;
+/** startPictureOffer.ts chooseStartPicture: what a phone asks a computer of this memory to get (nothing installed). */
+function startPictureAsk(pool, memoryGb) {
+  const all = listedOn(pool, 'mobile', (m) => m.kind === 'video');
+  const models = all.filter((m) => m.availability !== 'coming_soon' && m.video?.startImage);
+  const ordered = [...models.filter((m) => m.ours), ...models.filter((m) => !m.ours)];
+  const hasLight = (m) => all.some((o) => o.quantOf === m.id);
+  const fits = (m) => hasLight(m) ? memoryGb >= (m.minRamGb ?? 0) * 2 : (m.minRamGb ?? 0) <= memoryGb;
+  const chosen = ordered.filter(fits).sort((a, b) => Number(hasLight(b)) - Number(hasLight(a)))[0];
+  if (chosen) return { kind: 'download', model: chosen };
+  if (!ordered.length) return null;
+  return { kind: 'tooSmall', needsGb: Math.min(...ordered.map((m) => m.minRamGb ?? 0)) };
+}
+
+// ── Voice, transcription ──
+const desktopBySize = (pool, kind, ram) => pickModelsForDevice(listedOn(pool, 'desktop', (m) => m.kind === kind && !m.quantOf && m.availability !== 'coming_soon' && !m.sources.every((s) => s === 'mobile-code' || s === 'catalog-mobile')).map(cand), ram, BUDGET.desktop, 'roomy');
+/** TranscriptionModelsTab.tsx speechPicks: multilingual whisper models, phone budget (Android's), runsWell. */
+const mobileSpeechPicks = (pool, ram) => pickModelsForDevice(pool.filter((m) => m.kind === 'transcription' && isFresh(m) && m.mobileId && m.lang === 'multi').map(cand), ram, BUDGET.android, 'runsWell');
+
+// ── Computer use (desktop only) ──
+/** modelShowsOnTab('computer_use'): computer-use models and chat models marked as grounders. */
+const computerUseModels = (pool) => listedOn(pool, 'desktop', (m) => (m.kind === 'computer_use' || m.grounder === true) && !m.id.endsWith('+MTP'));
+</script>
+
+<script>
+const TARGETS = [['mobile', 'Mobile'], ['desktop', 'Desktop']];
+const SOURCES = [['new', 'New'], ['argus', 'Argus'], ['hf-trending', 'Trending'], ['catalog', 'In a catalog'], ['bundled', 'Bundled'], ['all', 'All']];
+const MODALITIES = [
+  ['chat', 'Chat', (m) => m.kind === 'text' || m.kind === 'vision'],
+  ['image', 'Image', (m) => m.kind === 'image'],
+  ['video', 'Video', (m) => m.kind === 'video'],
+  ['voice', 'Voice', (m) => m.kind === 'voice'],
+  ['transcription', 'Transcription', (m) => m.kind === 'transcription'],
+  ['computer', 'Computer use', (m) => m.kind === 'computer_use' || m.grounder === true],
+];
+const CHAT = MODALITIES[0][2];
+const tabFromHash = () => { const h = location.hash.slice(1); return MODALITIES.some(([k]) => k === h) ? h : 'chat'; };
+
+const state = { pool: [], meta: null, cats: { mobile: { ids: [], quality: {} }, desktop: { ids: [], quality: {} } }, src: 'new', q: '', selected: null, decSort: 'rec', db: null, tab: tabFromHash() };
+const $ = (id) => document.getElementById(id);
+const chatPool = () => state.pool.filter(CHAT);
+const byId = (id) => state.pool.find((m) => m.id === id);
+/** A chat model the target's app has without a catalog entry: the bundled catalog, or the app's own code. */
+const isBase = (m, target) => isFresh(m) && m.sources.includes('bundled') || m.sources.includes(`${target}-code`);
+const isBundled = (m) => m.sources.includes('bundled');
+function el(tag, attrs = {}, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') e.className = v; else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else if (v !== false && v != null) e.setAttribute(k, v);
+  }
+  for (const kid of kids.flat()) if (kid != null) e.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+  return e;
+}
+const fmtGB = (g) => g == null ? '?' : g < 1 ? `${Math.round(g * 1000)} MB` : `${g.toFixed(1)} GB`;
+const meta = (m) => [orgOf(m), m.params ? `${m.params}B` : null, m.quant, `${m.sizeGB.toFixed(1)} GB`].filter(Boolean).join(' · ');
+const orgOf = (m) => (m.ours || isOurs(m.id ?? '')) ? 'Off Grid AI' : m.org;
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+/** "Oct 2026" from the doc's release date, with where the date came from on hover. */
+function dateTag(m) {
+  const d = m?.released?.date;
+  if (!d) return el('span', { class: 'date', title: 'No release date found' }, '—');
+  return el('span', { class: 'date', title: `Released ${d} (${m.released.source})` }, `${MONTHS[+d.slice(5, 7) - 1]} ${d.slice(0, 4)}`);
+}
+/** The tab's one benchmark score, linked to the page it was read on. "—" when the model is not on that board. */
+function scoreTag(m) {
+  const b = m?.bench;
+  if (!b) return el('span', { class: 'score none', title: 'Not on this benchmark' }, '—');
+  return el('a', { class: 'score', href: b.url, target: '_blank', rel: 'noopener', title: `${b.benchmark}: ${b.score}${b.matched ? ` as "${b.matched}"` : ''}${b.estimated ? ' (the leaderboard marks it as its estimate)' : ''} · read ${b.readAt}` },
+    `${b.score}${b.estimated ? ' est.' : ''}`);
+}
+/** Name, release date and score on one line: what every model card leads with. */
+const nameRow = (m, cls = 'mname') => el('span', { class: 'nrow' }, el('span', { class: cls, title: m.id }, m.name), dateTag(m), scoreTag(m));
+const qualityOf = (target, m) => state.cats[target].quality?.[m.id] ?? m.quality ?? null;
+
+// ── Tabs ──
+function renderTabs() {
+  $('tabs').replaceChildren(...MODALITIES.map(([k, label, test]) => el('button', { class: 'tab', role: 'tab', id: `tab-${k}`, 'aria-selected': String(state.tab === k),
+    'aria-controls': k === 'chat' ? 'view-chat' : 'view-media', onclick: () => { state.tab = k; try { history.replaceState(null, '', `#${k}`); } catch {} ; render(); } },
+    label, state.pool.length ? el('span', {}, state.pool.filter(test).length) : null)));
+  $('view-chat').hidden = state.tab !== 'chat';
+  $('view-media').hidden = state.tab === 'chat';
+  $('view-media').setAttribute('aria-labelledby', `tab-${state.tab}`);
+}
+
+// ── Chat (drag-and-drop; unchanged behaviour) ──
+function renderPool() {
+  $('srcchips').replaceChildren(...SOURCES.map(([k, l]) => el('button', { class: 'chip', 'aria-pressed': String(state.src === k), onclick: () => { state.src = k; renderPool(); } }, l)));
+  const pool = chatPool();
+  if (!pool.length) return;
+  const q = state.q.toLowerCase();
+  const inCat = (m) => TARGETS.filter(([t]) => state.cats[t].ids.includes(m.id)).map(([t]) => t);
+  const known = (m) => isBundled(m) || m.sources.some((s) => s.startsWith('catalog') || s.endsWith('-code'));
+  const list = pool
+    .filter((m) => state.src === 'all' ? true : state.src === 'new' ? !known(m) : state.src === 'catalog' ? m.sources.some((s) => s.startsWith('catalog')) : m.sources.includes(state.src))
+    .filter((m) => !q || `${m.name} ${orgOf(m)} ${m.id}`.toLowerCase().includes(q))
+    .sort((a, b) => (b.likes ?? 0) - (a.likes ?? 0) || a.sizeGB - b.sizeGB);
+  $('poolmeta').textContent = `${list.length} shown · synced ${state.pool[0]?.syncedAt?.slice(0, 16).replace('T', ' ') ?? '?'}`;
+  $('pool').replaceChildren(...(list.length ? list.map((m) => {
+    const toggle = () => { state.selected = state.selected === m.id ? null : m.id; render(); };
+    return el('div', { class: 'model', draggable: 'true', tabindex: '0', role: 'option', 'aria-selected': String(state.selected === m.id),
+      ondragstart: (e) => e.dataTransfer.setData('text/plain', m.id), onclick: toggle,
+      onkeydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } } },
+      el('div', { class: 'mrow' }, nameRow(m), ...inCat(m).map((t) => el('span', { class: 'tag in' }, t))),
+      el('div', { class: 'mmeta' }, meta(m)),
+      el('div', { class: 'src' }, [m.sources.join(' '), m.likes ? `♥ ${m.likes}` : null, m.launched ? m.launched.slice(0, 10) : null].filter(Boolean).join(' · ')));
+  }) : [el('p', { class: 'hint' }, 'Nothing matches. Try All.')]));
+}
+
+async function saveCat(target) {
+  if (!state.db) { $('status').textContent = 'Not saved: open the board signed in'; return; }
+  try { await state.db.doc(`catalog/${target}`).set({ ...state.cats[target], updatedAt: new Date().toISOString() }); $('status').textContent = 'Saved'; }
+  catch (e) { $('status').textContent = `Not saved: ${e.message ?? e}`; }
+}
+function addTo(target, id) {
+  const c = state.cats[target];
+  if (!id || c.ids.includes(id) || !byId(id)) return;
+  c.ids = [...c.ids, id]; state.selected = null; render(); saveCat(target);
+}
+function removeFrom(target, id) { const c = state.cats[target]; c.ids = c.ids.filter((x) => x !== id); render(); saveCat(target); }
+function setQuality(target, id, v) {
+  const c = state.cats[target]; c.quality = { ...(c.quality ?? {}) };
+  if (v === '' || isNaN(+v)) delete c.quality[id]; else c.quality[id] = +v;
+  renderMatrix(); renderExport(); saveCat(target);
+}
+
+function renderCats() {
+  $('selhint').textContent = state.selected ? 'Tap a catalog to add the selected model' : '';
+  $('cats').replaceChildren(...TARGETS.map(([t, label]) => {
+    const c = state.cats[t];
+    const zone = el('div', { class: 'drop', role: 'list', 'aria-label': `${label} catalog`, tabindex: '0',
+      ondragover: (e) => { e.preventDefault(); zone.classList.add('over'); }, ondragleave: () => zone.classList.remove('over'),
+      ondrop: (e) => { e.preventDefault(); zone.classList.remove('over'); addTo(t, e.dataTransfer.getData('text/plain')); },
+      onclick: (e) => { if (state.selected && e.target === zone) addTo(t, state.selected); },
+      onkeydown: (e) => { if ((e.key === 'Enter' || e.key === ' ') && state.selected && e.target === zone) { e.preventDefault(); addTo(t, state.selected); } } },
+      el('h3', {}, label, el('span', {}, `${offered(t).length} models · ${c.ids.length} from the catalog`)),
+      el('p', { class: 'hint' }, state.selected ? 'Tap here to add the selected model' : 'Drop a model here to add it to this catalog'),
+      offered(t).map((m) => {
+        const fromCat = c.ids.includes(m.id);
+        const qid = `q-${t}-${m.id.replace(/[^A-Za-z0-9]/g, '-')}`;
+        return el('div', { class: 'model', role: 'listitem', style: `cursor:default${fromCat ? '' : ';opacity:.85'}` },
+          el('div', { class: 'mrow' }, nameRow(m),
+            fromCat ? el('span', { class: 'mrow', style: 'gap:6px' }, el('span', { class: 'tag in' }, 'catalog'), el('button', { class: 'x', 'aria-label': `Remove ${m.name}`, onclick: () => removeFrom(t, m.id) }, '×'))
+              : el('span', { class: 'src' }, [isBundled(m) ? 'bundled' : 'app code', m.supersededBy ? 'replaced' : null].filter(Boolean).join(' · '))),
+          el('div', { class: 'mmeta' }, meta(m)),
+          fromCat ? el('label', { class: 'qual', for: qid }, 'quality',
+            el('input', { id: qid, type: 'number', min: '0', max: '100', step: '1', value: qualityOf(t, m) ?? '', placeholder: '—', onchange: (e) => setQuality(t, m.id, e.target.value) }),
+            qualityOf(t, m) == null ? 'needed to compete' : null)
+            : el('div', { class: 'qual' }, `quality ${m.quality ?? '—'}`));
+      }));
+    return zone;
+  }));
+}
+
+/** Everything one app offers: its bundled (and in-code) chat models plus its catalog entries, best first. */
+function offered(target) {
+  const ids = new Set(state.cats[target].ids);
+  return chatPool().filter((m) => isBase(m, target) || ids.has(m.id))
+    .sort((a, b) => (qualityOf(target, b) ?? -1) - (qualityOf(target, a) ?? -1) || a.sizeGB - b.sizeGB);
+}
+
+/** The chat candidates the app's pick rule sees (mobile devicePicks.ts chatEntries; desktop ModelsScreen.tsx picks). */
+function candidates(target) {
+  const ids = new Set(state.cats[target].ids);
+  const shown = (m) => !m.quantOf && m.availability !== 'coming_soon' && (target === 'desktop' || !m.grounder);
+  const fromCat = chatPool().filter((m) => ids.has(m.id));
+  const base = chatPool().filter((m) => isBase(m, target) && !ids.has(m.id));
+  return [...base, ...fromCat].filter(shown).map((m) => ({ id: m.id, name: m.name, org: m.org, params: m.params ?? undefined, activeParams: m.activeParams ?? undefined,
+    sizeBytes: m.sizeGB * 1e9, quality: qualityOf(target, m) ?? undefined, supersededBy: m.supersededBy ?? undefined,
+    sourceModelId: target === 'desktop' ? (m.sourceModelId ?? undefined) : undefined, fromCat: ids.has(m.id), doc: m }));
+}
+function renderMatrix() {
+  const cands = { mobile: candidates('mobile'), desktop: candidates('desktop') };
+  const rows = [...PHONES.map((c) => ({ ...c, target: 'mobile', pool: 'runsWell' })), ...DESKTOPS.map((c) => ({ ...c, target: 'desktop', pool: 'roomy' }))];
+  $('matrix').replaceChildren(...rows.map((c) => {
+    const b = BUDGET[c.platform], p = pickModelsForDevice(cands[c.target], c.ram, b, c.pool);
+    const cell = (m) => m ? el('td', { class: m.fromCat ? 'fromcat' : '' }, nameRow(m.doc, 'cname'), el('small', {}, `${(m.sizeBytes / 1e9).toFixed(1)} GB${m.quality != null ? ` · q${m.quality}` : ''}${m.fromCat ? ' · catalog' : ''}`)) : el('td', { class: 'none' }, '—');
+    return el('tr', {}, el('td', { class: 'dev' }, c.label, el('span', { class: 'budget' }, `runs well under ${(c.ram * b.soft).toFixed(1)} GB`)), cell(p.fast), cell(p.balanced), cell(p.best));
+  }));
+}
+
+function shipped(target) {
+  return state.cats[target].ids.map(byId).filter(Boolean).map((m) => {
+    const q = qualityOf(target, m);
+    return { ...m.entry, ...(q != null ? { quality: q } : {}) };
+  });
+}
+function renderExport() {
+  $('export').textContent = JSON.stringify({ mobile: shipped('mobile').map((e) => e.id), desktop: shipped('desktop').map((e) => e.id) }, null, 2);
+}
+
+// ── Other modalities (view only) ──
+const srcFor = (m, target) => !isFresh(m) ? null : m.sources.includes(`catalog-${target}`) ? 'catalog' : m.sources.includes('bundled') ? 'bundled' : m.sources.includes(`${target}-code`) ? 'code' : null;
+function srcTag(m, target) {
+  const s = srcFor(m, target);
+  return s ? el('span', { class: `tag ${s === 'catalog' ? 'ok' : 'dim'}` }, s) : el('span', { class: 'src' }, '—');
+}
+const ogTag = (m) => m?.ours ? el('span', { class: 'tag og' }, 'Off Grid') : null;
+/** One model in a tier cell: name, size, where the app got it, Off Grid's own builds marked. */
+function pickCell(m, target, extra) {
+  if (!m) return el('td', { class: 'none' }, '—');
+  const doc = m.doc ?? m, s = srcFor(doc, target);
+  return el('td', { class: s === 'catalog' ? 'fromcat' : '' }, nameRow(doc, 'cname'),
+    el('small', {}, [fmtGB(doc.totalGB ?? doc.sizeGB), s, extra].filter(Boolean).join(' · ')), doc.ours ? el('div', { class: 'tags' }, ogTag(doc)) : null);
+}
+const devCell = (c, note) => el('td', { class: 'dev' }, c.label, el('span', { class: 'budget' }, note ?? `runs well under ${(c.ram * BUDGET[c.platform].soft).toFixed(1)} GB`));
+const head = (...cols) => el('tr', {}, ...cols.map((c) => el('th', {}, c)));
+const pickRow = (c, p, target, note) => el('tr', {}, devCell(c, note), pickCell(p.fast, target), pickCell(p.balanced, target), pickCell(p.best, target));
+const notes = (...lines) => lines.filter(Boolean).map((l) => el('div', {}, ...(Array.isArray(l) ? l : [l])));
+
+function renderList(test) {
+  const pool = state.pool.filter(test);
+  const listed = pool.filter((m) => srcFor(m, 'mobile') || srcFor(m, 'desktop') || m.decision)
+    .sort((a, b) => (b.ours - a.ours) || (a.totalGB ?? a.sizeGB) - (b.totalGB ?? b.sizeGB));
+  $('mlistmeta').textContent = `${listed.length} models`;
+  $('mlist').replaceChildren(...(listed.length ? listed.map((m) => {
+    const notesFor = [m.quantOf ? 'Light build' : null, m.availability === 'coming_soon' ? 'coming soon' : null, m.engine ? `engine ${m.engine}` : null,
+      m.video ? `video ${m.video.arch ?? '?'}${m.video.startImage ? ' · start picture' : ''}` : null, m.lang ? (m.lang === 'en' ? 'English only' : 'multilingual') : null,
+      m.grounder ? 'grounder' : null].filter(Boolean).join(' · ');
+    return el('tr', {}, el('td', {}, nameRow(m, 'cname'), suggestedTag(m), el('small', {}, m.id), notesFor ? el('small', {}, notesFor) : null, m.ours ? el('div', { class: 'tags' }, ogTag(m)) : null),
+      el('td', { class: 'num' }, m.totalGB == null && m.sizeGB == null ? '—' : fmtGB(m.totalGB ?? m.sizeGB)), el('td', { class: 'num' }, m.minRamGb ? `${m.minRamGb} GB` : '—'),
+      el('td', {}, srcTag(m, 'mobile'), m.video && srcFor(m, 'mobile') ? el('small', {}, `Android ${m.video.support.android} · iOS ${m.video.support.ios}`) : null),
+      el('td', {}, srcTag(m, 'desktop'), m.video && srcFor(m, 'desktop') ? el('small', {}, `Mac ${m.video.support.macos}`) : null));
+  }) : [el('tr', {}, el('td', { colspan: '5', class: 'none' }, 'Nothing in the pool for this kind yet. Run the Model Picks sync.'))]));
+}
+
+const VIEWS = {
+  image() {
+    const desk = listedOn(state.pool, 'desktop', (m) => m.kind === 'image');
+    const deskById = new Map(desk.map((m) => [m.id, m]));
+    const setup = deskById.get('offgrid-ai/juggernaut-xl-v9-GGUF');
+    return {
+      mobHead: head('Phone', 'Fast', 'Balanced', 'Best'),
+      mobNotes: notes([el('b', {}, 'Shared rule by size'), ` over the sd.cpp packs the phone lists (Android ${mobileSdImages(state.pool, 'android').length}, iPhone ${mobileSdImages(state.pool, 'ios').length}), minus replaced ones, one variant per family, Android's budget on iPhone too (ImagePicksRow.tsx).`],
+        'Core ML models (iPhone) and MNN / QNN models (Android) are fetched live from Hugging Face and join these picks on the device. They are not in any catalog, so they are not shown here.'),
+      mobRows: PHONES.map((c) => pickRow(c, mobileImagePicks(state.pool, c.ram, c.platform), 'mobile', `runs well under ${(c.ram * BUDGET.android.soft).toFixed(1)} GB`)),
+      deskHead: head('Desktop', 'Fast', 'Balanced', 'Best', 'Recommended badge'),
+      deskNotes: notes([el('b', {}, 'Set by product'), ' (desktopImagePicks in the shared package, run by the sync for each size): one SDXL model always among the picks; the newer models where their peak memory runs well.'],
+        `Configure for me always offers ${setup?.name ?? 'Juggernaut XL v9'} (${fmtGB(setup?.totalGB)}). The badge is recommendedImageModelId: a Light build at 16 GB and under.`),
+      deskRows: DESKTOPS.map((c) => {
+        const ids = desktopImagePickIds(c.ram), rec = deskById.get(recommendedImageId(desk, c.ram));
+        return el('tr', {}, devCell(c), pickCell(deskById.get(ids.fast), 'desktop'), pickCell(deskById.get(ids.balanced), 'desktop'), pickCell(deskById.get(ids.best), 'desktop'), pickCell(rec, 'desktop'));
+      }),
+    };
+  },
+  video() {
+    const setup = desktopSetupVideo(state.pool);
+    return {
+      mobHead: head('Phone', 'Listed', 'Memory'),
+      mobNotes: notes([el('b', {}, 'No picks.'), ' The Video tab lists every catalog video model the platform supports (VideoModelsTab.tsx), and says "may exceed available memory" below the catalog\'s suggested RAM.'],
+        'Android support is experimental for every architecture; iPhone runs Wan 2.1 only.'),
+      mobRows: PHONES.map((c) => {
+        const list = mobileVideos(state.pool, c.platform);
+        const ok = list.filter((m) => !m.minRamGb || m.minRamGb <= c.ram), over = list.filter((m) => !ok.includes(m));
+        const names = (xs, cls) => xs.length ? el('div', { class: 'tags' }, ...xs.map((m) => el('span', { class: `tag ${cls}`, title: `${m.id} · ${fmtGB(m.totalGB)} · ${m.minRamGb} GB suggested · ${m.video.support[c.platform]}` }, [m.name, fmtGB(m.totalGB), m.released?.date?.slice(0, 7), m.bench ? `score ${m.bench.score}` : null].filter(Boolean).join(' · ')))) : null;
+        return el('tr', {}, devCell(c, `${list.length} listed`), el('td', {}, names(ok, 'ok') ?? el('span', { class: 'src' }, 'none within suggested RAM')),
+          el('td', {}, over.length ? el('span', {}, el('span', { class: 'src' }, 'may exceed memory'), names(over, 'warn')) : el('span', { class: 'src' }, '—')));
+      }),
+      deskHead: head('Desktop', 'Fast', 'Balanced', 'Best', 'Phone asks for'),
+      deskNotes: notes([el('b', {}, 'Shared rule by size'), ' over full builds (Light builds are a size option in the panel), roomy pool. Video is a Pro tab.'],
+        `Configure for me offers the smallest complete pack at every size: ${setup ? `${setup.name} (${fmtGB(setup.totalGB)})` : 'none'}. "Phone asks for" is chooseStartPicture: the start-picture model a paired phone asks this computer to get.`),
+      deskRows: DESKTOPS.map((c) => {
+        const ask = startPictureAsk(state.pool, c.ram);
+        const askCell = !ask ? el('td', { class: 'none' }, '—') : ask.kind === 'download' ? pickCell(ask.model, 'mobile', `${ask.model.minRamGb} GB`) : el('td', { class: 'none' }, `too small (needs ${ask.needsGb} GB)`);
+        const p = desktopVideoPicks(state.pool, c.ram);
+        return el('tr', {}, devCell(c), pickCell(p.fast, 'desktop'), pickCell(p.balanced, 'desktop'), pickCell(p.best, 'desktop'), askCell);
+      }),
+    };
+  },
+  voice() {
+    const kokoro = state.pool.find((m) => m.id === 'mobile/tts/kokoro');
+    return {
+      mobHead: head('Phone', 'Offered', 'Note'),
+      mobNotes: notes([el('b', {}, 'One voice, no picks.'), ' The Pro voice panel downloads Kokoro (react-native-executorch, pro/audio). It is kept in the app\'s code, not a catalog.']),
+      mobRows: PHONES.map((c) => el('tr', {}, devCell(c, ''), pickCell(kokoro, 'mobile'),
+        el('td', {}, kokoro?.warnBelowRamGb && c.ram < kokoro.warnBelowRamGb ? el('span', { class: 'tag warn' }, `warns under ${kokoro.warnBelowRamGb} GB`) : el('span', { class: 'src' }, '—')))),
+      deskHead: head('Desktop', 'Fast', 'Balanced', 'Best'),
+      deskNotes: notes([el('b', {}, 'Shared rule by size'), ', roomy pool.'], 'Configure for me always offers Kokoro TTS 82M.'),
+      deskRows: DESKTOPS.map((c) => pickRow(c, desktopBySize(state.pool, 'voice', c.ram), 'desktop')),
+    };
+  },
+  transcription() {
+    return {
+      mobHead: head('Phone', 'Fast', 'Balanced', 'Best'),
+      mobNotes: notes([el('b', {}, 'Shared rule by size'), ' over the multilingual Whisper models (whisperModels.ts plus the catalog file\'s transcription section), Android\'s budget on iPhone too. English-only models are listed but never picked.']),
+      mobRows: PHONES.map((c) => pickRow(c, mobileSpeechPicks(state.pool, c.ram), 'mobile', `runs well under ${(c.ram * BUDGET.android.soft).toFixed(1)} GB`)),
+      deskHead: head('Desktop', 'Fast', 'Balanced', 'Best'),
+      deskNotes: notes([el('b', {}, 'Shared rule by size'), ', roomy pool. Parakeet is listed only where the sherpa-onnx runtime is installed.'],
+        'Configure for me picks by mode, not RAM: Lean Whisper Tiny, Balanced Whisper Base, Extreme Whisper Small.'),
+      deskRows: DESKTOPS.map((c) => pickRow(c, desktopBySize(state.pool, 'transcription', c.ram), 'desktop')),
+    };
+  },
+  computer() {
+    const models = computerUseModels(state.pool);
+    const group = (xs, cls) => xs.length ? el('div', { class: 'tags' }, ...xs.map((m) => el('span', { class: `tag ${cls}`, title: `${m.id} · ${fmtGB(m.totalGB)}` }, [m.name, fmtGB(m.totalGB), m.released?.date?.slice(0, 7), m.bench ? `OSWorld ${m.bench.score}%` : null].filter(Boolean).join(' · ')))) : el('span', { class: 'src' }, '—');
+    return {
+      mobHead: head('Phone', ''),
+      mobNotes: notes([el('b', {}, 'Not offered on phones.'), ' Computer use is a Desktop feature.']),
+      mobRows: [],
+      deskHead: head('Desktop', 'Runs well', 'Tight', 'Too big'),
+      deskNotes: notes([el('b', {}, 'No picks.'), ' Task models play roles, not tiers (ModelsScreen.tsx). Each model\'s fit by the shared rule and the desktop budget.'],
+        'Kev 4B and 9B are built in the app\'s code by a helper and are not in this pool.'),
+      deskRows: DESKTOPS.map((c) => {
+        const t = (m) => fitTier(m.totalGB, c.ram, BUDGET.desktop);
+        return el('tr', {}, devCell(c), el('td', {}, group(models.filter((m) => ['easy', 'fits'].includes(t(m))), 'ok')),
+          el('td', {}, group(models.filter((m) => t(m) === 'tight'), 'warn')), el('td', {}, group(models.filter((m) => t(m) === 'wontFit'), 'bad')));
+      }),
+    };
+  },
+};
+
+// ── Decisions: research recommendations (suggestions.json) for the open tab ──
+const REC_ORDER = { Add: 0, Replace: 1, Keep: 2, Later: 3, Remove: 4 };
+const EFFORT_ORDER = { S: 0, M: 1, L: 2 };
+const PLATS = [['macos', 'Mac'], ['windows', 'Win'], ['linux', 'Linux'], ['android', 'Android'], ['ios', 'iOS']];
+const isSuggested = (m) => !!m.decision && !srcFor(m, 'mobile') && !srcFor(m, 'desktop');
+const suggestedTag = (m) => isSuggested(m) ? el('span', { class: 'tag sug' }, m.decision.recommendation === 'Remove' ? 'Removed' : 'Suggested') : null;
+const lowerIsBetter = (m) => m.kind === 'transcription';
+/** The score gained over what the model replaces or competes with; a number for sorting and words for the cell. */
+function gainOf(m) {
+  const vs = m.decision?.vs ? state.pool.find((x) => x.id === m.decision.vs) : null;
+  if (!m.bench || !vs?.bench) return { n: -1e9, text: m.bench ? `${m.bench.score} (nothing to compare)` : '—' };
+  const d = m.bench.score - vs.bench.score, lower = lowerIsBetter(m);
+  const n = lower ? -d : d;
+  const text = lower ? `WER ${m.bench.score} vs ${vs.bench.score} (${vs.name})` : `${d >= 0 ? '+' : ''}${Math.round(d * 10) / 10} vs ${vs.name}`;
+  return { n, text };
+}
+/** The smallest phone and desktop that run it well, by the shared fit rule on the full download. */
+function costOf(m) {
+  const gb = m.totalGB ?? m.sizeGB;
+  if (gb == null) return 'No download resolved';
+  const first = (rows) => rows.find((c) => ['easy', 'fits'].includes(fitTier(gb, c.ram, BUDGET[c.platform])));
+  const phone = first(PHONES.filter((c) => c.platform === 'android')), desk = first(DESKTOPS);
+  return [fmtGB(gb), m.minRamGb ? `catalog RAM ${m.minRamGb} GB` : null, `phone ${phone ? `${phone.ram} GB+` : 'none'}`, `desktop ${desk ? `${desk.ram} GB+` : 'none'}`].filter(Boolean).join(' · ');
+}
+/** Platforms that run it today: the decision's own list, else what the apps list for an image model. */
+function todayOf(m) {
+  if (m.decision?.platforms?.today) return m.decision.platforms.today;
+  const out = [];
+  if (srcFor(m, 'desktop')) for (const p of ['macos', 'windows', 'linux']) if (m.imageHosts?.[p] ?? true) out.push(p);
+  if (srcFor(m, 'mobile')) for (const p of ['android', 'ios']) if (m.mobileSd ? m.mobileSd[p] : true) out.push(p);
+  return out;
+}
+const platChips = (list) => el('span', { class: 'plats' }, ...PLATS.map(([k, l]) => el('span', { class: `tag ${list?.includes(k) ? 'ok' : 'dim'}` }, l)));
+function renderDecisions(test) {
+  const items = state.pool.filter((m) => m.decision && test(m));
+  $('decisions').hidden = !items.length;
+  if (!items.length) return;
+  const sorters = { rec: (a, b) => (REC_ORDER[a.decision.recommendation] ?? 9) - (REC_ORDER[b.decision.recommendation] ?? 9), gain: (a, b) => gainOf(b).n - gainOf(a).n,
+    effort: (a, b) => (EFFORT_ORDER[a.decision.effort?.size] ?? 9) - (EFFORT_ORDER[b.decision.effort?.size] ?? 9) };
+  $('decsort').replaceChildren(...[['rec', 'Recommendation'], ['gain', 'Gain'], ['effort', 'Effort']].map(([k, l]) =>
+    el('button', { class: 'chip', 'aria-pressed': String(state.decSort === k), onclick: () => { state.decSort = k; renderDecisions(test); } }, l)));
+  const byId = (id) => state.pool.find((x) => x.id === id);
+  $('dec').replaceChildren(...items.sort(sorters[state.decSort] ?? sorters.rec).map((m) => {
+    const d = m.decision, rec = d.recommendation;
+    const recText = rec === 'Replace' ? `Replace ${(d.replaces ?? []).map((id) => byId(id)?.name ?? id).join(', ')}` : rec === 'Remove' && d.replacedBy ? `Remove: replaced by ${byId(d.replacedBy)?.name ?? d.replacedBy}` : rec;
+    const recCls = { Add: 'ok', Replace: 'ok', Keep: 'in', Later: 'warn', Remove: 'bad' }[rec] ?? 'dim';
+    const lic = d.licence;
+    return el('tr', {},
+      el('td', {}, nameRow(m, 'cname'), suggestedTag(m), el('small', {}, orgOf(m))),
+      el('td', {}, el('span', { class: `tag ${recCls}` }, recText), el('small', { class: 'why' }, d.why)),
+      el('td', {}, gainOf(m).text, ...(d.notes ?? []).map((n) => el('small', {}, n)), m.editBench ? el('small', {}, el('a', { href: m.editBench.url, target: '_blank', rel: 'noopener' }, `editing Elo ${m.editBench.score}`)) : null),
+      el('td', {}, costOf(m)),
+      el('td', {}, d.effort ? [el('span', { class: 'tag dim' }, d.effort.size), ' ', d.effort.what] : '—'),
+      el('td', {}, platChips(todayOf(m)), el('div', { class: 'arrow' }, '→'), platChips(d.platforms?.after ?? todayOf(m))),
+      el('td', {}, lic ? [lic.name, ' ', el('span', { class: `tag ${{ yes: 'ok', limits: 'warn', no: 'bad' }[lic.commercial] ?? 'dim'}` }, lic.commercial === 'yes' ? 'commercial OK' : lic.commercial === 'limits' ? 'commercial limits' : 'no commercial')] : '—',
+        ...(d.risks ?? []).map((r) => el('small', {}, r))),
+      el('td', {}, ...(d.sources ?? []).map((s) => el('div', {}, el('a', { href: s.url, target: '_blank', rel: 'noopener' }, s.label))), el('small', {}, `read ${d.readAt}`)));
+  }));
+}
+
+function renderMedia() {
+  const [, label, test] = MODALITIES.find(([k]) => k === state.tab);
+  renderList(test);
+  renderDecisions(test);
+  $('mmobh').textContent = `${label} on Off Grid AI Mobile`; $('mdeskh').textContent = `${label} on Off Grid AI Desktop`;
+  const kind = { image: 'image', video: 'video', voice: 'voice', transcription: 'transcription', computer: 'computer_use' }[state.tab];
+  $('mbench').replaceChildren(...benchHead(kind));
+  if (!state.pool.length) return;
+  const v = VIEWS[state.tab]();
+  $('mmobhead').replaceChildren(v.mobHead); $('mmob').replaceChildren(...v.mobRows); $('mmobnotes').replaceChildren(...v.mobNotes);
+  $('mdeskhead').replaceChildren(v.deskHead); $('mdesk').replaceChildren(...v.deskRows); $('mdesknotes').replaceChildren(...v.deskNotes);
+}
+
+/** The tab's benchmark, named once: next to every name is its release date, then its score on this. */
+function benchHead(kind) {
+  const b = state.meta?.benchmarks?.[kind];
+  return [el('span', {}, 'Each name: release date, then score on'), b ? el('a', { href: b.url, target: '_blank', rel: 'noopener' }, b.name) : el('span', {}, 'no benchmark yet'), el('span', {}, '"—" means not on it')];
+}
+function renderMeta() {
+  const m = state.meta;
+  $('syncmeta').textContent = m ? `Catalog files from ${m.ref}${m.commits ? ` (mobile ${m.commits.mobile}, desktop ${m.commits.desktop})` : ''} · synced ${m.syncedAt?.slice(0, 16).replace('T', ' ')}` : '';
+}
+function render() {
+  renderTabs(); renderMeta();
+  $('decisions').hidden = state.tab === 'chat';
+  if (state.tab === 'chat') { $('cbench').replaceChildren(...benchHead('text')); renderPool(); renderCats(); renderMatrix(); renderExport(); } else renderMedia();
+}
+
+$('q').addEventListener('input', (e) => { state.q = e.target.value; renderPool(); });
+$('copy').addEventListener('click', async () => {
+  const text = JSON.stringify({ mobile: shipped('mobile'), desktop: shipped('desktop') }, null, 2);
+  try { await navigator.clipboard.writeText(text); $('copy').textContent = 'Copied'; }
+  catch { const r = document.createRange(); r.selectNodeContents($('export')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); $('copy').textContent = 'Selected'; }
+  setTimeout(() => { $('copy').textContent = 'Copy JSON'; }, 1500);
+});
+addEventListener('hashchange', () => { state.tab = tabFromHash(); render(); });
+
+render();
+(async () => {
+  const db = await window.claude?.use?.('db');
+  if (!db) { $('status').textContent = 'Open the board signed in to claude.ai to load models'; return; }
+  state.db = db; $('status').textContent = 'Live';
+  db.collection('pool').limit(1000).onSnapshot((snap) => { state.pool = snap.docs.map((d) => d.data()); render(); });
+  db.collection('meta').onSnapshot((snap) => {
+    state.meta = snap.docs.find((d) => d.id === 'sync')?.data() ?? null;
+    isFresh = (m) => !state.meta?.syncedAt || m.syncedAt === state.meta.syncedAt;
+    IMAGE_PICKS = state.meta?.imagePicks ?? {};
+    render();
+  });
+  db.collection('catalog').onSnapshot((snap) => {
+    for (const d of snap.docs) if (d.id === 'mobile' || d.id === 'desktop') { const v = d.data(); state.cats[d.id] = { ids: v.ids ?? [], quality: v.quality ?? {} }; }
+    render();
+  });
+})();
+</script>

@@ -1,0 +1,11 @@
+{
+  "//": "Hygiene tsconfig flags - WEB. These three flags are the compiler half of the AI-dead-code net (the eslint rules are the other half). bootstrap.sh MERGES these into your existing tsconfig.json compilerOptions (it does not replace your tsconfig). Shown here as a standalone fragment for reference and for a manual merge.",
+  "compilerOptions": {
+    "//allowUnreachableCode": "false = the compiler ERRORS on code after a return/throw/break. Catches dead code an AI left behind.",
+    "allowUnreachableCode": false,
+    "//noUnusedLocals": "true = an unused local variable is a compile error.",
+    "noUnusedLocals": true,
+    "//noUnusedParameters": "true = an unused function parameter is a compile error (prefix with _ to intentionally ignore).",
+    "noUnusedParameters": true
+  }
+}

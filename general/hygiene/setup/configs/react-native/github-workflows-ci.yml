@@ -1,0 +1,58 @@
+name: CI
+
+# The quality spine for a React Native repo, enforced in CI on every push + PR.
+# Runs the FULL set: everything the fast pre-push runs PLUS the heavy typed lint
+# and knip (kept out of pre-push for speed). A push/PR below the bar fails here.
+#
+# EDIT: rename to .github/workflows/ci.yml. The Metro bundle step is the RN
+# stand-in for a production build (bundler/resolver errors tsc+jest miss).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22' # EDIT: match your repo's Node version
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Format check (prettier)
+        run: npm run format:check
+
+      - name: Lint (TYPED - the AI-dead-code net; slow, CI-only)
+        run: npm run lint
+
+      - name: Knip (module-level dead code; CI-only)
+        run: npm run knip
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Tests + coverage gate (>=85% all dimensions)
+        run: npm run coverage:check
+
+      - name: Dependency-cruiser (no circular imports / boundary breaks)
+        run: npm run depcruise
+
+      - name: jscpd DRY gate (duplication under threshold)
+        run: npm run jscpd
+
+      - name: Metro bundle (catches resolver/bundle errors)
+        run: npx react-native bundle --platform android --dev true --entry-file index.js --bundle-output /tmp/ci.bundle --reset-cache
