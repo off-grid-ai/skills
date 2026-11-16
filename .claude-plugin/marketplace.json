@@ -7,8 +7,8 @@
   },
   "plugins": [
     {
-      "name": "review-like-a-senior-engineer",
-      "source": "./01-review-like-a-senior-engineer",
+      "name": "review",
+      "source": "./review",
       "description": "Your AI changes 50 files and you can't tell what broke. Now you get one page with every screen it touched, before and after, and only the calls that need you.",
       "category": "productivity",
       "tags": [
@@ -19,8 +19,8 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "your-ai-stops-breaking-things",
-      "source": "./02-your-ai-stops-breaking-things",
+      "name": "testing",
+      "source": "./testing",
       "description": "You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage.",
       "category": "productivity",
       "tags": [
@@ -31,8 +31,8 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "ui-that-looks-like-stripe-made-it",
-      "source": "./03-ui-that-looks-like-stripe-made-it",
+      "name": "design",
+      "source": "./design",
       "description": "Vibe-coded apps all look the same. Now every screen clears a real design bar, reuses your best components, and one fix lands on every screen.",
       "category": "productivity",
       "tags": [
@@ -43,8 +43,8 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "an-ai-that-thinks-like-a-cto",
-      "source": "./04-an-ai-that-thinks-like-a-cto",
+      "name": "cto",
+      "source": "./cto",
       "description": "No CTO? Your AI becomes one. It decides what's urgent, argues back when you're wrong, builds while you sleep, and never loses where you left off.",
       "category": "productivity",
       "tags": [
@@ -55,8 +55,8 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "launch-like-a-real-startup",
-      "source": "./05-launch-like-a-real-startup",
+      "name": "launch",
+      "source": "./launch",
       "description": "It worked on your laptop and broke on your phone. Now every release is tested on real phones, shipped cleanly, and announced in notes people read.",
       "category": "productivity",
       "tags": [
@@ -67,8 +67,8 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "get-users-without-ads",
-      "source": "./06-get-users-without-ads",
+      "name": "growth",
+      "source": "./growth",
       "description": "Your landing page reads like ChatGPT wrote it and nobody can find you. Now your copy sounds human, sells, and gets you recommended in AI answers.",
       "category": "productivity",
       "tags": [
@@ -79,8 +79,8 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "know-what-makes-you-money",
-      "source": "./07-know-what-makes-you-money",
+      "name": "revenue",
+      "source": "./revenue",
       "description": "You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page.",
       "category": "productivity",
       "tags": [
@@ -91,8 +91,8 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "make-a-game-like-a-studio",
-      "source": "./08-make-a-game-like-a-studio",
+      "name": "games",
+      "source": "./games",
       "description": "Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.",
       "category": "productivity",
       "tags": [

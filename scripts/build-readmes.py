@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 cat = json.load(open(os.path.join(ROOT, "scripts", "catalog.json")))
 sets = cat["sets"]
 total = sum(len(s["skills"]) for s in sets)
-plug = lambda s: s["dir"].split("-", 1)[1]
+plug = lambda s: s["dir"]
 
 
 def table(s, prefix=""):
