@@ -21,12 +21,15 @@ def table(s, prefix=""):
     return "\n".join(rows)
 
 
+img = lambda s, pre="": (f"![How {s['title'].lower()} works]({pre}how-it-works.png)\n\n"
+                         if os.path.exists(os.path.join(ROOT, s["dir"], "how-it-works.png")) else "")
+
 for s in sets:
     body = f"""# {s['title']}
 
 {s['pitch']}
 
-{table(s)}
+{img(s)}{table(s)}
 
 ## Install just this set
 
@@ -41,14 +44,18 @@ Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add 
 """
     open(os.path.join(ROOT, s["dir"], "README.md"), "w").write(body)
 
+img = lambda s, pre="": (f"![How {s['title'].lower()} works]({pre}how-it-works.png)\n\n"
+                         if os.path.exists(os.path.join(ROOT, s["dir"], "how-it-works.png")) else "")
 sections = "\n\n".join(
-    f"### [{s['title']}]({s['dir']})\n\n{s['pitch']}\n\n{table(s, s['dir'] + '/')}" for s in sets)
+    f"### [{s['title']}]({s['dir']})\n\n{s['pitch']}\n\n{img(s, s['dir'] + '/')}{table(s, s['dir'] + '/')}" for s in sets)
+hero = ("![How it works: you ask for a change, your agent maps everything it touches, makes it, checks it, and hands you one page with only the calls that need you](assets/how-it-works.png)\n\n"
+        if os.path.exists(os.path.join(ROOT, "assets", "how-it-works.png")) else "")
 
-readme = f"""# Your AI agent does the work. You just make the calls.
+readme = f"""# Review everything your AI agent changed, on one page
 
-{total} skills that make any AI agent check its own work, show you only what changed, and ask you only what matters. Free, and they work in Claude Code, Codex, Cursor, Gemini CLI, Copilot and 60+ other agents.
+Your agent writes code faster than you can read it. These {total} free skills make it check its own work, show you every changed screen before and after, and ask you only the calls that need you. They work in Claude Code, Codex, Cursor, Gemini CLI, Copilot and 60+ other agents.
 
-[![Built with these skills: 193B tokens, 22,809 GitHub contributions in 4 months](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
+{hero}[![Built with these skills: 193B tokens, 22,809 GitHub contributions in 4 months](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
 
 ## Install in one line
 
