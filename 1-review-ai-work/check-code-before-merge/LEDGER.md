@@ -1,7 +1,7 @@
 # Hygiene lessons ledger
 
 Provenance for every rule/tell folded into `hygiene/SKILL.md` from a PR review, via
-`/hygiene-learn`. One line per accepted lesson. This is the audit trail — it lets anyone see
+`/learn-from-every-review`. One line per accepted lesson. This is the audit trail — it lets anyone see
 why a rule exists and revert a bad addition. Lesson *content* lives in SKILL.md, not here.
 
 Format: `YYYY-MM-DD · <repo> PR #<n> · §<X> · <the one-line lesson>`
@@ -11,7 +11,7 @@ Format: `YYYY-MM-DD · <repo> PR #<n> · §<X> · <the one-line lesson>`
 <!-- newest first -->
 
 ## §D — isolation features: data-correct ≠ secure; attack the cross-principal × other-surface cell
-- **2026-07-10 · console (public read-only demo, adversarial /hygiene)** — I reported the two-tenant
+- **2026-07-10 · console (public read-only demo, adversarial /check-code-before-merge)** — I reported the two-tenant
   demo "verified live" off the same-principal-same-surface happy path (bank viewer on the bank host →
   sees bank data, write 403). The org-binding was data-correct (never returned another tenant's rows),
   but a shared session cookie (`AUTH_COOKIE_DOMAIN=.getoffgridai.co`) let the bank login silently work
@@ -91,7 +91,7 @@ Format: `YYYY-MM-DD · <repo> PR #<n> · §<X> · <the one-line lesson>`
 
 ## SETUP mode — quality-as-code bootstrap added
 - **2026-07-10 · console (provenance) + Wednesday templates** — added a third mode to the
-  hygiene skill: **SETUP**, which bootstraps the entire quality spine into a fresh repo so
+  check-code-before-merge skill: **SETUP**, which bootstraps the entire quality spine into a fresh repo so
   gates are code, not memory. New `setup/` subtree: `bootstrap.sh` (idempotent, non-destructive
   stack-detecting installer), `setup/configs/{web,react-native}/` (real, generalized templates:
   `.prettierrc`, `.eslintrc.json`, `.dependency-cruiser.js`, `.jscpd.json`, `.c8rc.json`,

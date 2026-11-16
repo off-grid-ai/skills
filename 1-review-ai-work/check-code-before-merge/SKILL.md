@@ -1,5 +1,5 @@
 ---
-name: hygiene
+name: check-code-before-merge
 description: The Off Grid engineering standard. SETUP mode bootstraps a fresh repo's quality gates (setup/bootstrap.sh). PLAN mode designs a task against the bar (separation of concerns, SOLID, DRY, test strategy) before coding. AUDIT mode reviews a diff before a PR and gives a pass/fail verdict with evidence. Load only when designing a new subsystem or auditing a real PR — not for small fixes.
 ---
 
@@ -65,4 +65,4 @@ End with an overall verdict + a blocking-issues list.
 
 # Evolving this standard
 
-`pr-review`'s closing phase (`hygiene-learn`) folds *generic* review lessons into the right standard above and logs each with provenance in `LEDGER.md`. Keep this file lean — tighten and collapse redundant rules, never bloat.
+`get-prs-merge-ready`'s closing phase (`learn-from-every-review`) folds *generic* review lessons into the right standard above and logs each with provenance in `LEDGER.md`. Keep this file lean — tighten and collapse redundant rules, never bloat.

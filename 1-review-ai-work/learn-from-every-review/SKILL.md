@@ -1,16 +1,16 @@
 ---
-name: hygiene-learn
-description: Distill PR review comments into the hygiene skill so the standard gets sharper every review. Takes the review signal from a PR (Gemini/Codecov/SonarCloud/human comments, or a pasted set) and, for each, decides whether the lesson is GENERIC (a recurring class of mistake worth codifying) or SPECIFIC (a one-off to discard). Generic lessons are folded into the right hygiene dimension (§A–§H) as a tightened rule/tell/anti-pattern — minimally, without bloat — and logged with provenance. Run it as the closing phase of /pr-review, or standalone against any set of review comments.
+name: learn-from-every-review
+description: Distill PR review comments into the check-code-before-merge skill so the standard gets sharper every review. Takes the review signal from a PR (Gemini/Codecov/SonarCloud/human comments, or a pasted set) and, for each, decides whether the lesson is GENERIC (a recurring class of mistake worth codifying) or SPECIFIC (a one-off to discard). Generic lessons are folded into the right hygiene dimension (§A–§H) as a tightened rule/tell/anti-pattern — minimally, without bloat — and logged with provenance. Run it as the closing phase of /get-prs-merge-ready, or standalone against any set of review comments.
 ---
 
 # Distill reviews into the standard
 
-The `hygiene` skill is only as good as the mistakes it has learned to catch. Every review is a
+The `check-code-before-merge` skill is only as good as the mistakes it has learned to catch. Every review is a
 free lesson. This skill decides which lessons are worth keeping — and folds those, and only
-those, back into `hygiene` so the next PR starts from a higher bar. The discipline is as much
+those, back into `check-code-before-merge` so the next PR starts from a higher bar. The discipline is as much
 about what you REFUSE to add as what you add: a bloated standard is an ignored standard.
 
-**Input.** The review comments for a PR (from `/pr-review` Phase 2, or `gh pr view <n>
+**Input.** The review comments for a PR (from `/get-prs-merge-ready` Phase 2, or `gh pr view <n>
 --comments` + `gh api .../pulls/{n}/comments`, or a set the user pastes). Include your own
 AUDIT findings and any bug that slipped past the suite — a shipped regression is the highest-
 signal lesson there is (hygiene §D: "why did the suite stay green?").
@@ -19,7 +19,7 @@ signal lesson there is (hygiene §D: "why did the suite stay green?").
 
 ## Step 1 — For each comment, classify: GENERIC or SPECIFIC
 
-Promote a lesson into `hygiene` **only if ALL five hold**:
+Promote a lesson into `check-code-before-merge` **only if ALL five hold**:
 
 1. **Recurs.** It is a *class* of mistake, not this feature's domain bug. The test:
    *"Would this exact comment be valid on an unrelated PR, in another repo?"* If it only makes

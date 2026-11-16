@@ -1,0 +1,52 @@
+{
+  "name": "off-grid-ai",
+  "description": "Agent skills that turn AI-written changes into one page you review in minutes. Claude Code, Codex, Cursor, Gemini CLI, Copilot and 60+ agents.",
+  "owner": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "plugins": [
+    {
+      "name": "review-ai-work",
+      "source": "./1-review-ai-work",
+      "description": "**[graph-engineering](graph-engineering)** and **[graph-engineering-loop](graph-engineering-loop)**. Think of them as the PR review of the AI age.",
+      "category": "productivity"
+    },
+    {
+      "name": "get-the-best-from-agents",
+      "source": "./2-get-the-best-from-agents",
+      "description": "get-the-best-from-agents",
+      "category": "productivity"
+    },
+    {
+      "name": "ship-with-confidence",
+      "source": "./3-ship-with-confidence",
+      "description": "ship-with-confidence",
+      "category": "productivity"
+    },
+    {
+      "name": "run-a-product-team",
+      "source": "./4-run-a-product-team",
+      "description": "run-a-product-team",
+      "category": "productivity"
+    },
+    {
+      "name": "write-copy-that-sells",
+      "source": "./5-write-copy-that-sells",
+      "description": "write-copy-that-sells",
+      "category": "productivity"
+    },
+    {
+      "name": "make-decisions",
+      "source": "./6-make-decisions",
+      "description": "make-decisions",
+      "category": "productivity"
+    },
+    {
+      "name": "track-growth",
+      "source": "./7-track-growth",
+      "description": "track-growth",
+      "category": "productivity"
+    }
+  ]
+}

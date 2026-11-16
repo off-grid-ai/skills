@@ -1,0 +1,24 @@
+{
+  "name": "review-ai-work",
+  "version": "1.0.0",
+  "description": "**[graph-engineering](graph-engineering)** and **[graph-engineering-loop](graph-engineering-loop)**. Think of them as the PR review of the AI age.",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "apply-feedback-everywhere",
+    "check-code-before-merge",
+    "get-prs-merge-ready",
+    "graph-engineering",
+    "graph-engineering-loop",
+    "learn-from-every-review",
+    "review-every-screen",
+    "test-every-page"
+  ],
+  "skills": "./"
+}
