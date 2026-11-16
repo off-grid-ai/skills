@@ -1,0 +1,21 @@
+{
+  "name": "know-what-makes-you-money",
+  "version": "1.1.0",
+  "description": "You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page.",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "grow-my-revenue",
+    "help-me-decide",
+    "mission-control",
+    "pick-the-best-ai-model",
+    "weekly-wins"
+  ],
+  "skills": "./"
+}

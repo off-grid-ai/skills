@@ -1,5 +1,5 @@
 ---
-name: weekly-debrief
+name: weekly-wins
 description: A one-page weekly debrief of what you and your team did this week against last week, built from git, your agent chats and whatever metrics you track, bottom line first. Use when you say "weekly debrief", "weekly one pager", "what did we do this week", "week in review", "what changed since last week", "status for the team meeting" or "BLUF of the week".
 ---
 
@@ -8,7 +8,7 @@ description: A one-page weekly debrief of what you and your team did this week a
 One page the user can put in front of a partner, team or manager each week. **It is a debrief of what happened
 this week, compared with last week: the bottom line first, then what went right, then the experiments and how
 each went.** It never asks for decisions, recommends bets or says "decide today". If the user wants a decision,
-use `one-page-decision-report` instead.
+use `help-me-decide` instead.
 
 **Window: the last 7 days, compared with the 7 days before.** Use a different window only when the user names one.
 The first run has no earlier page, so say it sets the baseline. Lead with what was done and what is working.
@@ -17,7 +17,7 @@ that a specific change worked (for example "after the new signup page: 3.0 to 4.
 
 ## 0. Set it up once (ask on the first run, then reuse)
 
-Ask only what you cannot find yourself, and save the answers in a short `weekly-debrief.config.md` next to where
+Ask only what you cannot find yourself, and save the answers in a short `weekly-wins.config.md` next to where
 the pages are kept, so later weeks need no questions:
 
 - **Scope.** What the debrief covers (for example the whole company, marketing and sales, one product, or one
@@ -25,8 +25,8 @@ the pages are kept, so later weeks need no questions:
 - **Who reads it.** The audience sets the depth and the words.
 - **Repos.** The git repos whose commits count as this scope's work.
 - **Metrics.** Where the numbers live: an analytics export, a dashboard, a database query, a spreadsheet, a
-  billing or store console, a CSV the user drops in, or a skill such as `find-what-grows-revenue` or
-  `one-dashboard-for-everything`. If the user has none, the page runs on git and chats only and says so.
+  billing or store console, a CSV the user drops in, or a skill such as `grow-my-revenue` or
+  `mission-control`. If the user has none, the page runs on git and chats only and says so.
 - **Where pages go.** A folder for the weekly pages, and whether they may be committed. If any metric is private
   (money, customers, anything the user would not post publicly), keep that folder out of git and tell the user.
 
@@ -52,7 +52,7 @@ Pull each metric for this week and last week from the sources in the config. Run
    It reads local agent chat transcripts (Claude Code and Codex folders by default; pass `--chats <folder>` for
    others) and git, and prints this week's chats with their first asks and last answers, plus commit counts for
    this week and last week and this week's commit log. It sends nothing anywhere.
-2. Read the chats that matter in full (the `pick-up-any-chat` skill helps find one by title). Newer numbers beat
+2. Read the chats that matter in full (the `resume-any-chat` skill helps find one by title). Newer numbers beat
    older ones. If two chats disagree, use the one that says it corrected the other.
 3. Add what the chats and git do not hold, when the user has the tools connected: shipped releases, merged pull
    requests (`gh pr list --state merged --search "merged:>=<date>"`), posts and their reach, emails or newsletters
@@ -62,7 +62,7 @@ Pull each metric for this week and last week from the sources in the config. Run
 
 ## 3. Write
 
-If you have them, load `copy-that-sells`, then `write-like-a-human` last.
+If you have them, load `make-it-sell`, then `sound-human` last.
 
 Tone: **positive and confident, never defensive, anxious or cautious.** Lead with what went right. What isn't
 working is stated plainly as fact, in one short list, never as worry. Every fact right, every claim backed by data.

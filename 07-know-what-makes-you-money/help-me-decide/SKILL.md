@@ -1,5 +1,5 @@
 ---
-name: one-page-decision-report
+name: help-me-decide
 description: One page a busy decider can approve from its first screen, with the answer first, every claim sourced, options scored on points the decider set, and separate reviewers checking facts and reasoning. Use when you ask for a "decision report", "decision paper", "board paper", "CEO report", "recommendation", "help me decide between", or "write this up so I can decide". Not for status updates, newsletters or marketing copy.
 ---
 

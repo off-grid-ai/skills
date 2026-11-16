@@ -1,9 +1,9 @@
 ---
-name: one-dashboard-for-everything
+name: mission-control
 description: Keep one local dashboard page of everything in flight across your repos (branches, PRs, CI, releases, what is blocked or due), built from git and GitHub, with what needs you at the top. Use when someone says "update the dashboard", "what's in flight", "what needs me", "where is feature X", "triage the backlog", "link this branch to the roadmap" or "research and plan this idea".
 ---
 
-# one-dashboard-for-everything
+# mission-control
 
 One page answers "what is in flight, and what needs me?" across every repo the user works in. **Git and GitHub are
 the source of truth.** Where a piece of work is (local, in review, on main, released) is read from them, never typed.
@@ -138,7 +138,7 @@ it), open GitHub issues, or crash and review exports the user points to.
 1. Find the item and any link or triage file for it. Read what is wrong, the evidence, and what done looks like.
 2. If a link names a branch, continue there; else make a new branch in the item's repo (follow the repo's own rules)
    and write the link at once (`state: "in progress"`, the branch).
-3. Fix it with the repo's tests (see `tests-that-catch-bugs`). In the same PR, remove the item from the backlog file
+3. Fix it with the repo's tests (see `bug-trap`). In the same PR, remove the item from the backlog file
    and put `Fixes <id>` (and `Fixes #<n>` for a GitHub issue) in the PR description.
 4. Update the link with the PR, and `state: "fixed"` once it merges. Rebuild the page.
 
@@ -171,7 +171,7 @@ The user has an idea for a feature. Research it and write a plan. Read-only on e
    write notes under the branch key (carry `title`, `goal`, `due` over from the plan) and add the branch to the plan
    note's `work`.
 3. Open each repo and worktree the feature lists. Check its PRs' state, CI and review comments (`gh pr view`,
-   `gh pr checks`) and the branch's diff against main. If PRs need work, see `get-prs-merge-ready`.
+   `gh pr checks`) and the branch's diff against main. If PRs need work, see `safe-to-merge`.
 4. Work toward `next`. Clear blockers you resolve; add ones you hit. At the end, update the notes (`next`,
    `blockers`, `by`, `at`) and rebuild the page.
 

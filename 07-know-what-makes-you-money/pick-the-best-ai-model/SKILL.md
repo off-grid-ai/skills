@@ -1,5 +1,5 @@
 ---
-name: pick-the-right-ai-models
+name: pick-the-best-ai-model
 description: A sourced shortlist of which AI models your app should ship or call, for every kind of model it uses and every device class it runs on, with a clear Add, Replace, Keep, Later or Remove call for each. Use when you say "pick the right models", "which model should we use", "which models should ship", "is there a better model for this", "refresh our model list" or "model research".
 ---
 
