@@ -56,9 +56,11 @@ hooks = "\n".join(f"- **[{s['title']}]({s['dir']})**. {s['pitch']}" for s in set
 
 readme = f"""# Stop babysitting your AI. Make it build, test and ship like a senior team.
 
-I'm [Mac](https://github.com/alichherawalla), CTO and co-founder of Wednesday Solutions. I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) with these exact skills: an offline AI app on iPhone, Android and Mac with 3,382 stars on GitHub. In the last 4 months I put 193B tokens through Claude Code and Codex with them and shipped 22,809 GitHub contributions.
+I'm [Mac](https://github.com/alichherawalla), CTO and co-founder of [Wednesday Solutions](https://www.wednesday.is). We build apps for 10%% of India's unicorns, including Rapido, PharmEasy, PayU and Kotak Securities, and for Kalshi, Zalora and Ninja Van.
 
-[![Built with these skills: Off Grid AI, 3,382 GitHub stars, 22,809 contributions in 4 months, 193B tokens](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
+This year I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) with these exact skills: a private AI app that runs offline on iPhone, Android and Mac. It went to #1 on Hacker News, got written up by [GIGAZINE](https://www.gigazine.net/gsc_news/en/20260401-off-grid-mobile-ai), and has 3,382 stars on GitHub. In the last 4 months the same skills turned 193B tokens of Claude Code and Codex into 22,809 GitHub contributions.
+
+[![Built with these skills: Off Grid AI, 3,382 GitHub stars, #1 on Hacker News, 22,809 contributions in 4 months, 193B tokens](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
 
 ## What these skills do
 
