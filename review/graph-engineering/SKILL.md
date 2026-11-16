@@ -1,6 +1,6 @@
 ---
 name: graph-engineering
-description: The PR review of the AI age. Change one thing and get one review page with every place it touches across your apps, every changed screen before and after with notes, and only the calls that need you. Use when you say "graph engineering", "/graph-engineering", "change X everywhere", "what does changing X touch", "ripple of X", "change review", or change a feature that lives in more than one app.
+description: Change one thing and get one review page with every place it touches across your apps, every changed screen before and after with notes, and only the calls that need you. Use when you say "graph engineering", "/graph-engineering", "change X everywhere", "what does changing X touch", "ripple of X", "change review", or change a feature that lives in more than one app.
 ---
 
 # Graph engineering
