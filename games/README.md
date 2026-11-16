@@ -21,7 +21,7 @@ Making a game alone with AI? Now it has a director, an art director and a QA tea
 npx skills add off-grid-ai/skills --skill game-director art-director playtest ship-the-feature prove-it boot-game devlog game-calls
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install make-a-game-like-a-studio@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add make-a-game-like-a-studio@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install games@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add games@off-grid-ai`.
 
 [All skills](../README.md)
