@@ -18,7 +18,7 @@ No CTO? Your AI becomes one. It decides what's urgent, argues back when you're w
 npx skills add off-grid-ai/skills --skill be-my-cto build-while-you-sleep argue-with-me resume-any-chat no-fluff
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install an-ai-that-thinks-like-a-cto@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add an-ai-that-thinks-like-a-cto@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install cto@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add cto@off-grid-ai`.
 
 [All skills](../README.md)
