@@ -1,9 +1,9 @@
 ---
-name: tests-that-follow-the-user
+name: test-like-a-user
 description: Hold every test to one bar, real integration tests that walk the whole user journey and prove the intended end state, with fakes only at boundaries you can't control. Use when writing, fixing, reviewing or auditing tests, or when the user says "are these tests any good", "test this properly", "audit the tests" or "review this test".
 ---
 
-# Tests that follow the user
+# Test like a user: no mocks of your own code
 
 This standard works for web apps, services, mobile apps and desktop apps. "The project's own code" means everything in the repo you are testing: its source folders, services, stores, hooks, components, screens, navigators, parsers and registries. Find those folders first (for example `src/`, `app/`, `lib/`, `packages/*`).
 
@@ -37,4 +37,4 @@ This standard works for web apps, services, mobile apps and desktop apps. "The p
 
 Fail the review when a test mocks the project's own code, makes up state instead of using the product, asserts only calls or source text, skips a known bug, keeps a duplicate or replaced journey, leaves out visual or navigation proof for changed UI, or passes while async work outlives teardown. Name the exact file and the real integration test that should replace it.
 
-For the deeper method (fakes vs stubs vs mocks, observing the transition, debugging a test), see `test-on-real-phones/reference/test-doctrine.md`. The companion skill `tests-that-catch-bugs` is the short checklist.
+For the deeper method (fakes vs stubs vs mocks, observing the transition, debugging a test), see `reference/test-doctrine.md` in this skill. The companion skill `bug-trap` is the short checklist.

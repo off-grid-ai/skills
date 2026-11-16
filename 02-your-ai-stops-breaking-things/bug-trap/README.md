@@ -9,4 +9,4 @@ Use it when:
 - Tests keep breaking after harmless UI changes.
 - Someone wants to "just raise the timeout" on a failing test.
 
-Try it: "Add tests for the export feature, following tests-that-catch-bugs."
+Try it: "Add tests for the export feature, following bug-trap."

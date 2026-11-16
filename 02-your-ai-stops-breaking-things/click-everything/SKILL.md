@@ -1,6 +1,6 @@
 ---
-name: test-every-page
-description: Test your app one module at a time by looking at it like a user does. Your agent lists every route from the router, screenshots every route and state, clicks the buttons, makes the app produce real output and reads it, fixes what doesn't make sense, adds replayable end-to-end tests, and reports. Use when you say "test every page", "/test-every-page", "sweep the app", "visually test this module", or when there is no other work queued.
+name: click-everything
+description: Test your app one module at a time by looking at it like a user does. Your agent lists every route from the router, screenshots every route and state, clicks the buttons, makes the app produce real output and reads it, fixes what doesn't make sense, adds replayable end-to-end tests, and reports. Use when you say "test every page", "/click-everything", "sweep the app", "visually test this module", or when there is no other work queued.
 ---
 
 # Test every page
@@ -68,7 +68,7 @@ E2E         test files added, and what each one pins down
 
 State the denominator. "Swept 23 of 23 Workspace routes" is evidence; "swept Workspace" is not.
 
-If you want the user to see the screens, publish them with `review-every-screen` and point at each problem with numbered marks.
+If you want the user to see the screens, publish them with `show-me` and point at each problem with numbered marks.
 
 ## The verification standard
 

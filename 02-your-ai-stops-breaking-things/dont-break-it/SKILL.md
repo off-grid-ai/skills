@@ -1,5 +1,5 @@
 ---
-name: change-code-safely
+name: dont-break-it
 description: Your agent changes code in small, additive, checked commits that never skip hooks and never block on long jobs. Use before editing code, running checks, committing or pushing in any repo, or when you say "change code safely", "commit this properly", "small commits" or "follow the engineering rules".
 ---
 
@@ -19,7 +19,7 @@ description: Your agent changes code in small, additive, checked commits that ne
 4. **Push with hooks.** Never `--no-verify`. If the repo uses submodules and you committed inside one, commit the
    new submodule pointer in the parent repo too and push both, submodule first.
 5. **No worktrees unless asked.** If the user asks for one, run `lean-worktree.sh <dir>` from the
-   `act-like-a-cto` skill folder before installing dependencies, so the worktree shares `node_modules` with the
+   `be-my-cto` skill folder before installing dependencies, so the worktree shares `node_modules` with the
    main checkout.
 6. **Never wait.** Long jobs (builds, full test runs, installs) run in the background. Carry on and resume when
    they finish.

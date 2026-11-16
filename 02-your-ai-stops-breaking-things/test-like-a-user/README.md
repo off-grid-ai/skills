@@ -9,4 +9,4 @@ Use it when:
 - You want an audit of an existing test suite.
 - A redesign or migration needs proof that nothing got lost and nothing is duplicated.
 
-Try it: "Review the tests in this PR against tests-that-follow-the-user and tell me which ones would pass with the feature deleted."
+Try it: "Review the tests in this PR against test-like-a-user and tell me which ones would pass with the feature deleted."

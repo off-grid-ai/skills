@@ -1,6 +1,6 @@
 ---
-name: fix-the-real-problem
-description: Fix bugs at the system level instead of patching symptoms, by reproducing each bug with a failing probe, finding who already solved the general problem, and committing small checked changes safely even when several agents share one checkout. Use before editing code, running checks or committing, or when the user says "no hack fixes", "fix it properly", "this keeps breaking", "fix the root cause" or "fix-the-real-problem".
+name: fix-it-for-real
+description: Fix bugs at the system level instead of patching symptoms, by reproducing each bug with a failing probe, finding who already solved the general problem, and committing small checked changes safely even when several agents share one checkout. Use before editing code, running checks or committing, or when the user says "no hack fixes", "fix it properly", "this keeps breaking", "fix the root cause" or "fix-it-for-real".
 ---
 
 # Fix the real problem
@@ -16,7 +16,7 @@ Sometimes the user wants the code finished with no time spent on side runs. When
 - Run nothing beyond compile and static checks: no probes, no autoplay, no test harness, no private copy of the services, no headless game.
 - The allowed checks only read files: the compiler or type checker on what you touched (for example `node --check`, `tsc --noEmit`, `godot --headless --check-only`, a C# or C++ build) and the project's rules-check script. A file that doesn't load is never left in the tree.
 - A probe the fix needs may be written but not run by you. Commit small and often, and name the probe in the commit so someone can run it later.
-- Testing is grouped and run by whoever owns it (see `run-agents-in-parallel`).
+- Testing is grouped and run by whoever owns it (see `build-while-you-sleep`).
 
 ## Change the real tree, never a copy
 
@@ -65,7 +65,7 @@ Every change follows these. A plan that breaks one isn't approved.
 - **Consolidating is expected; no fallbacks.** Rewrites toward these principles are welcome. The new code replaces the old in the same change: no switch back to the old path, no two systems doing one job. Carry every behaviour over (nothing lost) and delete the old code. These rewrites are exempt from "additive" below.
 - **One interface per behaviour.** For example, everything that moves goes through one mover that asks the navigation system for the route; nothing else tweens or sets a position to travel. Scenes, moods and reactions are data rows, never new hand-written functions.
 - **Check the rules.** If the project has a rules-check script or lint rules for these principles, run it before committing. A breach is fixed, not added to the known-breach list (that list only shrinks). If there is none, suggest one.
-- **Proof includes behaviour.** Compiling isn't working. Every change to AI, characters or other behaviour passes a behaviour probe (for example: distinct activities, no repeats, no over-long holds, pools not empty) before it is committed. See `prove-game-changes` for games and `tests-that-catch-bugs` for apps.
+- **Proof includes behaviour.** Compiling isn't working. Every change to AI, characters or other behaviour passes a behaviour probe (for example: distinct activities, no repeats, no over-long holds, pools not empty) before it is committed. See `prove-it` for games and `bug-trap` for apps.
 
 ## Working rules
 
