@@ -1,6 +1,6 @@
 ---
 name: bug-trap
-description: Write and fix tests that catch real bugs, by testing behaviour, faking only the device boundary and seeding data the way the product writes it. Use before writing, changing or fixing any test, or when the user says "write a test", "fix this failing test", "add tests for this" or "why is this test flaky".
+description: Write and fix tests that catch real bugs, by testing behaviour, faking only the device boundary and seeding data the way the product writes it. Use when a bug needs a test that fails first, or a unit test is failing or flaky, or when the user says "add a test for this bug", "fix this failing test" or "why is this test flaky". For the bar every test is held to, use test-like-a-user.
 ---
 
 # Tests
