@@ -62,3 +62,4 @@ done
 echo "Installed $(skills | wc -l | tr -d ' ') skills into ${#agents[@]} agent folders:"
 printf '  %s\n' "${agents[@]}"
 echo "Update any time: bash $HOME_DIR/install.sh"
+echo "Try it in your agent: \"Use graph-engineering to rename one thing across the app.\""
