@@ -1,6 +1,6 @@
 ---
 name: try-it-on-my-phone
-description: Verify a release by hand on real devices with a written checklist, one device at a time, and turn every failure into a fixed bug or a logged item. Use when the user says "hand test", "verify the release", "manual verification", "test it on my phone", "write a test", "fix a test", or /try-it-on-my-phone.
+description: Verify a release by hand on real devices with a written checklist, one device at a time, and turn every failure into a fixed bug or a logged item. Use when the user says "hand test", "verify the release", "manual verification", "test it on my phone", or /try-it-on-my-phone.
 ---
 
 # Hand test
