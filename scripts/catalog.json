@@ -3,7 +3,7 @@
     {
       "dir": "review",
       "title": "Review like a senior engineer, without reading code",
-      "pitch": "Your AI changes 50 files and you can't tell what broke. Now you get one page with every screen it touched, before and after, and only the calls that need you.",
+      "pitch": "Your AI changes 50 files and you can't tell what broke. You get one page with every screen it touched, before and after, and only the calls that need you.",
       "skills": [
         [
           "graph-engineering",
@@ -34,7 +34,7 @@
     {
       "dir": "testing",
       "title": "Your AI stops breaking things that already worked",
-      "pitch": "You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage.",
+      "pitch": "You fix one bug and two old features break. Every change gets tested by tapping through your app like a real user, with no mocks hiding the breakage.",
       "skills": [
         [
           "test-like-a-user",
@@ -61,7 +61,7 @@
     {
       "dir": "design",
       "title": "UI that looks like Stripe's designers made it",
-      "pitch": "Vibe-coded apps all look the same. Now every screen clears a real design bar, reuses your best components, and one fix lands on every screen.",
+      "pitch": "Most vibe-coded apps look the same. Every screen has to clear a real design bar and reuse your best components, and a note on one screen fixes all of them.",
       "skills": [
         [
           "make-it-look-expensive",
@@ -80,7 +80,7 @@
     {
       "dir": "cto",
       "title": "An AI that thinks like your CTO",
-      "pitch": "No CTO? Your AI becomes one. It decides what's urgent, argues back when you're wrong, builds while you sleep, and never loses where you left off.",
+      "pitch": "No CTO? Your AI picks what's urgent, tells you when you're wrong, keeps building overnight and picks up any old chat where you left it.",
       "skills": [
         [
           "be-my-cto",
@@ -107,7 +107,7 @@
     {
       "dir": "launch",
       "title": "Launch like a real startup",
-      "pitch": "It worked on your laptop and broke on your phone. Now every release is tested on real phones, shipped cleanly, and announced in notes people read.",
+      "pitch": "It worked on your laptop and broke on your phone. Every release gets tried on real phones first, then ships with notes people actually read.",
       "skills": [
         [
           "ship-it",
@@ -134,11 +134,11 @@
     {
       "dir": "growth",
       "title": "Get users without ads",
-      "pitch": "Your landing page reads like ChatGPT wrote it and nobody can find you. Now your copy sounds human, sells, and gets you recommended in AI answers.",
+      "pitch": "Your landing page reads like ChatGPT wrote it. With these, your copy sounds like a person, it sells, and AI search starts naming you.",
       "skills": [
         [
           "make-it-sell",
-          "Headlines and landing pages that sell, on the rules of the best ad writers ever."
+          "Headlines and landing pages that sell, built on the rules Ogilvy and Bly wrote down."
         ],
         [
           "sound-human",
@@ -161,7 +161,7 @@
     {
       "dir": "revenue",
       "title": "Know what makes you money",
-      "pitch": "You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page.",
+      "pitch": "You have Stripe, analytics and store numbers but no idea what to change. You get the three moves that should grow revenue most, and big calls laid out on one page.",
       "skills": [
         [
           "grow-my-revenue",
@@ -188,7 +188,7 @@
     {
       "dir": "games",
       "title": "Make a game like a studio would",
-      "pitch": "Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.",
+      "pitch": "Making a game alone with AI? You get a director, an art director and a QA team that playtests every scene.",
       "skills": [
         [
           "game-director",

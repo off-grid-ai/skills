@@ -1,6 +1,6 @@
 # Review like a senior engineer, without reading code
 
-Your AI changes 50 files and you can't tell what broke. Now you get one page with every screen it touched, before and after, and only the calls that need you.
+Your AI changes 50 files and you can't tell what broke. You get one page with every screen it touched, before and after, and only the calls that need you.
 
 ![How review like a senior engineer, without reading code works](how-it-works.png)
 

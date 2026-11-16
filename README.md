@@ -8,16 +8,16 @@ These are the skills I use every day. I built [Off Grid AI](https://github.com/o
 
 Vibe coding gets you a demo in an afternoon. Then your AI breaks things that already worked, every screen looks like every other AI app, and you're asked to approve 50 changed files you can't read.
 
-A skill is a short playbook your agent reads before it starts. These 42 give it the habits of a senior team. It maps everything a change will touch before it writes code, tests the real app the way a user taps through it, holds every screen to a design bar, and hands you one page with every screen before and after and only the calls that need you. They're free and work in Claude Code, Codex, Cursor and 60+ other agents.
+Each skill is a short playbook your agent reads before it starts, so it tests every change in your real app and checks the design before you see anything. What you get back is one page with every screen before and after, and only the decisions that need you. They're free, MIT licensed, and work in Claude Code, Codex, Cursor and 60+ other agents.
 
-- **[Review like a senior engineer, without reading code](review)**. Your AI changes 50 files and you can't tell what broke. Now you get one page with every screen it touched, before and after, and only the calls that need you.
-- **[Your AI stops breaking things that already worked](testing)**. You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage.
-- **[UI that looks like Stripe's designers made it](design)**. Vibe-coded apps all look the same. Now every screen clears a real design bar, reuses your best components, and one fix lands on every screen.
-- **[An AI that thinks like your CTO](cto)**. No CTO? Your AI becomes one. It decides what's urgent, argues back when you're wrong, builds while you sleep, and never loses where you left off.
-- **[Launch like a real startup](launch)**. It worked on your laptop and broke on your phone. Now every release is tested on real phones, shipped cleanly, and announced in notes people read.
-- **[Get users without ads](growth)**. Your landing page reads like ChatGPT wrote it and nobody can find you. Now your copy sounds human, sells, and gets you recommended in AI answers.
-- **[Know what makes you money](revenue)**. You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page.
-- **[Make a game like a studio would](games)**. Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.
+- [Review like a senior engineer, without reading code](review)
+- [Your AI stops breaking things that already worked](testing)
+- [UI that looks like Stripe's designers made it](design)
+- [An AI that thinks like your CTO](cto)
+- [Launch like a real startup](launch)
+- [Get users without ads](growth)
+- [Know what makes you money](revenue)
+- [Make a game like a studio would](games)
 
 ![How it works: you ask for a change, your agent maps everything it touches, makes it, checks it, and hands you one page with only the calls that need you](assets/how-it-works.png)
 
@@ -84,7 +84,7 @@ It links every skill into each agent it finds on your machine. Run it again to u
 
 ### [Review like a senior engineer, without reading code](review)
 
-Your AI changes 50 files and you can't tell what broke. Now you get one page with every screen it touched, before and after, and only the calls that need you.
+Your AI changes 50 files and you can't tell what broke. You get one page with every screen it touched, before and after, and only the calls that need you.
 
 ![How review like a senior engineer, without reading code works](review/how-it-works.png)
 
@@ -99,7 +99,7 @@ Your AI changes 50 files and you can't tell what broke. Now you get one page wit
 
 ### [Your AI stops breaking things that already worked](testing)
 
-You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage.
+You fix one bug and two old features break. Every change gets tested by tapping through your app like a real user, with no mocks hiding the breakage.
 
 ![How your ai stops breaking things that already worked works](testing/how-it-works.png)
 
@@ -113,7 +113,7 @@ You fix one bug and two old features break. Now every change is tested by tappin
 
 ### [UI that looks like Stripe's designers made it](design)
 
-Vibe-coded apps all look the same. Now every screen clears a real design bar, reuses your best components, and one fix lands on every screen.
+Most vibe-coded apps look the same. Every screen has to clear a real design bar and reuse your best components, and a note on one screen fixes all of them.
 
 ![How ui that looks like stripe's designers made it works](design/how-it-works.png)
 
@@ -125,7 +125,7 @@ Vibe-coded apps all look the same. Now every screen clears a real design bar, re
 
 ### [An AI that thinks like your CTO](cto)
 
-No CTO? Your AI becomes one. It decides what's urgent, argues back when you're wrong, builds while you sleep, and never loses where you left off.
+No CTO? Your AI picks what's urgent, tells you when you're wrong, keeps building overnight and picks up any old chat where you left it.
 
 ![How an ai that thinks like your cto works](cto/how-it-works.png)
 
@@ -139,7 +139,7 @@ No CTO? Your AI becomes one. It decides what's urgent, argues back when you're w
 
 ### [Launch like a real startup](launch)
 
-It worked on your laptop and broke on your phone. Now every release is tested on real phones, shipped cleanly, and announced in notes people read.
+It worked on your laptop and broke on your phone. Every release gets tried on real phones first, then ships with notes people actually read.
 
 ![How launch like a real startup works](launch/how-it-works.png)
 
@@ -153,13 +153,13 @@ It worked on your laptop and broke on your phone. Now every release is tested on
 
 ### [Get users without ads](growth)
 
-Your landing page reads like ChatGPT wrote it and nobody can find you. Now your copy sounds human, sells, and gets you recommended in AI answers.
+Your landing page reads like ChatGPT wrote it. With these, your copy sounds like a person, it sells, and AI search starts naming you.
 
 ![How get users without ads works](growth/how-it-works.png)
 
 | Skill | What you get |
 | --- | --- |
-| [**make-it-sell**](growth/make-it-sell) | Headlines and landing pages that sell, on the rules of the best ad writers ever. |
+| [**make-it-sell**](growth/make-it-sell) | Headlines and landing pages that sell, built on the rules Ogilvy and Bly wrote down. |
 | [**sound-human**](growth/sound-human) | Copy that sounds like a person wrote it, with zero AI tells. |
 | [**write-like-me**](growth/write-like-me) | Posts and emails in your own voice, learned from what you've already written. |
 | [**get-cited-by-ai**](growth/get-cited-by-ai) | Articles that rank on Google and get you named in ChatGPT-style answers. |
@@ -167,7 +167,7 @@ Your landing page reads like ChatGPT wrote it and nobody can find you. Now your 
 
 ### [Know what makes you money](revenue)
 
-You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page.
+You have Stripe, analytics and store numbers but no idea what to change. You get the three moves that should grow revenue most, and big calls laid out on one page.
 
 ![How know what makes you money works](revenue/how-it-works.png)
 
@@ -181,7 +181,7 @@ You have Stripe, analytics and store numbers and no idea what to change. Now you
 
 ### [Make a game like a studio would](games)
 
-Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.
+Making a game alone with AI? You get a director, an art director and a QA team that playtests every scene.
 
 ![How make a game like a studio would works](games/how-it-works.png)
 
@@ -195,6 +195,14 @@ Making a game alone with AI? Now it has a director, an art director and a QA tea
 | [**boot-game**](games/boot-game) | Your whole game stack started in the right order, every time. |
 | [**devlog**](games/devlog) | Push, document and show off your progress. |
 | [**game-calls**](games/game-calls) | Straight answers when you're making game decisions. |
+
+## Get all 42
+
+```bash
+npx skills add off-grid-ai/skills
+```
+
+Or paste "Install the skills from github.com/off-grid-ai/skills" into your agent.
 
 ## Good to know
 
