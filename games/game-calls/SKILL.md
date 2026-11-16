@@ -1,6 +1,6 @@
 ---
 name: game-calls
-description: Talk to the user in short, result-first updates, decide what must be fixed now, show pictures, and act on your own until a real fork needs the user. Use at the start of any project session, game or not, or when the user says "keep it short", "just decide", "stop asking me", "what's the status" or "game-calls".
+description: Talk to the user in short, result-first updates, decide what must be fixed now, show pictures, and act on your own until a real fork needs the user. Use at the start of a game project session, or when the user says "just decide", "stop asking me", "what's the game status" or "game-calls". For short answers outside games, use no-fluff.
 ---
 
 # Talk game decisions

@@ -1,6 +1,6 @@
 ---
 name: game-director
-description: Run game work like a director who holds the bar, so every change serves a named goal, keeps what already works and is built on proven engine parts. Entry point that loads the other game skills. Use at the start of real work on a game, or when the user says "act as game director", "follow the rules", "run this game project" or "game-director".
+description: Run game work like a director who holds the bar, so every change serves a named goal, keeps what already works and is built on proven engine parts. Entry point that loads the other game skills. Use at the start of real work on a game, or when the user says "act as game director", "follow the game rules", "run this game project" or "game-director".
 ---
 
 # Act like a game director

@@ -1,6 +1,6 @@
 ---
 name: art-director
-description: Hold every screen, scene, camera and animation in your game to the bar of a polished shipped game, with no half-built features, no repeated motion and a voice that fits the world. Use before designing, building or reviewing any game screen, HUD, menu, scene, camera, crowd or animation, or when the user says "make it look great", "polish this", "it looks cheap" or "art-director".
+description: Hold every screen, scene, camera and animation in your game to the bar of a polished shipped game, with no half-built features, no repeated motion and a voice that fits the world. Use before designing, building or reviewing any game screen, HUD, menu, scene, camera, crowd or animation, or when the user says "polish the game", "the game looks cheap" or "art-director". For apps that are not games, use make-it-look-expensive.
 ---
 
 # Make the game look great

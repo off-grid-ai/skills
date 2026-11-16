@@ -1,6 +1,6 @@
 ---
 name: ship-the-feature
-description: Take game work all the way to done in one session, from what is left to built, seen working, pushed and shown with screenshots. Use when the user says "finish the game work", "get it live", "ship it", "finish all the work" or "ship-the-feature" on a game in any engine.
+description: Take game work all the way to done in one session, from what is left to built, seen working, pushed and shown with screenshots. Use in a game project, in any engine, when the user says "finish the game work", "finish this game feature" or "ship-the-feature". For apps that are not games, use ship-it.
 ---
 
 # Finish game features

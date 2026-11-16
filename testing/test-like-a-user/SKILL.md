@@ -1,6 +1,6 @@
 ---
 name: test-like-a-user
-description: Hold every test to one bar, real integration tests that walk the whole user journey and prove the intended end state, with fakes only at boundaries you can't control. Use when writing, fixing, reviewing or auditing tests, or when the user says "are these tests any good", "test this properly", "audit the tests" or "review this test".
+description: Hold every test to one bar, real integration tests that walk the whole user journey and prove the intended end state, with fakes only at boundaries you can't control. Use when writing, fixing, reviewing or auditing tests, or when the user says "write a test", "add tests for this", "are these tests any good", "test this properly", "audit the tests" or "review this test".
 ---
 
 # Test like a user: no mocks of your own code

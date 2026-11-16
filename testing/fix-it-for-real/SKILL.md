@@ -1,6 +1,6 @@
 ---
 name: fix-it-for-real
-description: Fix bugs at the system level instead of patching symptoms, by reproducing each bug with a failing probe, finding who already solved the general problem, and committing small checked changes safely even when several agents share one checkout. Use before editing code, running checks or committing, or when the user says "no hack fixes", "fix it properly", "this keeps breaking", "fix the root cause" or "fix-it-for-real".
+description: Fix bugs at the system level instead of patching symptoms, by reproducing each bug with a failing probe, finding who already solved the general problem, and committing small checked changes safely even when several agents share one checkout. Use when fixing a bug, especially one that came back, or when the user says "no hack fixes", "fix it properly", "this keeps breaking", "fix the root cause" or "fix-it-for-real".
 ---
 
 # Fix the real problem
