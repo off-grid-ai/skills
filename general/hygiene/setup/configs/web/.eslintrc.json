@@ -1,0 +1,75 @@
+{
+  "//": "Wednesday house WEB/REACT baseline (from wednesday-solutions/react-template) + the Off Grid AI-dead-code typed rules. This is the BASELINE eslint config for a Next.js / React web repo. It uses the eslintrc (legacy) format so the full Wednesday plugin set (sonarjs / security / github) and typed typescript-eslint rules compose cleanly. If your repo is eslint 9 flat-config-only, port these same extends/plugins/rules into eslint.config.js - the RULES are the contract, not the file format.",
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "//project": "TYPED LINTING. Point this at the repo tsconfig so @typescript-eslint/no-unnecessary-condition and the other type-aware rules have type info. If typed linting is slow on a big repo, keep it in CI only (see github-workflows-ci.yml) and drop `project` from the pre-push subset.",
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  },
+  "env": { "browser": true, "es2022": true, "node": true, "jest": true },
+  "settings": { "react": { "version": "detect" } },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:security/recommended-legacy",
+    "plugin:github/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "jest",
+    "sonarjs",
+    "security",
+    "immutable"
+  ],
+  "rules": {
+    "//── Wednesday web baseline ──": 0,
+    "no-console": ["error", { "allow": ["error"] }],
+    "complexity": ["error", 8],
+    "max-lines": ["error", { "max": 300, "skipBlankLines": true, "skipComments": true }],
+    "max-params": ["error", 4],
+    "no-else-return": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "newlines-between": "never",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+
+    "//── AI-dead-code detectors (the founder-wanted set) ──": 0,
+    "//no-unnecessary-condition": "THE STAR. Flags always-true / always-false conditions - the classic AI-generated dead branch (a guard that can never be false, a `?.` on a non-nullable). BASELINE-THEN-RATCHET: on a fresh repo with a backlog, set this to \"warn\" and ratchet to \"error\" once the backlog is burned down (see setup/README.md).",
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "no-unreachable": "error",
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "no-constant-binary-expression": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }
+    ]
+  },
+  "overrides": [
+    {
+      "//": "Tests may be longer and use console; relax the size/console rules there.",
+      "files": ["**/*.test.ts", "**/*.test.tsx", "test/**", "**/__tests__/**"],
+      "env": { "jest": true },
+      "rules": {
+        "max-lines": "off",
+        "no-console": "off",
+        "sonarjs/no-duplicate-string": "off"
+      }
+    }
+  ]
+}

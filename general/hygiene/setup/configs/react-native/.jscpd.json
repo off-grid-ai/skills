@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/kucherenko/jscpd/master/packages/jscpd/schema.json",
+  "//": "jscpd (copy/paste detector) - REACT NATIVE baseline. Mechanically enforces DRY. EDIT the path/ignore globs to your layout.",
+  "path": ["src"],
+  "ignore": [
+    "**/__tests__/**",
+    "**/*.d.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "node_modules/**",
+    "coverage/**",
+    "android/**",
+    "ios/**",
+    "**/*.generated.*"
+  ],
+  "format": ["typescript", "tsx", "javascript", "jsx"],
+  "//min": "8 lines / 70 tokens - jscpd's sensible mid-range: flags real duplicated helpers, ignores import blocks and JSX scaffolding.",
+  "minLines": 8,
+  "minTokens": 70,
+  "reporters": ["console", "json", "html"],
+  "output": "./coverage/jscpd/",
+  "//threshold": "BASELINE-THEN-RATCHET. Fresh repo: 0.5 is a fine start. Existing repo: run `npx jscpd` once, read the reported %%, set this just above it. Ratchet DOWN as clones are extracted.",
+  "threshold": 0.5,
+  "absolute": true,
+  "gitignore": true
+}

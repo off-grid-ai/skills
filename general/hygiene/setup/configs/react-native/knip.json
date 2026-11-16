@@ -1,0 +1,21 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "//": "knip - MODULE-LEVEL dead-code detector (unused files, exports, dependencies) for a React Native app. Complements dependency-cruiser (cycles + boundaries) and the eslint no-unnecessary-condition rule (dead branches inside a file).",
+  "//entry": "RN entry points: index.js (AppRegistry.registerComponent), App.tsx, and any *.native/.ios/.android platform variants. Navigation registries and lazy screen tables are the classic false-positive source (see //ignore).",
+  "entry": [
+    "index.js",
+    "App.{ts,tsx}",
+    "src/**/*.{ios,android,native}.{ts,tsx}",
+    "metro.config.js",
+    "react-native.config.js"
+  ],
+  "project": ["src/**/*.{ts,tsx}"],
+  "//ignore": "IMPORTANT PER-REPO TUNING. knip cannot see screens/components reached ONLY through a navigation registry (React Navigation route tables), a dynamic import(), or a string-keyed lazy table - it flags them as unused (false positive). Workflow is ANNOTATE, DO NOT DELETE: when knip flags a screen/component that IS wired through the navigator, add it here (or `// knip-ignore` the export). Deleting a real lazy/registered screen is how knip breaks navigation.",
+  "ignore": [
+    "src/**/*.d.ts",
+    "src/navigation/**"
+  ],
+  "//ignoreDependencies": "RN has native-only deps with no JS import (pods/gradle-linked). Add them to ignoreDependencies so knip does not report them as unused.",
+  "ignoreDependencies": [],
+  "ignoreExportsUsedInFile": true
+}

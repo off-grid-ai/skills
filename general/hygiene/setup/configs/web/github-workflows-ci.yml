@@ -1,0 +1,63 @@
+name: CI
+
+# The quality spine, enforced in CI on every push + PR. This runs the FULL set:
+# everything the fast pre-push runs PLUS the heavy typed lint and knip (which are
+# kept OUT of pre-push so local pushes stay snappy). A push/PR that drops below the
+# bar fails here, not just on a developer's machine.
+#
+# EDIT: rename this file to .github/workflows/ci.yml in your repo. Adjust the Node
+# version and, if your @-scoped deps live in a sibling repo, add a checkout step
+# for it (see the commented block).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22' # EDIT: match your repo's Node version
+          cache: npm
+
+      # EDIT: if @-scoped deps are `file:` links to a sibling monorepo, check it out
+      # and build it here before `npm ci` (mirror your local layout).
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Format check (prettier)
+        run: npm run format:check
+
+      - name: Lint (TYPED - the AI-dead-code net; slow, CI-only)
+        run: npm run lint
+
+      - name: Knip (module-level dead code; CI-only)
+        run: npm run knip
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Tests + coverage gate (>=85% all dimensions)
+        run: npm run coverage:check
+
+      - name: Dependency-cruiser (no circular imports / boundary breaks)
+        run: npm run depcruise
+
+      - name: jscpd DRY gate (duplication under threshold)
+        run: npm run jscpd
+
+      - name: Production build
+        run: npm run build
