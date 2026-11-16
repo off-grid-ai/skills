@@ -10,4 +10,4 @@ Use it when:
 - A theory about a bug or a decision needs checking before anyone builds on it.
 - The agent is overindexing on your last message.
 
-Try it: "/push-back-with-facts I think signups dropped because of the new pricing page. Argue with me."
+Try it: "/argue-with-me I think signups dropped because of the new pricing page. Argue with me."

@@ -9,4 +9,4 @@ Use it when:
 - A chat ran out of context and you need a fresh one that knows what happened.
 - You forgot what a session last week was doing.
 
-Try it: `/pick-up-any-chat pricing page` or "take over the pricing page chat".
+Try it: `/resume-any-chat pricing page` or "take over the pricing page chat".

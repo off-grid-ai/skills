@@ -1,6 +1,6 @@
 ---
-name: pick-up-any-chat
-description: Pick up any earlier agent chat on this computer by its title, from any Claude Code account or Codex, and carry on where it stopped. Use when the user says "/pick-up-any-chat <name>", "get context from <chat>", "take over <chat>", "continue the <name> chat", "what was that other session doing", or "pick up where I left off".
+name: resume-any-chat
+description: Pick up any earlier agent chat on this computer by its title, from any Claude Code account or Codex, and carry on where it stopped. Use when the user says "/resume-any-chat <name>", "get context from <chat>", "take over <chat>", "continue the <name> chat", "what was that other session doing", or "pick up where I left off".
 ---
 
 # Pick up any chat

@@ -1,6 +1,6 @@
 ---
-name: run-agents-in-parallel
-description: Get the most done with several agents at once, builders write code in one shared tree with no test runs, a supervisor tests everything that landed together on a timer and removes the bottleneck each round. Use when you say "/run-agents-in-parallel", "keep going", "finish the code", "no test runs", "group and test", "what's the bottleneck", "run agents in parallel", and on every supervisor wake-up.
+name: build-while-you-sleep
+description: Get the most done with several agents at once, builders write code in one shared tree with no test runs, a supervisor tests everything that landed together on a timer and removes the bottleneck each round. Use when you say "/build-while-you-sleep", "keep going", "finish the code", "no test runs", "group and test", "what's the bottleneck", "run agents in parallel", and on every supervisor wake-up.
 ---
 
 # Run agents in parallel: finish the code, test as a group, remove the bottleneck
@@ -42,7 +42,7 @@ Find these in the project, or ask the user if they don't exist:
 
 ## Supervisor: the round
 
-Keep the loop alive. In Claude Code: `/loop 12m /run-agents-in-parallel`. In other agents: a scheduled task, a
+Keep the loop alive. In Claude Code: `/loop 12m /build-while-you-sleep`. In other agents: a scheduled task, a
 cron job, or a shell loop that re-prompts the supervisor every 12 minutes. Each round:
 
 1. **What landed.** `git log --since="12 minutes ago" --stat` on the shared branch. Nothing new: skip to step 4.
@@ -83,5 +83,5 @@ a broken `main` blocks other people. Use a shared integration branch there, and 
 
 ## Related
 
-`fix-the-real-problem` (how code is changed and committed), `change-code-safely`, `get-it-live` (taking the
+`fix-it-for-real` (how code is changed and committed), `dont-break-it`, `ship-it` (taking the
 finished work to release).

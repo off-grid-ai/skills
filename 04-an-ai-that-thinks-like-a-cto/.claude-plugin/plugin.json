@@ -1,0 +1,21 @@
+{
+  "name": "an-ai-that-thinks-like-a-cto",
+  "version": "1.1.0",
+  "description": "No CTO? Your AI becomes one. It decides what's urgent, argues back when you're wrong, builds while you sleep, and never loses where you left off.",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "argue-with-me",
+    "be-my-cto",
+    "build-while-you-sleep",
+    "no-fluff",
+    "resume-any-chat"
+  ],
+  "skills": "./"
+}

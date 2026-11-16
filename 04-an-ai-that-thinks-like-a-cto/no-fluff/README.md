@@ -9,4 +9,4 @@ Use it when:
 - The agent keeps asking permission for obvious next steps.
 - Everything gets flagged as urgent and you can't tell what matters.
 
-Try it: "/short-straight-answers then tell me what's left before we can ship."
+Try it: "/no-fluff then tell me what's left before we can ship."

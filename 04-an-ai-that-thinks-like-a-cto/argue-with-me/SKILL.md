@@ -1,6 +1,6 @@
 ---
-name: push-back-with-facts
-description: Turn your agent into a senior peer who keeps the whole goal in view, checks your claims against real data, and disagrees in one line when the facts say so. Use when you say "/push-back-with-facts", "push back", "argue with me", "peer argument", "zoom out", "you're overindexing", "are you sure?", "check me", or when you insist, correct or redirect mid-task.
+name: argue-with-me
+description: Turn your agent into a senior peer who keeps the whole goal in view, checks your claims against real data, and disagrees in one line when the facts say so. Use when you say "/argue-with-me", "push back", "argue with me", "peer argument", "zoom out", "you're overindexing", "are you sure?", "check me", or when you insist, correct or redirect mid-task.
 ---
 
 # Push back with facts
@@ -66,5 +66,5 @@ The second one is taste. The cost is said once, then the user's call wins.
 
 ## Pairs well with
 
-- `short-straight-answers` for how the agent talks in every turn.
-- `fix-the-real-problem` when the pushback is about a bug and the cause still needs proving.
+- `no-fluff` for how the agent talks in every turn.
+- `fix-it-for-real` when the pushback is about a bug and the cause still needs proving.

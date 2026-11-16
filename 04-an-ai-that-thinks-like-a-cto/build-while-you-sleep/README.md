@@ -9,4 +9,4 @@ Use it when:
 - Agents spend more time running tests than writing code.
 - You want to know what is actually holding the work up, with numbers.
 
-Try it: "/run-agents-in-parallel. Three builders on the checkout, settings and search pieces; you supervise every 12 minutes."
+Try it: "/build-while-you-sleep. Three builders on the checkout, settings and search pieces; you supervise every 12 minutes."

@@ -1,5 +1,5 @@
 ---
-name: act-like-a-cto
+name: be-my-cto
 description: Your agent works like a careful CTO on your product, with one writer for all code, no lost features, and the right skills loaded for each job. Use at the start of real work in any product repo, or when you say "act as CTO", "act as CPTO", "follow the rules", "take ownership of this" or "run this like a tech lead".
 ---
 
@@ -40,15 +40,15 @@ rather than guessing.
 
 Each is short; apply with judgement. If your agent has no skill loader, open the skill's `SKILL.md` and follow it.
 
-- `short-straight-answers`: always. How to talk to the user and help them decide.
-- `change-code-safely`: editing code, running checks, committing, pushing.
-- `tests-that-catch-bugs`: writing or fixing tests.
-- `make-it-look-great`: any screen, flow or feature. No shoddy work.
-- `reuse-ui-components`: any UI change, so it is built from the shared components.
-- `run-on-real-devices`: running apps, builds, phones.
-- `ship-releases-cleanly`: release branches, PR screenshots, release tracking.
-- `test-on-real-phones`: verifying a release on devices.
-- `get-it-live`: all of the above, start to finish, until the work is release-ready.
+- `no-fluff`: always. How to talk to the user and help them decide.
+- `dont-break-it`: editing code, running checks, committing, pushing.
+- `bug-trap`: writing or fixing tests.
+- `make-it-look-expensive`: any screen, flow or feature. No shoddy work.
+- `match-the-design`: any UI change, so it is built from the shared components.
+- `run-on-any-device`: running apps, builds, phones.
+- `release-day`: release branches, PR screenshots, release tracking.
+- `try-it-on-my-phone`: verifying a release on devices.
+- `ship-it`: all of the above, start to finish, until the work is release-ready.
 
 ## Worktrees that cost almost no disk
 
