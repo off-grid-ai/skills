@@ -21,4 +21,6 @@ npx skills add off-grid-ai/skills --skill be-my-cto build-while-you-sleep argue-
 Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install cto@off-grid-ai`.
 Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add cto@off-grid-ai`.
 
+Some of these skills call skills in other sets. To get everything working together, install every set (see the main README).
+
 [All skills](../README.md)

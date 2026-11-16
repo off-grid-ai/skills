@@ -19,4 +19,6 @@ npx skills add off-grid-ai/skills --skill make-it-look-expensive match-the-desig
 Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install design@off-grid-ai`.
 Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add design@off-grid-ai`.
 
+Some of these skills call skills in other sets. To get everything working together, install every set (see the main README).
+
 [All skills](../README.md)

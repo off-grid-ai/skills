@@ -21,4 +21,6 @@ npx skills add off-grid-ai/skills --skill make-it-sell sound-human write-like-me
 Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install growth@off-grid-ai`.
 Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add growth@off-grid-ai`.
 
+Some of these skills call skills in other sets. To get everything working together, install every set (see the main README).
+
 [All skills](../README.md)

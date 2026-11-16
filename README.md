@@ -41,18 +41,18 @@ npx skills add off-grid-ai/skills
 <summary>Other ways: Claude Code plugin, Codex plugin, no Node</summary>
 
 **Claude Code**
-```text
-/plugin marketplace add off-grid-ai/skills
-/plugin install review@off-grid-ai
+```bash
+claude plugin marketplace add off-grid-ai/skills
+for s in review testing design cto launch growth revenue games; do claude plugin install $s@off-grid-ai; done
 ```
 
 **Codex**
 ```bash
 codex plugin marketplace add off-grid-ai/skills
-codex plugin add review@off-grid-ai
+for s in review testing design cto launch growth revenue games; do codex plugin add $s@off-grid-ai; done
 ```
 
-Plugin names: `review`, `testing`, `design`, `cto`, `launch`, `growth`, `revenue`, `games`.
+Each set is its own plugin, so you can drop any you don't want. Skills call each other across sets, so installing all eight is the safe choice.
 
 **Any agent, no Node**
 ```bash
@@ -66,7 +66,6 @@ It links every skill into each agent it finds on your machine. Run it again to u
 
 **[graph-engineering](review/graph-engineering): review a change across your whole app on one page.** Ask for one change and you see every place it touches, every changed screen before and after, and only the calls that need you. [graph-engineering-loop](review/graph-engineering-loop) learns the rule behind each call and applies it everywhere.
 
-![What your AI hands you after every change: every app it touches, the newest version, checks from 5 angles, every changed screen before and after, notes, and only the decisions that need you.](assets/review-page.png)
 
 > *"Use graph-engineering to rename Folders to Projects across the app."*
 
