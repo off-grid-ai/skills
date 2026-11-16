@@ -1,10 +1,12 @@
-# Skills that let a small team ship like a big one
+# Your AI agent does the work. You just make the calls.
 
-Your AI agent writes code faster than anyone can check it. These skills fix that, and the work around it: shipping, copy, decisions and growth. They work with Claude Code, Codex and any agent that reads skill folders.
+These skills turn everything your agent changed into one page you can review in minutes: every screen before and after, every place the change touched, and only the decisions that need you. They work with Claude Code, Codex and any agent that reads skill folders.
+
+**Last week they shipped 2,882 commits while the person running them was on vacation.**
 
 ![What your AI agent hands you after every change: every app it touches, the newest version, checks from 5 angles, every changed screen, before and after, notes, and only the decisions that need you.](assets/review-page.png)
 
-**43 skills in 7 sets.** Copy a folder into your agent and it's ready.
+43 skills in 7 sets, from reviewing AI work to shipping, copy, decisions and growth. Copy a folder into your agent and it's ready.
 
 ## Start here
 
