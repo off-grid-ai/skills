@@ -2,8 +2,6 @@
 
 These are the skills I use every day. I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) on my own with them, and it now has 250,000+ downloads on 7 platforms. Install them and your AI works the way mine does.
 
-Off Grid went to [#1 on Hacker News](https://news.ycombinator.com/item?id=47019133), and the [EFF lists it](https://www.eff.org/pages/i-want-opt-out-ai-tools-or-training-made-big-tech) as a way to use AI without Big Tech. I'm also CTO at [Wednesday Solutions](https://mobile.wednesday.is), where we build apps for American Express, Visa, Discover and EY, so these habits hold up on apps that can't afford to break.
-
 [![Off Grid AI, built by one person with these skills: 250,000+ downloads on 7 platforms](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
 
 ## What these skills do
