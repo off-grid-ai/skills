@@ -1,15 +1,15 @@
 {
   "name": "off-grid-ai",
-  "description": "Agent skills that turn AI-written changes into one page you review in minutes. Claude Code, Codex, Cursor, Gemini CLI, Copilot and 60+ agents.",
+  "description": "Stop babysitting your AI. 42 free skills that make Claude Code, Codex, Cursor and 60+ agents build, test and ship like a senior team.",
   "owner": {
     "name": "Off Grid AI",
     "url": "https://github.com/off-grid-ai"
   },
   "plugins": [
     {
-      "name": "review-ai-work",
-      "source": "./1-review-ai-work",
-      "description": "Your agent writes code faster than you can read it. See only what changed, and make only the calls that need you.",
+      "name": "review-like-a-senior-engineer",
+      "source": "./01-review-like-a-senior-engineer",
+      "description": "Your AI changes 50 files and you can't tell what broke. Now you get one page with every screen it touched, before and after, and only the calls that need you.",
       "category": "productivity",
       "tags": [
         "agent-skills",
@@ -19,9 +19,9 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "get-the-best-from-agents",
-      "source": "./2-get-the-best-from-agents",
-      "description": "Better answers and no lost work, in every session.",
+      "name": "your-ai-stops-breaking-things",
+      "source": "./02-your-ai-stops-breaking-things",
+      "description": "You fix one bug and two old features break. Now every change is tested by tapping through your app like a real user, with no fake mocks hiding the breakage.",
       "category": "productivity",
       "tags": [
         "agent-skills",
@@ -31,9 +31,9 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "ship-with-confidence",
-      "source": "./3-ship-with-confidence",
-      "description": "Proof it works on real devices before anyone else sees it.",
+      "name": "ui-that-looks-like-stripe-made-it",
+      "source": "./03-ui-that-looks-like-stripe-made-it",
+      "description": "Vibe-coded apps all look the same. Now every screen clears a real design bar, reuses your best components, and one fix lands on every screen.",
       "category": "productivity",
       "tags": [
         "agent-skills",
@@ -43,9 +43,9 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "run-a-product-team",
-      "source": "./4-run-a-product-team",
-      "description": "Your agent works like a senior team: it knows what's urgent, what good looks like, and when to ask.",
+      "name": "an-ai-that-thinks-like-a-cto",
+      "source": "./04-an-ai-that-thinks-like-a-cto",
+      "description": "No CTO? Your AI becomes one. It decides what's urgent, argues back when you're wrong, builds while you sleep, and never loses where you left off.",
       "category": "productivity",
       "tags": [
         "agent-skills",
@@ -55,9 +55,9 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "write-copy-that-sells",
-      "source": "./5-write-copy-that-sells",
-      "description": "Plain, specific words that get read and acted on, with no AI tells.",
+      "name": "launch-like-a-real-startup",
+      "source": "./05-launch-like-a-real-startup",
+      "description": "It worked on your laptop and broke on your phone. Now every release is tested on real phones, shipped cleanly, and announced in notes people read.",
       "category": "productivity",
       "tags": [
         "agent-skills",
@@ -67,9 +67,9 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "make-decisions",
-      "source": "./6-make-decisions",
-      "description": "The answer first, every claim sourced, every option scored.",
+      "name": "get-users-without-ads",
+      "source": "./06-get-users-without-ads",
+      "description": "Your landing page reads like ChatGPT wrote it and nobody can find you. Now your copy sounds human, sells, and gets you recommended in AI answers.",
       "category": "productivity",
       "tags": [
         "agent-skills",
@@ -79,9 +79,9 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "track-growth",
-      "source": "./7-track-growth",
-      "description": "All your numbers in one place, and the few moves that matter.",
+      "name": "know-what-makes-you-money",
+      "source": "./07-know-what-makes-you-money",
+      "description": "You have Stripe, analytics and store numbers and no idea what to change. Now you get the three moves that grow revenue most, and decisions you can make from one page.",
       "category": "productivity",
       "tags": [
         "agent-skills",
@@ -91,9 +91,9 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "build-a-game",
-      "source": "./8-build-a-game",
-      "description": "The same bar, set up for games in Godot, Unity, Unreal or the web.",
+      "name": "make-a-game-like-a-studio",
+      "source": "./08-make-a-game-like-a-studio",
+      "description": "Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.",
       "category": "productivity",
       "tags": [
         "agent-skills",
