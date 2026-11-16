@@ -40,6 +40,8 @@ npx skills add off-grid-ai/skills --skill {' '.join(n for n, _ in s['skills'])}
 Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install {plug(s)}@off-grid-ai`.
 Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add {plug(s)}@off-grid-ai`.
 
+Some of these skills call skills in other sets. To get everything working together, install every set (see the main README).
+
 [All skills](../README.md)
 """
     open(os.path.join(ROOT, s["dir"], "README.md"), "w").write(body)
@@ -88,18 +90,18 @@ npx skills add off-grid-ai/skills
 <summary>Other ways: Claude Code plugin, Codex plugin, no Node</summary>
 
 **Claude Code**
-```text
-/plugin marketplace add off-grid-ai/skills
-/plugin install {plug(sets[0])}@off-grid-ai
+```bash
+claude plugin marketplace add off-grid-ai/skills
+for s in {' '.join(plug(s) for s in sets)}; do claude plugin install $s@off-grid-ai; done
 ```
 
 **Codex**
 ```bash
 codex plugin marketplace add off-grid-ai/skills
-codex plugin add {plug(sets[0])}@off-grid-ai
+for s in {' '.join(plug(s) for s in sets)}; do codex plugin add $s@off-grid-ai; done
 ```
 
-Plugin names: {', '.join('`' + plug(s) + '`' for s in sets)}.
+Each set is its own plugin, so you can drop any you don't want. Skills call each other across sets, so installing all eight is the safe choice.
 
 **Any agent, no Node**
 ```bash
@@ -113,7 +115,6 @@ It links every skill into each agent it finds on your machine. Run it again to u
 
 **[graph-engineering](%(ge)s): review a change across your whole app on one page.** Ask for one change and you see every place it touches, every changed screen before and after, and only the calls that need you. [graph-engineering-loop](%(gel)s) learns the rule behind each call and applies it everywhere.
 
-![What your AI hands you after every change: every app it touches, the newest version, checks from 5 angles, every changed screen before and after, notes, and only the decisions that need you.](assets/review-page.png)
 
 > *"Use graph-engineering to rename Folders to Projects across the app."*
 
