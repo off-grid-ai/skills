@@ -1,0 +1,21 @@
+{
+  "name": "launch-like-a-real-startup",
+  "version": "1.1.0",
+  "description": "It worked on your laptop and broke on your phone. Now every release is tested on real phones, shipped cleanly, and announced in notes people read.",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "release-day",
+    "run-on-any-device",
+    "ship-it",
+    "try-it-on-my-phone",
+    "whats-new"
+  ],
+  "skills": "./"
+}

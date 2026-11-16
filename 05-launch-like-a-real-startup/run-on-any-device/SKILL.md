@@ -1,5 +1,5 @@
 ---
-name: run-on-real-devices
+name: run-on-any-device
 description: Run and drive your app on real phones, simulators and desktop the safe way, one step at a time, with test data only and the machine kept healthy. Use before running an app, a build or a device check, or when the user says "run it on my phone", "open it on the device", "drive the app" or "check it on Android".
 ---
 

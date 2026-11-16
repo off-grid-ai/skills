@@ -1,11 +1,11 @@
 ---
-name: test-on-real-phones
-description: Verify a release by hand on real devices with a written checklist, one device at a time, and turn every failure into a fixed bug or a logged item. Use when the user says "hand test", "verify the release", "manual verification", "test it on my phone", "write a test", "fix a test", or /test-on-real-phones.
+name: try-it-on-my-phone
+description: Verify a release by hand on real devices with a written checklist, one device at a time, and turn every failure into a fixed bug or a logged item. Use when the user says "hand test", "verify the release", "manual verification", "test it on my phone", "write a test", "fix a test", or /try-it-on-my-phone.
 ---
 
 # Hand test
 
-Load `run-on-real-devices`, `tests-that-catch-bugs` and `ship-releases-cleanly` first, or ask your agent to follow them. Then do this in this session (see `act-like-a-cto`):
+Load `run-on-any-device`, `bug-trap` and `release-day` first, or ask your agent to follow them. Then do this in this session (see `be-my-cto`):
 
 1. **Plan.** Read the release diff in every repo. Write one checklist in the project's docs folder (for example `docs/release-checklist.md`). Each row says: do this, then you should see this.
 2. **Order.** Start with an old install that holds real-looking test data, then upgrade it, then run the checks. Do a fresh install last. If one device pairs with or depends on another (a phone that syncs with a desktop app), test the one the others depend on last.
@@ -27,4 +27,4 @@ python3 scripts/pr_shots.py <repo-dir> <owner/repo> <pr-number> <file>... [--bra
 
 ## Deeper reference
 
-`reference/test-doctrine.md` holds the full method for writing and fixing tests that prove what the user sees. Read it for any hard case.
+`test-like-a-user/reference/test-doctrine.md` holds the full method for writing and fixing tests that prove what the user sees. Read it for any hard case.

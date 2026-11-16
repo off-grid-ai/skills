@@ -1,11 +1,11 @@
 ---
-name: release-notes-people-read
-description: Turn the notes and replies from a screen review into release notes users actually read, grouped by how people use the app, then put them in the repo and at the top of the release PR. Use when the user says "release notes", "what's new", "write the release notes from the comments", "update the PR with what changed for users", or /release-notes-people-read.
+name: whats-new
+description: Turn the notes and replies from a screen review into release notes users actually read, grouped by how people use the app, then put them in the repo and at the top of the release PR. Use when the user says "release notes", "what's new", "write the release notes from the comments", "update the PR with what changed for users", or /whats-new.
 ---
 
 # Release notes from the review
 
-The screen review page (made by `review-every-screen`) already holds what changed and why: the user's notes, the agent's replies under them, and the agent's own notes on the After shots. This skill turns that into notes a user reads, ordered by the way they use the app, not by screen or by commit.
+The screen review page (made by `show-me`) already holds what changed and why: the user's notes, the agent's replies under them, and the agent's own notes on the After shots. This skill turns that into notes a user reads, ordered by the way they use the app, not by screen or by commit.
 
 ## 1. Read
 
@@ -36,7 +36,7 @@ Under each heading, give a bold line with the outcome for the user, then 1 to 3 
 
 ## 3. Write it in the product's own voice
 
-Load `write-like-a-human` and run its checks on every line. If the project or user has a voice skill or style guide, follow it too.
+Load `sound-human` and run its checks on every line. If the project or user has a voice skill or style guide, follow it too.
 
 - Lead with what the user gets, never with the component or the fix. Write "The model sheet opens straight away", not "Virtualized the remote model list".
 - Use real numbers when they are true and checked: "about half a second; it used to take nearly 3". Never invent one.
@@ -45,7 +45,7 @@ Load `write-like-a-human` and run its checks on every line. If the project or us
 - Write the product name exactly as the brand writes it, every time.
 - If the app runs on more than one operating system, say "your computer" or "your phone", never one OS by name, and never name a shortcut that only works on one platform.
 
-Then do a last pass for AI-sounding writing (`write-like-a-human` covers it). Remove em dashes, "not X, it's Y", colon reveals, lists of three that are only habit, cute lines, and "and more". Read it out loud once.
+Then do a last pass for AI-sounding writing (`sound-human` covers it). Remove em dashes, "not X, it's Y", colon reveals, lists of three that are only habit, cute lines, and "and more". Read it out loud once.
 
 Check the facts. Every claim must trace back to a comment, a reply or the decision log. Remove anything you cannot trace.
 
