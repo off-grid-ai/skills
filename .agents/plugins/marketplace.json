@@ -14,7 +14,8 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Productivity",
+      "description": "Your agent writes code faster than you can read it. See only what changed, and make only the calls that need you."
     },
     {
       "name": "get-the-best-from-agents",
@@ -26,7 +27,8 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Productivity",
+      "description": "Better answers and no lost work, in every session."
     },
     {
       "name": "ship-with-confidence",
@@ -38,7 +40,8 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Productivity",
+      "description": "Proof it works on real devices before anyone else sees it."
     },
     {
       "name": "run-a-product-team",
@@ -50,7 +53,8 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Productivity",
+      "description": "Your agent works like a senior team: it knows what's urgent, what good looks like, and when to ask."
     },
     {
       "name": "write-copy-that-sells",
@@ -62,7 +66,8 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Productivity",
+      "description": "Plain, specific words that get read and acted on, with no AI tells."
     },
     {
       "name": "make-decisions",
@@ -74,7 +79,8 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Productivity",
+      "description": "The answer first, every claim sourced, every option scored."
     },
     {
       "name": "track-growth",
@@ -86,7 +92,8 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Productivity",
+      "description": "All your numbers in one place, and the few moves that matter."
     },
     {
       "name": "build-a-game",
@@ -98,7 +105,8 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Productivity"
+      "category": "Productivity",
+      "description": "The same bar, set up for games in Godot, Unity, Unreal or the web."
     }
   ]
 }
