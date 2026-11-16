@@ -9,4 +9,4 @@ Use it when:
 - You're writing or revising a how-to, a "best X" list or a README meant to bring in users.
 - You want to know which of your existing articles work and why, without guessing.
 
-Try it: "/get-found-by-ai-search Plan ten article titles for our app from the last three releases."
+Try it: "/get-cited-by-ai Plan ten article titles for our app from the last three releases."

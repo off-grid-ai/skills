@@ -1,0 +1,21 @@
+{
+  "name": "get-users-without-ads",
+  "version": "1.1.0",
+  "description": "Your landing page reads like ChatGPT wrote it and nobody can find you. Now your copy sounds human, sells, and gets you recommended in AI answers.",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "find-threads-to-join",
+    "get-cited-by-ai",
+    "make-it-sell",
+    "sound-human",
+    "write-like-me"
+  ],
+  "skills": "./"
+}

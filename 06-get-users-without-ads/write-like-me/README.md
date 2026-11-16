@@ -9,4 +9,4 @@ Use it when:
 - Drafts from your agent sound polite and generic, not like you.
 - You want relationship notes that give value instead of asking for a meeting.
 
-Try it: "/write-as-a-founder Here are 15 of my old LinkedIn posts. Learn my voice, then draft a note to a CTO I met last week."
+Try it: "/write-like-me Here are 15 of my old LinkedIn posts. Learn my voice, then draft a note to a CTO I met last week."

@@ -9,4 +9,4 @@ Use it when:
 - You're writing a post, landing page, store listing, email or newsletter.
 - Copy talks about the product instead of what the reader gets.
 
-Try it: "/write-like-a-human Rewrite this launch post so a stranger would actually read it."
+Try it: "/sound-human Rewrite this launch post so a stranger would actually read it."

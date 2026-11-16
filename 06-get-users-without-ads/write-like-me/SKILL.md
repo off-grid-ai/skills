@@ -1,6 +1,6 @@
 ---
-name: write-as-a-founder
-description: Get outreach, posts and emails that sound like you wrote them, because your agent learns your voice from your own past writing, picks the right posture, and audits every draft before you see it. Use when drafting LinkedIn posts or DMs, cold or warm emails, drip campaigns, landing copy or talk scripts that go out under your name, or when you say "/write-as-a-founder", "write it as me", "in my voice", "sound like me".
+name: write-like-me
+description: Get outreach, posts and emails that sound like you wrote them, because your agent learns your voice from your own past writing, picks the right posture, and audits every draft before you see it. Use when drafting LinkedIn posts or DMs, cold or warm emails, drip campaigns, landing copy or talk scripts that go out under your name, or when you say "/write-like-me", "write it as me", "in my voice", "sound like me".
 ---
 
 # Write as a founder

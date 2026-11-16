@@ -22,7 +22,7 @@ Keep useful visible FAQs. Do not promise FAQ rich results or require JSON-LD in 
 
 ## Synthesis of supplied sources
 
-- The `copy-that-sells` skill: reader research, specific benefits, authentic proof, short clear prose, and a concrete next step. Do not import fabricated sales results, mandatory urgency, guarantees, or an arbitrary opening sentence length.
+- The `make-it-sell` skill: reader research, specific benefits, authentic proof, short clear prose, and a concrete next step. Do not import fabricated sales results, mandatory urgency, guarantees, or an arbitrary opening sentence length.
 - SNLabat SEO-GEO-AEO-Skill: inspect real page evidence, direct answers, meaningful headings, comparisons, and source attribution. Its full-site audit procedure is a separate workflow, not required for an article revision.
 - AgriciDaniel claude-seo: usefulness, clear authorship, verifiable evidence, primary-source guidance, and a distinction between heuristic scores and measured performance. Treat statistics and fixed content-length suggestions as claims to verify, not rules.
 - mykpono ultimate-seo-geo and GRCEngClub seo-skills: intent coverage, clear page ownership, related content links, concise answers, and no duplicate guides aimed at the same task.

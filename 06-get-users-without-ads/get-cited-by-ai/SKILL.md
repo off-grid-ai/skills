@@ -1,6 +1,6 @@
 ---
-name: get-found-by-ai-search
-description: Get articles that search engines and AI answer engines can find and quote, because each one answers a real reader question directly, with verified facts and a clear next step. Use when planning titles, writing or revising articles, READMEs or "best X" lists for SEO, AEO or GEO, reviewing article performance, or when you say "/get-found-by-ai-search", "write an SEO article", "get us cited by ChatGPT".
+name: get-cited-by-ai
+description: Get articles that search engines and AI answer engines can find and quote, because each one answers a real reader question directly, with verified facts and a clear next step. Use when planning titles, writing or revising articles, READMEs or "best X" lists for SEO, AEO or GEO, reviewing article performance, or when you say "/get-cited-by-ai", "write an SEO article", "get us cited by ChatGPT".
 ---
 
 # Get found by AI search (SEO, AEO, GEO)
@@ -70,7 +70,7 @@ Articles, lists and READMEs are sales and marketing. They should feel genuine an
 - Fairness throat-clearing: "To be fair", "in fairness", "we're biased".
 Accuracy still rules. Don't claim what isn't verified; just don't narrate the verification.
 
-**Sell like Bly and Ogilvy** (from `copy-that-sells`):
+**Sell like Bly and Ogilvy** (from `make-it-sell`):
 - Benefit over feature. For every capability ask "so what does the reader get?" and write that. Nobody buys drill bits, they buy holes.
 - One reader, one objective, one next action. Write to "you"; "you" beats "we" two to one.
 - Specific beats grand: numbers, names, prices, time saved. "Records the call on your own computer, no bot joins, {price.lifetime} once" beats "fast, private meeting notes".
@@ -78,14 +78,14 @@ Accuracy still rules. Don't claim what isn't verified; just don't narrate the ve
 - CTAs are specific action verbs ("Get Pro for {price.lifetime} once", "Download the app"), early and at the end, never "learn more".
 - Cardinal sins: talking about yourself before the reader's problem, empty superlatives, clever over clear, burying the lead, claims without proof.
 
-**Sound like a person** (from `write-like-a-human`, or the user's own voice guide if they have one):
+**Sound like a person** (from `sound-human`, or the user's own voice guide if they have one):
 - Outcome first: open with what the reader gets, not how the thing is built.
 - Ask "so what?" three times of the main claim and write the third answer. Every paragraph answers "what's in it for you".
 - Talk like a real person: contractions, everyday words, connect thoughts with "because", "so", "but". Read it out loud.
 - Take a clear position. No "might be worth considering". Never oversell; say what's true today.
 - No "Why it matters:" or lesson endings, no hanging one-fact sentences, no opening with "We made...".
 
-**Cut the slop** (the slop pass in `write-like-a-human`):
+**Cut the slop** (the slop pass in `sound-human`):
 - Banned words: delve, leverage, utilize, seamless, robust, unlock, empower, game changer, cutting-edge, elevate, harness, landscape (figurative).
 - Banned shapes: "not X, it's Y", colon reveals ("The best part: it learns"), faux-insight setups ("what most people get wrong"), negative listing, stacked punchy fragments, default threes, recap endings, fake-profound kickers.
 - Weasel attribution ("experts agree", "studies show"): name the source or cut it.

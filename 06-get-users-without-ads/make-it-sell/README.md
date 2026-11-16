@@ -9,4 +9,4 @@ Use it when:
 - You're writing a landing page, ad, sales email or store listing.
 - Copy lists features and you need it to say what the reader gets.
 
-Try it: "/copy-that-sells Give me five headlines for this landing page and score each on the Four U's."
+Try it: "/make-it-sell Give me five headlines for this landing page and score each on the Four U's."

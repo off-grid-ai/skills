@@ -1,6 +1,6 @@
 ---
-name: copy-that-sells
-description: Get copy that sells, built on the direct-response rules of Robert Bly and David Ogilvy, with research first, benefits over features, headlines tested on the Four U's, and proof for every claim. Use when writing or editing headlines, taglines, value props, landing or hero sections, ads, email subject lines, CTAs or sales pages, or when you say "/copy-that-sells", "make this sell", "punchier", "rewrite this to convert".
+name: make-it-sell
+description: Get copy that sells, built on the direct-response rules of Robert Bly and David Ogilvy, with research first, benefits over features, headlines tested on the Four U's, and proof for every claim. Use when writing or editing headlines, taglines, value props, landing or hero sections, ads, email subject lines, CTAs or sales pages, or when you say "/make-it-sell", "make this sell", "punchier", "rewrite this to convert".
 ---
 
 # The Copywriting Rulebook
@@ -98,7 +98,7 @@ Writing about yourself before the reader's problem · empty superlatives · clev
 
 ## Pairs well with
 
-- `write-like-a-human` for tone and the final AI-slop pass, or `write-as-a-founder` when the copy goes out under
+- `sound-human` for tone and the final AI-slop pass, or `write-like-me` when the copy goes out under
   one person's name.
 - The user's own brand or style guide, if the project has one. Read it before drafting.
 

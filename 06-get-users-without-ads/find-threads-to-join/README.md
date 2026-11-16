@@ -9,4 +9,4 @@ Use it when:
 - Your feed is full of welcomes and awards and you can't find the posts worth replying to.
 - You track a list of people and want to know the warmest moment to show up.
 
-Try it: "/find-posts-worth-replying-to from my latest scraper run"
+Try it: "/find-threads-to-join from my latest scraper run"

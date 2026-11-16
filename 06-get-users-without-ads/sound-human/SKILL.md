@@ -1,6 +1,6 @@
 ---
-name: write-like-a-human
-description: Get copy that sounds like a real person wrote it, plain, direct and outcome first, with four checks run on every draft and the AI tells removed. Use when writing or editing posts, pitches, landing pages, store pages, emails, newsletters, Reddit posts, taglines or product copy, or when you say "/write-like-a-human", "make it sound human", "less AI", "plainer", "write it like a person".
+name: sound-human
+description: Get copy that sounds like a real person wrote it, plain, direct and outcome first, with four checks run on every draft and the AI tells removed. Use when writing or editing posts, pitches, landing pages, store pages, emails, newsletters, Reddit posts, taglines or product copy, or when you say "/sound-human", "make it sound human", "less AI", "plainer", "write it like a person".
 ---
 
 # Write like a human
@@ -9,12 +9,12 @@ Plain, direct, outcome first. Say less and mean all of it.
 
 If the user has their own voice notes (a style guide, a `voice.md`, past posts they like), read them first.
 Their rules win where they differ from this file. To learn a specific person's voice from their writing, use
-`write-as-a-founder`.
+`write-like-me`.
 
 ## How to use it (every time, in this order)
 
 1. **Structure:** when the copy has to sell or convert (headlines, landing pages, store pages, pitches, CTAs),
-   apply `copy-that-sells` first. Skip it for pure-value pieces such as newsletters and news posts, which follow
+   apply `make-it-sell` first. Skip it for pure-value pieces such as newsletters and news posts, which follow
    the structures below instead.
 2. **Voice:** write the draft with this skill: the four checks, Voice and Never below.
 3. **Slop pass:** run the slop pass at the end of this file on the finished draft, every piece, no exceptions.

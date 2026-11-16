@@ -1,6 +1,6 @@
 ---
-name: find-posts-worth-replying-to
-description: Get a short ranked list of LinkedIn or X posts worth commenting on today, from the people you track, with two ready-to-paste comments for each in your voice and a separate list of who moved jobs. Use when you say "/find-posts-worth-replying-to", "posts to comment on", "engagement digest", "what should I reply to", or ask for a fresh batch of posts to engage with.
+name: find-threads-to-join
+description: Get a short ranked list of LinkedIn or X posts worth commenting on today, from the people you track, with two ready-to-paste comments for each in your voice and a separate list of who moved jobs. Use when you say "/find-threads-to-join", "posts to comment on", "engagement digest", "what should I reply to", or ask for a fresh batch of posts to engage with.
 ---
 
 # Find posts worth replying to
@@ -23,7 +23,7 @@ Ask the user for anything you can't find, then save the answers in a config file
 - **The user's topics.** The 5 to 10 subjects where the user can credibly add something. This drives the gate.
 - **The target market** for people moves (industry, region, company size, roles).
 - **Relationship sources,** if connected: a CRM, an email outreach tool, a notes or memory tool. All optional.
-- **The user's voice.** A voice profile for `write-as-a-founder`, plus any comment-specific rules the user has.
+- **The user's voice.** A voice profile for `write-like-me`, plus any comment-specific rules the user has.
 - **Where the digest goes.** Slack or another chat tool if connected; otherwise a local Markdown or HTML file.
 - **The seen-posts store,** for example `engage/seen_posts.json`. Create it empty.
 
@@ -139,7 +139,7 @@ Track which notes or files informed each comment, so the user can check the sour
 
 ### 5. Draft two comments per post
 
-Use `write-as-a-founder` for every draft, with the user's voice profile. Read any comment-specific rules the user
+Use `write-like-me` for every draft, with the user's voice profile. Read any comment-specific rules the user
 keeps before drafting; they override the general voice.
 
 Give it: the full post, the author's dossier, the engager list and what it means, the context from step 4, and
