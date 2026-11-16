@@ -51,13 +51,18 @@ sections = "\n\n".join(
 hero = ("![How it works: you ask for a change, your agent maps everything it touches, makes it, checks it, and hands you one page with only the calls that need you](assets/how-it-works.png)\n\n"
         if os.path.exists(os.path.join(ROOT, "assets", "how-it-works.png")) else "")
 
-readme = f"""# Review everything your AI agent changed, on one page
+where = {n: f"{s['dir']}/{n}" for s in sets for n, _ in s["skills"]}
+hooks = "\n".join(f"- **[{s['title']}]({s['dir']})**. {s['pitch']}" for s in sets)
 
-Your agent writes code faster than you can read it. These {total} free skills make it check its own work, show you every changed screen before and after, and ask you only the calls that need you. They work in Claude Code, Codex, Cursor, Gemini CLI, Copilot and 60+ other agents.
+readme = f"""# Stop babysitting your AI. Make it build, test and ship like a senior team.
 
-{hero}[![Built with these skills: 193B tokens, 22,809 GitHub contributions in 4 months](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
+{total} free skills for Claude Code, Codex, Cursor and 60+ other agents. Install them with one line, and your AI starts checking its own work.
 
-## Install in one line
+{hooks}
+
+[![Built with these skills: 193B tokens, 22,809 GitHub contributions in 4 months](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
+
+{hero}## Install in one line
 
 Paste this into your agent:
 
@@ -77,13 +82,13 @@ npx skills add off-grid-ai/skills
 **Claude Code**
 ```text
 /plugin marketplace add off-grid-ai/skills
-/plugin install review-ai-work@off-grid-ai
+/plugin install {plug(sets[0])}@off-grid-ai
 ```
 
 **Codex**
 ```bash
 codex plugin marketplace add off-grid-ai/skills
-codex plugin add review-ai-work@off-grid-ai
+codex plugin add {plug(sets[0])}@off-grid-ai
 ```
 
 Plugin names: {', '.join('`' + plug(s) + '`' for s in sets)}.
@@ -96,21 +101,25 @@ It links every skill into each agent it finds on your machine. Run it again to u
 
 </details>
 
-## Start with these three
+## Try these first
 
-**1. Review a big change on one page.** [graph-engineering](1-review-ai-work/graph-engineering) maps every place a change touches, then shows you each changed screen before and after, with only the calls that need you. [graph-engineering-loop](1-review-ai-work/graph-engineering-loop) learns the rule behind each call and applies it everywhere.
+**[graph-engineering](%(ge)s): review a 98-screen change on one page.** Ask for one change and you see every place it touches, every changed screen before and after, and only the calls that need you. [graph-engineering-loop](%(gel)s) learns the rule behind each call and applies it everywhere.
 
-![What your agent hands you after every change: every app it touches, the newest version, checks from 5 angles, every changed screen before and after, notes, and only the decisions that need you.](assets/review-page.png)
+![What your AI hands you after every change: every app it touches, the newest version, checks from 5 angles, every changed screen before and after, notes, and only the decisions that need you.](assets/review-page.png)
 
-> Try it: *"Use graph-engineering to rename Folders to Projects across the app."*
+> *"Use graph-engineering to rename Folders to Projects across the app."*
 
-**2. Get an agent that argues back.** [push-back-with-facts](2-get-the-best-from-agents/push-back-with-facts) stops your agent from agreeing with whatever you said last. It checks the facts, keeps your whole goal in view, and tells you when you're wrong.
+**[test-like-a-user](%(tlu)s): tests that catch what your users would hit.** It opens the real screen, taps the real button and checks what you'd see. No mocks of your own code, so a green test means it really works.
 
-> Try it: *"/push-back-with-facts we should rewrite the backend in Rust"*
+> *"/test-like-a-user the checkout flow"*
 
-**3. Never lose a chat again.** [pick-up-any-chat](2-get-the-best-from-agents/pick-up-any-chat) finds any past session by its name, even from another account or from Codex, and carries on where it stopped.
+**[argue-with-me](%(awm)s): an AI that tells you when you're wrong.** It checks the facts and keeps your whole goal in view instead of agreeing with whatever you said last.
 
-> Try it: *"/pick-up-any-chat the onboarding redesign"*
+> *"/argue-with-me we should rewrite the backend in Rust"*
+
+**[resume-any-chat](%(rac)s): never lose a chat again.** Find any past session by its name, even from another account or from Codex, and carry on where it stopped.
+
+> *"/resume-any-chat the onboarding redesign"*
 
 ## All {total} skills
 
@@ -124,6 +133,6 @@ It links every skill into each agent it finds on your machine. Run it again to u
 - MIT licensed. Third-party files keep their own licenses (see `NOTICE` files).
 
 Made by [Mac](https://github.com/alichherawalla). Follow me on GitHub for new skills as they ship.
-"""
+""" % dict(ge=where["graph-engineering"], gel=where["graph-engineering-loop"], tlu=where["test-like-a-user"], awm=where["argue-with-me"], rac=where["resume-any-chat"])
 open(os.path.join(ROOT, "README.md"), "w").write(readme)
 print("README +", len(sets), "set READMEs,", total, "skills")

@@ -61,6 +61,8 @@ write('.claude-plugin/marketplace.json', {
     source: `./${s.dir}`,
     description: s.pitch,
     category: 'productivity',
+    tags: ['agent-skills', 'claude-code', 'codex'],
+    homepage: 'https://github.com/off-grid-ai/skills',
   })),
 });
 
@@ -72,6 +74,7 @@ write('.agents/plugins/marketplace.json', {
     source: { source: 'local', path: `./${s.dir}` },
     policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' },
     category: 'Productivity',
+    description: s.pitch,
   })),
 });
 

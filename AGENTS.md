@@ -3,8 +3,7 @@
 If a user says "install the skills from github.com/off-grid-ai/skills", pick the first method that fits your environment and install every set unless they name one.
 
 1. **You are Claude Code.** Run `/plugin marketplace add off-grid-ai/skills`, then `/plugin install <set>@off-grid-ai`
-   for each set the user wants (sets: review-ai-work, get-the-best-from-agents, ship-with-confidence,
-   run-a-product-team, write-copy-that-sells, make-decisions, track-growth). From a shell:
+   for each set the user wants (sets: review-like-a-senior-engineer, your-ai-stops-breaking-things, ui-that-looks-like-stripe-made-it, an-ai-that-thinks-like-a-cto, launch-like-a-real-startup, get-users-without-ads, know-what-makes-you-money, make-a-game-like-a-studio). From a shell:
    `claude plugin marketplace add off-grid-ai/skills` and `claude plugin install <set>@off-grid-ai`.
 2. **You are Codex.** Run `codex plugin marketplace add off-grid-ai/skills`, then `codex plugin add <set>@off-grid-ai`.
 3. **Node is available (any agent).** Run `npx skills add off-grid-ai/skills` and choose skills and agents, or
@@ -17,10 +16,10 @@ If a user says "install the skills from github.com/off-grid-ai/skills", pick the
 
 Each skill is a folder with a `SKILL.md` (instructions, with `name` and `description` frontmatter) and sometimes
 `references/` or `scripts/`. Skills load on demand when the user's request matches the description, or when the
-user names them (`/graph-engineering` in Claude Code, or "use the graph-engineering skill" anywhere).
+user names them (`/graph-engineering` or `/be-my-cto` in Claude Code, or "use the graph-engineering skill" anywhere).
 
 ## Working on this repo
-- One folder per set (`1-review-ai-work/`, ...), one folder per skill inside it. The skill folder name equals its
+- One folder per set (``, ...), one folder per skill inside it. The skill folder name equals its
   `name:` frontmatter.
 - After adding, removing or moving a skill, run `node scripts/build-manifests.mjs` to rebuild the Claude Code and
   Codex manifests, then `claude plugin validate .`.
