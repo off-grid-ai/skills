@@ -1,0 +1,24 @@
+{
+  "name": "make-a-game-like-a-studio",
+  "version": "1.1.0",
+  "description": "Making a game alone with AI? Now it has a director, an art director and a QA team that playtests every scene.",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "art-director",
+    "boot-game",
+    "devlog",
+    "game-calls",
+    "game-director",
+    "playtest",
+    "prove-it",
+    "ship-the-feature"
+  ],
+  "skills": "./"
+}

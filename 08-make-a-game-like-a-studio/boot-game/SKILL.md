@@ -1,6 +1,6 @@
 ---
-name: start-your-game
-description: Run your game and its services from the command line, take screenshot renders, and share the GPU safely with the user and other agent sessions. Use before running, rendering or timing anything in a game, or when the user says "run the game", "start the game", "take a screenshot of the scene", "render this level" or "start-your-game".
+name: boot-game
+description: Run your game and its services from the command line, take screenshot renders, and share the GPU safely with the user and other agent sessions. Use before running, rendering or timing anything in a game, or when the user says "run the game", "start the game", "take a screenshot of the scene", "render this level" or "boot-game".
 ---
 
 # Start your game
