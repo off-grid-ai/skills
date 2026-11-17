@@ -59,6 +59,41 @@
       ]
     },
     {
+      "dir": "codebase",
+      "title": "Take over any codebase, old or new",
+      "pitch": "New to a codebase, or starting one from nothing? Your AI maps it, knows what each change will break, keeps the architecture clean and deploys without a 2am rollback.",
+      "skills": [
+        [
+          "learn-this-codebase",
+          "Know a new codebase in an hour. Every answer comes with the file path."
+        ],
+        [
+          "blast-radius",
+          "Before shared code changes, see everything it breaks. Risky edits wait for your yes."
+        ],
+        [
+          "tests-for-old-code",
+          "Tests for code that never had any, each one run and passing before you see it."
+        ],
+        [
+          "audit-a-module",
+          "Refactor, rewrite or leave it alone? One screen and a straight answer."
+        ],
+        [
+          "stay-in-the-lines",
+          "Write down which parts may talk to which. Every change gets checked against it."
+        ],
+        [
+          "plan-from-scratch",
+          "An architect, a product lead and a security lead plan your new project, and show you where they disagree."
+        ],
+        [
+          "deploy-without-fear",
+          "Checks before and after every production deploy, and a clear call on when to roll back."
+        ]
+      ]
+    },
+    {
       "dir": "design",
       "title": "UI that looks like Stripe's designers made it",
       "pitch": "Most vibe-coded apps look the same. Every screen has to clear a real design bar and reuse your best components, and a note on one screen fixes all of them.",

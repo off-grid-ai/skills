@@ -3,7 +3,7 @@
 If a user says "install the skills from github.com/off-grid-ai/skills", pick the first method that fits your environment and install every set unless they name one.
 
 1. **You are Claude Code.** Run `/plugin marketplace add off-grid-ai/skills`, then `/plugin install <set>@off-grid-ai`
-   for each set the user wants (sets: review, testing, design, cto, launch, growth, revenue, games). From a shell:
+   for each set the user wants (sets: review, testing, codebase, design, cto, launch, growth, revenue, games). From a shell:
    `claude plugin marketplace add off-grid-ai/skills` and `claude plugin install <set>@off-grid-ai`.
 2. **You are Codex.** Run `codex plugin marketplace add off-grid-ai/skills`, then `codex plugin add <set>@off-grid-ai`.
 3. **Node is available (any agent).** Run `npx skills add off-grid-ai/skills` and choose skills and agents, or

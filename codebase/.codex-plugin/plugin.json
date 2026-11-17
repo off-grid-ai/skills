@@ -1,0 +1,23 @@
+{
+  "name": "codebase",
+  "version": "1.2.0",
+  "description": "New to a codebase, or starting one from nothing? Your AI maps it, knows what each change will break, keeps the architecture clean and deploys without a 2am rollback.",
+  "author": {
+    "name": "Off Grid AI",
+    "url": "https://github.com/off-grid-ai"
+  },
+  "homepage": "https://github.com/off-grid-ai/skills",
+  "repository": "https://github.com/off-grid-ai/skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "audit-a-module",
+    "blast-radius",
+    "deploy-without-fear",
+    "learn-this-codebase",
+    "plan-from-scratch",
+    "stay-in-the-lines",
+    "tests-for-old-code"
+  ],
+  "skills": "./"
+}
