@@ -1,16 +1,16 @@
-# Take over any codebase, old or new
+# Change old code without breaking it
 
-New to a codebase, or starting one from nothing? Your AI maps it, knows what each change will break, keeps the architecture clean and deploys without a 2am rollback.
+You inherit a codebase nobody fully understands, and every change is a guess. Your AI maps it first, shows you what each change will break, and adds tests before it touches anything risky.
 
 | Skill | What you get |
 | --- | --- |
-| [**learn-this-codebase**](learn-this-codebase) | Know a new codebase in an hour. Every answer comes with the file path. |
-| [**blast-radius**](blast-radius) | Before shared code changes, see everything it breaks. Risky edits wait for your yes. |
+| [**learn-this-codebase**](learn-this-codebase) | Ask anything about a codebase you've never seen, and get answers with the file and line. |
+| [**blast-radius**](blast-radius) | See everything a change will break before it's made. Risky edits wait for your yes. |
 | [**tests-for-old-code**](tests-for-old-code) | Tests for code that never had any, each one run and passing before you see it. |
-| [**audit-a-module**](audit-a-module) | Refactor, rewrite or leave it alone? One screen and a straight answer. |
-| [**stay-in-the-lines**](stay-in-the-lines) | Write down which parts may talk to which. Every change gets checked against it. |
-| [**plan-from-scratch**](plan-from-scratch) | An architect, a product lead and a security lead plan your new project, and show you where they disagree. |
-| [**deploy-without-fear**](deploy-without-fear) | Checks before and after every production deploy, and a clear call on when to roll back. |
+| [**audit-a-module**](audit-a-module) | Find out whether to refactor, rewrite or leave a module alone, on one screen. |
+| [**stay-in-the-lines**](stay-in-the-lines) | Your architecture stays the way you drew it, because every change gets checked against your rules. |
+| [**plan-from-scratch**](plan-from-scratch) | Starting fresh? An architect, a product lead and a security lead plan it, and show you where they disagree. |
+| [**deploy-without-fear**](deploy-without-fear) | Deploy on any day. It checks before and after, and tells you the moment to roll back. |
 
 ## Install just this set
 

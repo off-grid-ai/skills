@@ -33,7 +33,7 @@
     {
       "name": "codebase",
       "source": "./codebase",
-      "description": "New to a codebase, or starting one from nothing? Your AI maps it, knows what each change will break, keeps the architecture clean and deploys without a 2am rollback.",
+      "description": "You inherit a codebase nobody fully understands, and every change is a guess. Your AI maps it first, shows you what each change will break, and adds tests before it touches anything risky.",
       "category": "productivity",
       "tags": [
         "agent-skills",

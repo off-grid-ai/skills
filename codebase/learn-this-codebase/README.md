@@ -1,6 +1,6 @@
-# Know a new codebase in an hour, not a month
+# Find your way around any codebase on day one
 
-Your agent maps the project once: what it does, its modules, the risky files, what changed lately and the rules you mustn't break. Then it answers your questions with file paths you can click, not guesses.
+Your agent maps the project once: what it does, its modules, the risky files, what changed lately and the rules you mustn't break. Then it answers your questions with the file and line, so you can check every answer.
 
 Use it when:
 - You've joined a project or inherited one.

@@ -147,7 +147,7 @@ Or paste "Install the skills from github.com/off-grid-ai/skills" into your agent
 - Each skill is a folder with a `SKILL.md`, plain Markdown your agent reads when your request matches it. Nothing runs until you ask.
 - Review pages publish as Claude Artifacts when you have them, and as a local HTML page when you don't.
 - Skills mention each other by name. Install the whole set to get everything working together.
-- The codebase set started as Wednesday Solutions' ai-agent-skills, rebuilt here so it needs no extra tools.
+- The codebase skills started at [Wednesday Solutions](https://wednesday.is) and now need nothing else installed.
 - MIT licensed. Third-party files keep their own licenses (see `NOTICE` files).
 
 Made by [Mac](https://github.com/alichherawalla). Follow me on GitHub for new skills as they ship.
