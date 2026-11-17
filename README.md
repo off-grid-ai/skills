@@ -14,7 +14,7 @@ Each skill is a short playbook your agent reads before it starts, so it tests ev
 
 - [Review like a senior engineer, without reading code](review)
 - [Your AI stops breaking things that already worked](testing)
-- [Take over any codebase, old or new](codebase)
+- [Change old code without breaking it](codebase)
 - [UI that looks like Stripe's designers made it](design)
 - [An AI that thinks like your CTO](cto)
 - [Launch like a real startup](launch)
@@ -113,19 +113,19 @@ You fix one bug and two old features break. Every change gets tested by tapping 
 | [**fix-it-for-real**](testing/fix-it-for-real) | It fixes the cause, not the symptom, and reuses what someone already solved. |
 | [**click-everything**](testing/click-everything) | It clicks through every page of your web app and fixes what breaks. |
 
-### [Take over any codebase, old or new](codebase)
+### [Change old code without breaking it](codebase)
 
-New to a codebase, or starting one from nothing? Your AI maps it, knows what each change will break, keeps the architecture clean and deploys without a 2am rollback.
+You inherit a codebase nobody fully understands, and every change is a guess. Your AI maps it first, shows you what each change will break, and adds tests before it touches anything risky.
 
 | Skill | What you get |
 | --- | --- |
-| [**learn-this-codebase**](codebase/learn-this-codebase) | Know a new codebase in an hour. Every answer comes with the file path. |
-| [**blast-radius**](codebase/blast-radius) | Before shared code changes, see everything it breaks. Risky edits wait for your yes. |
+| [**learn-this-codebase**](codebase/learn-this-codebase) | Ask anything about a codebase you've never seen, and get answers with the file and line. |
+| [**blast-radius**](codebase/blast-radius) | See everything a change will break before it's made. Risky edits wait for your yes. |
 | [**tests-for-old-code**](codebase/tests-for-old-code) | Tests for code that never had any, each one run and passing before you see it. |
-| [**audit-a-module**](codebase/audit-a-module) | Refactor, rewrite or leave it alone? One screen and a straight answer. |
-| [**stay-in-the-lines**](codebase/stay-in-the-lines) | Write down which parts may talk to which. Every change gets checked against it. |
-| [**plan-from-scratch**](codebase/plan-from-scratch) | An architect, a product lead and a security lead plan your new project, and show you where they disagree. |
-| [**deploy-without-fear**](codebase/deploy-without-fear) | Checks before and after every production deploy, and a clear call on when to roll back. |
+| [**audit-a-module**](codebase/audit-a-module) | Find out whether to refactor, rewrite or leave a module alone, on one screen. |
+| [**stay-in-the-lines**](codebase/stay-in-the-lines) | Your architecture stays the way you drew it, because every change gets checked against your rules. |
+| [**plan-from-scratch**](codebase/plan-from-scratch) | Starting fresh? An architect, a product lead and a security lead plan it, and show you where they disagree. |
+| [**deploy-without-fear**](codebase/deploy-without-fear) | Deploy on any day. It checks before and after, and tells you the moment to roll back. |
 
 ### [UI that looks like Stripe's designers made it](design)
 
@@ -225,7 +225,7 @@ Or paste "Install the skills from github.com/off-grid-ai/skills" into your agent
 - Each skill is a folder with a `SKILL.md`, plain Markdown your agent reads when your request matches it. Nothing runs until you ask.
 - Review pages publish as Claude Artifacts when you have them, and as a local HTML page when you don't.
 - Skills mention each other by name. Install the whole set to get everything working together.
-- The codebase set started as Wednesday Solutions' ai-agent-skills, rebuilt here so it needs no extra tools.
+- The codebase skills started at [Wednesday Solutions](https://wednesday.is) and now need nothing else installed.
 - MIT licensed. Third-party files keep their own licenses (see `NOTICE` files).
 
 Made by [Mac](https://github.com/alichherawalla). Follow me on GitHub for new skills as they ship.

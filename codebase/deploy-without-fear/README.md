@@ -5,6 +5,6 @@ Before a production deploy, your agent checks CI, env vars, migrations and the r
 Use it when:
 - You're about to deploy to production.
 - You just deployed and want to know it's really fine.
-- Your team has had one too many 2am rollbacks.
+- Last time you deployed, something broke and nobody noticed for an hour.
 
 Try it: "/deploy-without-fear we're shipping v2.3 to prod"
