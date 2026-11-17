@@ -101,7 +101,7 @@ codex plugin marketplace add off-grid-ai/skills
 for s in {' '.join(plug(s) for s in sets)}; do codex plugin add $s@off-grid-ai; done
 ```
 
-Each set is its own plugin, so you can drop any you don't want. Skills call each other across sets, so installing all eight is the safe choice.
+Each set is its own plugin, so you can drop any you don't want. Skills call each other across sets, so installing all {len(sets)} is the safe choice.
 
 **Any agent, no Node**
 ```bash
@@ -147,6 +147,7 @@ Or paste "Install the skills from github.com/off-grid-ai/skills" into your agent
 - Each skill is a folder with a `SKILL.md`, plain Markdown your agent reads when your request matches it. Nothing runs until you ask.
 - Review pages publish as Claude Artifacts when you have them, and as a local HTML page when you don't.
 - Skills mention each other by name. Install the whole set to get everything working together.
+- The codebase set started as Wednesday Solutions' ai-agent-skills, rebuilt here so it needs no extra tools.
 - MIT licensed. Third-party files keep their own licenses (see `NOTICE` files).
 
 Made by [Mac](https://github.com/alichherawalla). Follow me on GitHub for new skills as they ship.

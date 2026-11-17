@@ -1,8 +1,8 @@
 {
   "name": "off-grid-ai-skills",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
-  "description": "Stop babysitting your AI. 42 free skills that make Claude Code, Codex, Cursor and 60+ agents build, test and ship like a senior team.",
+  "description": "Stop babysitting your AI. 49 free skills that make Claude Code, Codex, Cursor and 60+ agents build, test and ship like a senior team.",
   "license": "MIT",
   "scripts": {
     "build": "node scripts/build-manifests.mjs"

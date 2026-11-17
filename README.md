@@ -14,6 +14,7 @@ Each skill is a short playbook your agent reads before it starts, so it tests ev
 
 - [Review like a senior engineer, without reading code](review)
 - [Your AI stops breaking things that already worked](testing)
+- [Take over any codebase, old or new](codebase)
 - [UI that looks like Stripe's designers made it](design)
 - [An AI that thinks like your CTO](cto)
 - [Launch like a real startup](launch)
@@ -43,16 +44,16 @@ npx skills add off-grid-ai/skills
 **Claude Code**
 ```bash
 claude plugin marketplace add off-grid-ai/skills
-for s in review testing design cto launch growth revenue games; do claude plugin install $s@off-grid-ai; done
+for s in review testing codebase design cto launch growth revenue games; do claude plugin install $s@off-grid-ai; done
 ```
 
 **Codex**
 ```bash
 codex plugin marketplace add off-grid-ai/skills
-for s in review testing design cto launch growth revenue games; do codex plugin add $s@off-grid-ai; done
+for s in review testing codebase design cto launch growth revenue games; do codex plugin add $s@off-grid-ai; done
 ```
 
-Each set is its own plugin, so you can drop any you don't want. Skills call each other across sets, so installing all eight is the safe choice.
+Each set is its own plugin, so you can drop any you don't want. Skills call each other across sets, so installing all 9 is the safe choice.
 
 **Any agent, no Node**
 ```bash
@@ -81,7 +82,7 @@ It links every skill into each agent it finds on your machine. Run it again to u
 
 > *"/resume-any-chat the onboarding redesign"*
 
-## All 42 skills
+## All 49 skills
 
 ### [Review like a senior engineer, without reading code](review)
 
@@ -111,6 +112,20 @@ You fix one bug and two old features break. Every change gets tested by tapping 
 | [**dont-break-it**](testing/dont-break-it) | Your AI changes, checks and saves code so nothing half-done ships. |
 | [**fix-it-for-real**](testing/fix-it-for-real) | It fixes the cause, not the symptom, and reuses what someone already solved. |
 | [**click-everything**](testing/click-everything) | It clicks through every page of your web app and fixes what breaks. |
+
+### [Take over any codebase, old or new](codebase)
+
+New to a codebase, or starting one from nothing? Your AI maps it, knows what each change will break, keeps the architecture clean and deploys without a 2am rollback.
+
+| Skill | What you get |
+| --- | --- |
+| [**learn-this-codebase**](codebase/learn-this-codebase) | Know a new codebase in an hour. Every answer comes with the file path. |
+| [**blast-radius**](codebase/blast-radius) | Before shared code changes, see everything it breaks. Risky edits wait for your yes. |
+| [**tests-for-old-code**](codebase/tests-for-old-code) | Tests for code that never had any, each one run and passing before you see it. |
+| [**audit-a-module**](codebase/audit-a-module) | Refactor, rewrite or leave it alone? One screen and a straight answer. |
+| [**stay-in-the-lines**](codebase/stay-in-the-lines) | Write down which parts may talk to which. Every change gets checked against it. |
+| [**plan-from-scratch**](codebase/plan-from-scratch) | An architect, a product lead and a security lead plan your new project, and show you where they disagree. |
+| [**deploy-without-fear**](codebase/deploy-without-fear) | Checks before and after every production deploy, and a clear call on when to roll back. |
 
 ### [UI that looks like Stripe's designers made it](design)
 
@@ -197,7 +212,7 @@ Making a game alone with AI? You get a director, an art director and a QA team t
 | [**devlog**](games/devlog) | Push, document and show off your progress. |
 | [**game-calls**](games/game-calls) | Straight answers when you're making game decisions. |
 
-## Get all 42
+## Get all 49
 
 ```bash
 npx skills add off-grid-ai/skills
@@ -210,6 +225,7 @@ Or paste "Install the skills from github.com/off-grid-ai/skills" into your agent
 - Each skill is a folder with a `SKILL.md`, plain Markdown your agent reads when your request matches it. Nothing runs until you ask.
 - Review pages publish as Claude Artifacts when you have them, and as a local HTML page when you don't.
 - Skills mention each other by name. Install the whole set to get everything working together.
+- The codebase set started as Wednesday Solutions' ai-agent-skills, rebuilt here so it needs no extra tools.
 - MIT licensed. Third-party files keep their own licenses (see `NOTICE` files).
 
 Made by [Mac](https://github.com/alichherawalla). Follow me on GitHub for new skills as they ship.
