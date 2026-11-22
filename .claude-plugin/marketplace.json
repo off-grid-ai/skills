@@ -55,7 +55,7 @@
       "homepage": "https://github.com/off-grid-ai/skills"
     },
     {
-      "name": "cto",
+      "name": "off-grid-cto",
       "source": "./cto",
       "description": "No CTO? Your AI picks what's urgent, tells you when you're wrong, keeps building overnight and picks up any old chat where you left it.",
       "category": "productivity",

@@ -2,15 +2,15 @@
 
 It worked on your laptop and broke on your phone. Every release gets tried on real phones first, then ships with notes people actually read.
 
-![How launch like a real startup works](how-it-works.png)
+![How launch like a real startup works](../assets/sets/launch-how-it-works.png)
 
 | Skill | What you get |
 | --- | --- |
-| [**ship-it**](ship-it) | Take any feature all the way to live: built, tested, seen working. |
-| [**try-it-on-my-phone**](try-it-on-my-phone) | Your AI checks every release on real phones before your users do. |
-| [**run-on-any-device**](run-on-any-device) | Your AI runs and taps through your app on a computer, an iPhone and an Android phone. |
-| [**release-day**](release-day) | Clean releases with screenshots on every pull request. |
-| [**whats-new**](whats-new) | Release notes your users actually read. |
+| [**ship-it**](skills/ship-it) | Take any feature all the way to live: built, tested, seen working. |
+| [**try-it-on-my-phone**](skills/try-it-on-my-phone) | Your AI checks every release on real phones before your users do. |
+| [**run-on-any-device**](skills/run-on-any-device) | Your AI runs and taps through your app on a computer, an iPhone and an Android phone. |
+| [**release-day**](skills/release-day) | Clean releases with screenshots on every pull request. |
+| [**whats-new**](skills/whats-new) | Release notes your users actually read. |
 
 ## Install just this set
 

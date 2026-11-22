@@ -2,15 +2,15 @@
 
 Your landing page reads like ChatGPT wrote it. With these, your copy sounds like a person, it sells, and AI search starts naming you.
 
-![How get users without ads works](how-it-works.png)
+![How get users without ads works](../assets/sets/growth-how-it-works.png)
 
 | Skill | What you get |
 | --- | --- |
-| [**make-it-sell**](make-it-sell) | Headlines and landing pages that sell, built on the rules Ogilvy and Bly wrote down. |
-| [**sound-human**](sound-human) | Copy that sounds like a person wrote it, with zero AI tells. |
-| [**write-like-me**](write-like-me) | Posts and emails in your own voice, learned from what you've already written. |
-| [**get-cited-by-ai**](get-cited-by-ai) | Articles that rank on Google and get you named in ChatGPT-style answers. |
-| [**find-threads-to-join**](find-threads-to-join) | The posts worth your reply each day, with two angles ready for each. |
+| [**make-it-sell**](skills/make-it-sell) | Headlines and landing pages that sell, built on the rules Ogilvy and Bly wrote down. |
+| [**sound-human**](skills/sound-human) | Copy that sounds like a person wrote it, with zero AI tells. |
+| [**write-like-me**](skills/write-like-me) | Posts and emails in your own voice, learned from what you've already written. |
+| [**get-cited-by-ai**](skills/get-cited-by-ai) | Articles that rank on Google and get you named in ChatGPT-style answers. |
+| [**find-threads-to-join**](skills/find-threads-to-join) | The posts worth your reply each day, with two angles ready for each. |
 
 ## Install just this set
 

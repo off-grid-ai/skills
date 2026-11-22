@@ -1,5 +1,5 @@
 {
-  "name": "cto",
+  "name": "off-grid-cto",
   "version": "1.2.0",
   "description": "No CTO? Your AI picks what's urgent, tells you when you're wrong, keeps building overnight and picks up any old chat where you left it.",
   "author": {
@@ -17,5 +17,5 @@
     "no-fluff",
     "resume-any-chat"
   ],
-  "skills": "./"
+  "skills": "./skills/"
 }

@@ -20,5 +20,5 @@
     "prove-it",
     "ship-the-feature"
   ],
-  "skills": "./"
+  "skills": "./skills/"
 }

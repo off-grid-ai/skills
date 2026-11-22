@@ -26,7 +26,7 @@ TARGETS=(
   "$HOME/.kiro|$HOME/.kiro/skills"
 )
 
-skills() { find "$HOME_DIR" -mindepth 3 -maxdepth 3 -name SKILL.md -not -path '*/.git/*' -exec dirname {} \; | sort; }
+skills() { find "$HOME_DIR" -mindepth 4 -maxdepth 4 -path "*/skills/*" -name SKILL.md -not -path '*/.git/*' -exec dirname {} \; | sort; }
 
 if [[ "${1:-}" == "--uninstall" ]]; then
   for t in "${TARGETS[@]}"; do

@@ -1,0 +1,328 @@
+# example-report.html
+
+This is the `example-report.html` file for this skill, stored as Markdown so the skill folder holds no runnable files. To use it, write the code block below, exactly as it is, to a file named `example-report.html` at the same relative path in a work folder (the "Bundled files" section of SKILL.md has the command that does this for every file at once), then run that copy.
+
+~~~~~html
+<!-- Worked example: the decision paper that approved this skill. Copy its structure and CSS; replace every word. -->
+<title>Decision Report Standard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a read-alone decision paper. First screen = title + 3 strip rows + 3 reasons (7 lines). Everything else is closed until clicked. Wide and dense for a desktop reader. */
+:root{
+  --bg:#f5f7f9; --surface:#ffffff; --fg:#141d26; --muted:#59646f; --line:#d8dee4;
+  --accent:#1d5a86; --accent-soft:#e2edf6;
+  --good:#1d7845; --good-bg:#e1f2e7; --mid:#946500; --mid-bg:#faefd4; --bad:#a53030; --bad-bg:#f7e0e0;
+  --display:"IBM Plex Serif",Georgia,serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1419; --surface:#161d24; --fg:#e3e8ed; --muted:#93a0ac; --line:#29333d;
+  --accent:#72b2df; --accent-soft:#1a2c3a;
+  --good:#6fd39b; --good-bg:#14301f; --mid:#e2b55a; --mid-bg:#33290f; --bad:#ef8a8a; --bad-bg:#3a1a1a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1419; --surface:#161d24; --fg:#e3e8ed; --muted:#93a0ac; --line:#29333d;
+  --accent:#72b2df; --accent-soft:#1a2c3a;
+  --good:#6fd39b; --good-bg:#14301f; --mid:#e2b55a; --mid-bg:#33290f; --bad:#ef8a8a; --bad-bg:#3a1a1a; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body)}
+.wrap{max-width:1200px;margin:0 auto;padding-block:24px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:18px}
+h1{font:600 25px/1.25 var(--display);margin:0;text-wrap:balance}
+h2{font:600 16px/1.3 var(--display);margin:0;text-wrap:balance}
+h3{font:600 14px/1.3 var(--body);margin:0 0 8px}
+.lede{color:var(--muted);margin:0;max-width:95ch;font-size:13.5px}
+a{color:var(--accent)}
+sup a{font:500 10.5px var(--mono);text-decoration:none;padding:0 1px}
+
+.strip{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:130px 1fr;gap:8px 18px;margin:0}
+.strip dt{font:500 11.5px/1.7 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.strip dd{margin:0;min-width:0}
+.opt{font:500 12px var(--mono);border:1px solid var(--line);border-radius:4px;padding:2px 8px;background:var(--bg);margin-left:4px;white-space:nowrap}
+@media (max-width:680px){.strip{grid-template-columns:1fr}.strip dd{margin-bottom:6px}}
+
+ol.lines{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+ol.lines>li+li{border-top:1px solid var(--line)}
+ol.lines.inner{border:0;border-left:2px solid var(--line);border-radius:0;background:transparent}
+ol.lines.inner>li+li{border-top:1px dashed var(--line)}
+details>summary{cursor:pointer;list-style:none;padding:10px 16px;display:flex;gap:12px;align-items:baseline}
+details>summary::-webkit-details-marker{display:none}
+details>summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+details>summary:hover .claim{color:var(--accent)}
+.n{font:500 12px var(--mono);color:var(--muted);min-width:1.4em}
+.claim{flex:1;min-width:0;font-weight:500}
+.inner .claim{font-weight:400}
+.meta{display:flex;gap:6px;flex-shrink:0;align-items:baseline}
+.chev{color:var(--muted);font:12px var(--mono);transition:transform .15s}
+details[open]>summary .chev{transform:rotate(90deg)}
+.cnt{font:11px var(--mono);color:var(--muted);white-space:nowrap}
+.detail{padding:0 16px 12px 44px;max-width:104ch;display:flex;flex-direction:column;gap:8px}
+.detail p{margin:0}
+.lbl{font:500 10px var(--mono);text-transform:uppercase;letter-spacing:.06em;padding:1px 5px;border-radius:3px;margin-right:6px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.lbl.f{color:var(--good);border-color:var(--good)} .lbl.e{color:var(--mid);border-color:var(--mid)} .lbl.j{color:var(--accent);border-color:var(--accent)}
+@media (max-width:640px){details>summary{flex-wrap:wrap}.meta{width:100%;padding-left:2em}.detail{padding-left:16px}}
+
+details.sec{background:var(--surface);border:1px solid var(--line);border-radius:6px}
+details.sec>summary{padding:11px 16px}
+details.sec>summary h2{flex:1}
+.secbody{padding:0 16px 16px;display:flex;flex-direction:column;gap:12px}
+.below{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.belowhead{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 11px/1.35 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.c,th.c{text-align:center}
+.mine{color:var(--muted)}
+.pass{color:var(--good);font:600 12px var(--mono)} .fail{color:var(--bad);font:600 12px var(--mono)} .flag{color:var(--mid);font:600 12px var(--mono)}
+.win td{background:var(--accent-soft)}
+.out td{color:var(--muted)}
+.why{font-size:12.5px;color:var(--muted)}
+.note{font-size:13px;color:var(--muted);margin:0;max-width:110ch}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:6px;padding:12px 14px;min-width:0}
+.card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px}
+
+.rulegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:12px}
+.rulegroup{border:1px solid var(--line);border-radius:6px;padding:12px 14px;min-width:0}
+.rulegroup ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:7px;font-size:14px}
+.src{font:11px/1.4 var(--mono);color:var(--muted)}
+.ev{font:500 10px var(--mono);padding:1px 4px;border-radius:3px;margin-left:4px;white-space:nowrap}
+.ev.t{background:var(--good-bg);color:var(--good)} .ev.s{background:var(--mid-bg);color:var(--mid)} .ev.p{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+
+.ledger td:first-child{font:500 12px var(--mono);white-space:nowrap}
+.ledger tr:target td{background:var(--accent-soft)}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}
+</style>
+
+<div class="wrap">
+
+<h1>Build the decision report skill as a mix: our own structure, plus a proven source checker copied from GitHub</h1>
+
+<dl class="strip">
+  <dt>You decide</dt><dd><span class="lbl f">fact</span>Whether I build this skill. No deadline: nothing is waiting on it. Reply in chat:<span class="opt">Build it</span><span class="opt">Change the rules first</span><span class="opt">Don’t build it</span></dd>
+  <dt>I recommend</dt><dd><span class="lbl j">judgment</span><b>Build the mix. It scored 815 of 1,000; each option on its own scored 755.</b></dd>
+  <dt>Main risk</dt><dd><span class="lbl j">judgment</span>The extra checks could make reports too long to read. The skill fails any report whose first screen runs past seven lines.</dd>
+</dl>
+
+<ol class="lines">
+  <li><details><summary><span class="n">1</span><span class="claim"><span class="lbl e">estimate</span>The mix beats writing everything ourselves and beats adapting someone else’s skill, by 60 points each.</span><span class="meta"><span class="cnt">scores · case against</span><span class="chev">›</span></span></summary>
+    <div class="detail">
+      <p><span class="lbl f">fact</span>A separate reviewer read the GitHub skill’s code and scored all three options without seeing my scores <sup><a href="#s26">26</a></sup>. Its numbers are used here; mine are shown beside them.</p>
+      <p><span class="lbl j">judgment</span>Writing our own covers all the books but would rebuild a source checker that already exists and has tests. Adapting the GitHub skill gives that checker but follows one book and cannot score choices. The mix takes the best part of each.</p>
+      <p><span class="lbl j">against</span>The mix still takes longer to reach a first report than adapting, and we must maintain it ourselves. The books were read in summary, not in full, so some rules may be slightly off.</p>
+      <p><span class="lbl f">fact</span>My first scores had writing our own ahead, 850 to 665. The independent reviewer found them tied at 755. Full tables are under “How the three options scored”.</p>
+    </div></details></li>
+
+  <li><details><summary><span class="n">2</span><span class="claim"><span class="lbl f">fact</span>None of the 11 ready-made skills we read does all five things you asked for and lets us copy it.</span><span class="meta"><span class="cnt">2 sources</span><span class="chev">›</span></span></summary>
+    <div class="detail">
+      <p><span class="lbl f">fact</span>Your five needs: important things first, one-line items, click to open, a source for every claim, and visible scoring. Only one skill covers all five, and it gives no permission to copy <sup><a href="#s23">23</a></sup>.</p>
+      <p><span class="lbl f">fact</span>The GitHub skill we would copy from (by tyroneross) allows copying with credit. It has the deepest source checking we found: every number traced to where it came from, and a separate pass that checks the facts <sup><a href="#s23">23</a></sup><sup><a href="#s26">26</a></sup>.</p>
+      <p><span class="lbl f">fact</span>No consulting firm publishes its report rules. The McKinsey rules come from books by former staff <sup><a href="#s20">20</a></sup>.</p>
+    </div></details></li>
+
+  <li><details><summary><span class="n">3</span><span class="claim"><span class="lbl f">fact</span>The skill’s 22 rules are well grounded: 7 are proven in experiments, 3 come from studies of real decisions, and 12 from long practice.</span><span class="meta"><span class="cnt">5 reasons</span><span class="chev">›</span></span></summary>
+    <div class="detail">
+      <ol class="lines inner">
+        <li><details><summary><span class="claim"><span class="lbl f">fact</span>Cutting words and extras makes readers understand and respond more.</span><span class="meta"><span class="cnt">2 sources</span><span class="chev">›</span></span></summary><div class="detail">
+          <p><span class="lbl f">fact</span>Removing interesting but unneeded material improved understanding in 23 of 23 experiments <sup><a href="#s6">6</a></sup>.</p>
+          <p><span class="lbl f">fact</span>A 49-word email got 4.8% replies; a 127-word version got 2.7%. It was sent to 7,002 people <sup><a href="#s9">9</a></sup>.</p></div></details></li>
+        <li><details><summary><span class="claim"><span class="lbl f">fact</span>Writing guides from McKinsey, the US Army and company boards all put the answer first.</span><span class="meta"><span class="cnt">4 sources</span><span class="chev">›</span></span></summary><div class="detail">
+          <p><span class="lbl f">fact</span>Minto, who taught writing at McKinsey, says each line should sum up the lines under it, and opening it should answer the question it raises <sup><a href="#s1">1</a></sup>. That is how the clickable lines on this page work.</p>
+          <p><span class="lbl f">fact</span>Zelazny (McKinsey), the US Army writing rule and board-paper guides all open with the decision and the answer <sup><a href="#s2">2</a></sup><sup><a href="#s12">12</a></sup><sup><a href="#s22">22</a></sup>.</p></div></details></li>
+        <li><details><summary><span class="claim"><span class="lbl f">fact</span>The warning before the Columbia shuttle disaster sat in a small bullet under a reassuring headline.</span><span class="meta"><span class="cnt">2 sources</span><span class="chev">›</span></span></summary><div class="detail">
+          <p><span class="lbl f">fact</span>Tufte showed the slide that buried it <sup><a href="#s5">5</a></sup>. Amazon also replaced slides with written memos <sup><a href="#s11">11</a></sup>.</p>
+          <p><span class="lbl j">judgment</span>So each line here is a full sentence, and a warning that could change the decision goes on the first screen.</p></div></details></li>
+        <li><details><summary><span class="claim"><span class="lbl f">fact</span>In 1,048 big decisions, how the decision was made predicted results six times more than the analysis.</span><span class="meta"><span class="cnt">2 sources</span><span class="chev">›</span></span></summary><div class="detail">
+          <p><span class="lbl f">fact</span>McKinsey’s study <sup><a href="#s15">15</a></sup> led Kahneman and two co-authors to write 12 questions a decider asks of any recommendation <sup><a href="#s14">14</a></sup>.</p>
+          <p><span class="lbl j">judgment</span>The study shows a link, not proof of cause.</p></div></details></li>
+        <li><details><summary><span class="claim"><span class="lbl e">estimate</span>Yes-or-no decisions fail more often than decisions with two or more choices.</span><span class="meta"><span class="cnt">1 source</span><span class="chev">›</span></span></summary><div class="detail">
+          <p><span class="lbl f">fact</span>Readers of the book <i>Decisive</i> report 52% failure for yes-or-no decisions and 32% with two or more choices, from Paul Nutt’s research <sup><a href="#s17">17</a></sup>.</p>
+          <p><span class="lbl j">judgment</span>We could not find these exact numbers in Nutt’s own paper, so treat them as an estimate.</p></div></details></li>
+      </ol>
+    </div></details></li>
+</ol>
+
+<div class="below">
+<div class="belowhead">Detail · closed until clicked</div>
+
+<details class="sec"><summary><h2>The mix scored 815; the other two scored 755 each</h2><span class="chev">›</span></summary>
+  <div class="secbody">
+    <p class="lede"><span class="lbl j">judgment</span>Step 1: drop any option that fails one of your five needs, judged as it would be when finished. Step 2: score the rest 1 to 10. You said getting it right matters most, so I gave 90 of the 100 points to quality and 10 to speed and ease. Change these if they look wrong.</p>
+    <div class="tablebox"><table>
+      <thead><tr><th>Option</th><th class="c">Allowed to copy</th><th class="c">Source for every claim</th><th class="c">Click to open</th><th class="c">Visible scoring</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr class="win"><td>Mix: our own structure plus the tyroneross source checker</td><td class="c pass">yes</td><td class="c pass">yes</td><td class="c pass">yes</td><td class="c pass">yes</td><td>Kept</td></tr>
+        <tr><td>Write everything ourselves</td><td class="c pass">yes</td><td class="c pass">yes</td><td class="c pass">yes</td><td class="c pass">yes</td><td>Kept</td></tr>
+        <tr><td>Adapt the tyroneross skill</td><td class="c pass">yes</td><td class="c pass">yes</td><td class="c pass">yes</td><td class="c pass">yes</td><td>Kept</td></tr>
+        <tr class="out"><td>Install the sruthir28 skill unchanged</td><td class="c pass">yes</td><td class="c fail">no</td><td class="c pass">yes</td><td class="c pass">yes</td><td>Dropped: sources optional</td></tr>
+        <tr class="out"><td>Keep writing reports by hand</td><td class="c pass">yes</td><td class="c fail">no</td><td class="c fail">no</td><td class="c fail">no</td><td>Dropped</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tablebox"><table>
+      <thead><tr><th>What matters (points of 100)</th><th class="c">Mix</th><th class="c">Our own</th><th class="c">Adapt</th><th class="c mine">Our own (mine)</th><th class="c mine">Adapt (mine)</th><th>Reviewer’s reason</th></tr></thead>
+      <tbody>
+        <tr><td>Follows all the book rules (35)</td><td class="c">8</td><td class="c">8</td><td class="c">7</td><td class="c mine">9</td><td class="c mine">6</td><td class="why">Adapting follows Minto deeply; the other books would be added on.</td></tr>
+        <tr><td>Checks every source (30)</td><td class="c">9</td><td class="c">7</td><td class="c">9</td><td class="c mine">8</td><td class="c mine">9</td><td class="why">The tyroneross checker and its tests already exist; rebuilding loses detail.</td></tr>
+        <tr><td>Scores choices and checks reasoning (25)</td><td class="c">8</td><td class="c">8</td><td class="c">7</td><td class="c mine">9</td><td class="c mine">5</td><td class="why">Adapting must add all of it.</td></tr>
+        <tr><td>Easy for us to change (5)</td><td class="c">7</td><td class="c">8</td><td class="c">6</td><td class="c mine">8</td><td class="c mine">5</td><td class="why">The tyroneross skill is large and changes weekly.</td></tr>
+        <tr><td>First report soon (5)</td><td class="c">6</td><td class="c">5</td><td class="c">7</td><td class="c mine">6</td><td class="c mine">7</td><td class="why">Adapting works on day one.</td></tr>
+        <tr class="win"><td>Total of 1,000</td><td class="c">815</td><td class="c">755</td><td class="c">755</td><td class="c mine">850</td><td class="c mine">665</td><td class="why">The mix leads by 60.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note"><span class="lbl f">fact</span>What would change the answer: writing our own wins only if “easy to change” gets more than 25 points. Adapting wins only if “first report soon” gets more than 35 points.</p>
+    <p class="note"><span class="lbl f">fact</span>The points changed once: version 1 used 30/25/20/15/10 before you set the priority. I set the current points before the reviewer scored.</p>
+  </div>
+</details>
+
+<details class="sec"><summary><h2>Six ways this could fail, each with a fix</h2><span class="chev">›</span></summary>
+  <div class="secbody grid2">
+    <div class="card">
+      <h3>Imagine it is May 2027 and the skill failed. Why?</h3>
+      <ul>
+        <li>Reports grew too long to read. <i>Fix: seven-line first screen, checked by the reviewer.</i></li>
+        <li>The writer checked its own work. <i>Fix: a separate reviewer on a separate model.</i></li>
+        <li>Sources didn’t support the claims. <i>Fix: the copied checker traces every number to a place in its source.</i></li>
+        <li>The build took far longer than planned. <i>Fix: build the first screen and source checker first, then the scoring.</i></li>
+        <li>Rules drifted as we edited them. <i>Fix: rerun the copied test cases, plus our own, after every change.</i></li>
+        <li>Books disagreed and the skill picked one at random. <i>Fix: a written order of which book wins.</i></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Who does what, and when we check</h3>
+      <ul>
+        <li><span class="lbl e">estimate</span>Likely (55 to 80%) that the first report is approved without a rewrite. Nothing similar exists to compare with.</li>
+        <li><span class="lbl f">fact</span>You decide. The agent builds.</li>
+        <li><span class="lbl f">fact</span>If approved: build it, then run it on one real decision you choose.</li>
+        <li><span class="lbl f">fact</span>Check-in on 15 Dec 2026 or after three reports, whichever comes first. If two of three needed follow-up questions, we change the rules.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<details class="sec"><summary><h2>The skill will follow these 22 rules</h2><span class="chev">›</span></summary>
+  <div class="secbody">
+    <p class="lede"><span class="ev t">tested</span> proven in experiments. <span class="ev s">studied</span> found in studies of real decisions. <span class="ev p">practice</span> expert practice. The grey line names the sources.</p>
+    <div class="rulegrid">
+      <div class="rulegroup"><h3>The first screen</h3><ol>
+        <li>Open with the decision, the recommendation and the deadline. <span class="ev p">practice</span><div class="src">Minto · Zelazny · US Army · Garner · Board Intelligence</div></li>
+        <li>One decision per report, or the asks ranked. <span class="ev t">tested</span><div class="src">Rogers &amp; Lasky-Fink</div></li>
+        <li>Say the real problem and what waiting costs. <span class="ev p">practice</span><div class="src">Rumelt · Williams · Smart Brevity</div></li>
+        <li>At most seven lines, readable without opening anything. <span class="ev p">practice</span><div class="src">Few · Amazon · Board Intelligence</div></li>
+        <li>A warning that could change the decision goes on the first screen. <span class="ev p">practice</span><div class="src">Tufte</div></li>
+      </ol></div>
+      <div class="rulegroup"><h3>Each line</h3><ol start="6">
+        <li>A full statement with a verb, and a number where possible. Headings too. <span class="ev p">practice</span><div class="src">Minto · Zelazny · Tufte · Williams</div></li>
+        <li>Three to five lines per level, no overlap, most important first. <span class="ev p">practice</span><div class="src">Minto · Smart Brevity</div></li>
+        <li>Plain words. Method names stay in the sources, never in the text. <span class="ev p">practice</span><div class="src">US plain-language guidelines</div></li>
+        <li>Cut whatever doesn’t change the decision, then cut again. <span class="ev t">tested</span><div class="src">Mayer · Rogers &amp; Lasky-Fink</div></li>
+        <li>Bold only the recommendation. <span class="ev t">tested</span><div class="src">Rogers &amp; Lasky-Fink</div></li>
+      </ol></div>
+      <div class="rulegroup"><h3>Clicking to open</h3><ol start="11">
+        <li>Each line sums up what is under it; opening it answers the question it raises. <span class="ev t">tested</span><div class="src">Minto · Mayer · Few</div></li>
+        <li>Under a line, short sentences, not nested bullets. <span class="ev p">practice</span><div class="src">Amazon · Tufte · Duarte</div></li>
+        <li>Every number sits next to its label and something to compare it with. <span class="ev t">tested</span><div class="src">Mayer · Tufte · Few</div></li>
+      </ol></div>
+      <div class="rulegroup"><h3>Sources</h3><ol start="14">
+        <li>Every claim links to a source row: where in the source, what it supports, date read. <span class="ev p">practice</span><div class="src">Tufte · US intelligence standard</div></li>
+        <li>Every line is labelled fact, estimate or judgment. <span class="ev p">practice</span><div class="src">Kahneman, Lovallo &amp; Sibony · US intelligence standard</div></li>
+        <li>Odds are numbers, compared with similar cases where they exist. <span class="ev t">tested</span><div class="src">Tetlock</div></li>
+        <li>Show the case against the recommendation. <span class="ev s">studied</span><div class="src">Lovallo &amp; Sibony</div></li>
+      </ol></div>
+      <div class="rulegroup"><h3>The decision</h3><ol start="18">
+        <li>At least two real choices plus “do nothing”. <span class="ev s">studied</span><div class="src">Nutt · Kahneman, Lovallo &amp; Sibony</div></li>
+        <li>Points are set before scoring, and a separate reviewer scores. Show what would change the answer. <span class="ev s">studied</span><div class="src">Noise · Kepner-Tregoe · Bulletproof Problem Solving</div></li>
+        <li>List ways it could fail, each with a fix, and set a check-in date. <span class="ev t">tested</span><div class="src">Klein · Heath</div></li>
+        <li>Name who decides and who does the next step. <span class="ev p">practice</span><div class="src">Bain · Zelazny</div></li>
+        <li>A separate reviewer checks the report against these rules. <span class="ev p">practice</span><div class="src">Kahneman, Lovallo &amp; Sibony · Sibony</div></li>
+      </ol></div>
+    </div>
+  </div>
+</details>
+
+<details class="sec"><summary><h2>Twelve questions test the reasoning: 9 pass, 3 flagged</h2><span class="chev">›</span></summary>
+  <div class="secbody">
+    <p class="lede"><span class="lbl f">fact</span>From Kahneman, Lovallo and Sibony <sup><a href="#s14">14</a></sup>. I answered first; the independent reviewer then answered on its own, and where it disagreed its answer is used.</p>
+    <div class="tablebox"><table>
+      <thead><tr><th>#</th><th>Question</th><th class="c">Result</th><th>Answer</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Does the writer gain from this?</td><td class="c pass">pass</td><td><span class="lbl j">judgment</span>No stake beyond doing the work.</td></tr>
+        <tr><td>2</td><td>Is the writer too attached to the plan?</td><td class="c flag">flag</td><td><span class="lbl f">fact</span>I would also build it, and my first two drafts reached the same answer.</td></tr>
+        <tr><td>3</td><td>Did anyone disagree, and was that explored?</td><td class="c pass">pass</td><td><span class="lbl f">fact</span>A second reviewer argued for adapting, and changed the recommendation <sup><a href="#s26">26</a></sup>.</td></tr>
+        <tr><td>4</td><td>Does it lean on one famous success?</td><td class="c pass">pass</td><td><span class="lbl f">fact</span>26 sources; none decides it alone.</td></tr>
+        <tr><td>5</td><td>Are real alternatives shown?</td><td class="c pass">pass</td><td><span class="lbl f">fact</span>Three options scored, two more dropped.</td></tr>
+        <tr><td>6</td><td>What will we wish we knew in a year?</td><td class="c pass">pass</td><td><span class="lbl j">judgment</span>Whether reports were decided from the first screen. That is the check-in.</td></tr>
+        <tr><td>7</td><td>Where did the numbers come from?</td><td class="c pass">pass</td><td><span class="lbl f">fact</span>Each number links to a source row; scores come from the reviewer.</td></tr>
+        <tr><td>8</td><td>Does it assume success elsewhere carries over?</td><td class="c pass">pass</td><td><span class="lbl j">judgment</span>The check-in tests whether the rules fit us.</td></tr>
+        <tr><td>9</td><td>Is anyone defending a past choice?</td><td class="c flag">flag</td><td><span class="lbl f">fact</span>The points changed between drafts. Both sets are shown.</td></tr>
+        <tr><td>10</td><td>Is the best guess too hopeful?</td><td class="c flag">flag</td><td><span class="lbl f">fact</span>Nothing similar exists to compare the 55–80% with.</td></tr>
+        <tr><td>11</td><td>Is the worst case bad enough?</td><td class="c pass">pass</td><td><span class="lbl f">fact</span>Six ways it fails, including a slow build and rules drifting.</td></tr>
+        <tr><td>12</td><td>Is the plan too cautious?</td><td class="c pass">pass</td><td><span class="lbl j">judgment</span>No. Trying costs one skill and one test report.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</details>
+
+<details class="sec"><summary><h2>Four answers to questions you may ask</h2><span class="chev">›</span></summary>
+  <div class="secbody">
+    <ol class="lines">
+      <li><details><summary><span class="claim">Did you read the books themselves?</span><span class="chev">›</span></summary><div class="detail"><p><span class="lbl f">fact</span>No. The research used chapter summaries, the authors’ own articles and talks, and publisher excerpts. Three sources were read in full. You have read many of these books, so your corrections come first.</p></div></details></li>
+      <li><details><summary><span class="claim">Why a page and not slides?</span><span class="chev">›</span></summary><div class="detail"><p><span class="lbl j">judgment</span>You read it alone; nobody presents it. Every source that compares the two says reading material should be complete sentences. The skill can also make slides for meetings.</p></div></details></li>
+      <li><details><summary><span class="claim">What exactly gets copied, and from whom?</span><span class="chev">›</span></summary><div class="detail"><p><span class="lbl f">fact</span>From tyroneross (allowed with credit): the source checker, its notes tying Minto’s rules to page numbers, and its test cases, frozen at one version <sup><a href="#s23">23</a></sup>. From sruthir28 (allowed): the reviewer that grades a draft and lists the top three fixes. From zairuilab: only the idea of blocking any report with an unsourced number, because its permission to copy is unclear.</p></div></details></li>
+      <li><details><summary><span class="claim">What changed since version 2?</span><span class="chev">›</span></summary><div class="detail"><p><span class="lbl f">fact</span>The recommendation changed from “write our own” to the mix, after a second reviewer scored the options independently. A first reviewer found 7 rule breaks in version 2; this version fixes them: a seven-line first screen, a label on every line, one bold item, statement headings, plain words, two unsupported numbers re-sourced, and two false claims removed.</p></div></details></li>
+    </ol>
+  </div>
+</details>
+
+<details class="sec" id="sources"><summary><h2>26 sources, each with what it supports and when it was read</h2><span class="chev">›</span></summary>
+  <div class="secbody">
+    <p class="lede"><span class="lbl f">fact</span>Own text = the author’s words. Summary = a close summary of a book. Second-hand = someone else’s account. Quotes are not copied.</p>
+    <div class="tablebox"><table class="ledger">
+      <thead><tr><th>#</th><th>Source</th><th>Where</th><th>What it supports</th><th>Type</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr id="s1"><td>1</td><td><a href="https://www.minto.com/concept">Minto, The Pyramid Principle</a>; <a href="https://study-notes-dge.pages.dev/soft-skills/the-pyramid-principle/chapters/ch07-summarizing-grouped-ideas">chapter notes</a></td><td>Ch. 1, 2, 7</td><td>Answer first; each line sums up those below</td><td>own text + summary</td><td>9 Nov</td></tr>
+        <tr id="s2"><td>2</td><td><a href="https://www.antoinebuteau.com/lessons-from-gene-zelazny/">Zelazny, Say It With Presentations</a></td><td>Opening chapters</td><td>Open with the conclusion</td><td>summary</td><td>9 Nov</td></tr>
+        <tr id="s3"><td>3</td><td><a href="https://www.antoinebuteau.com/lessons-from-ethan-m-rasiel/">Rasiel, The McKinsey Way</a></td><td>Part 1</td><td>30-second test; “so what?”</td><td>summary</td><td>9 Nov</td></tr>
+        <tr id="s4"><td>4</td><td><a href="https://readingraphics.com/book-summary-bulletproof-problem-solving/">Conn &amp; McLean, Bulletproof Problem Solving</a></td><td>Ch. 2, 7</td><td>Decider sets the criteria first</td><td>summary</td><td>9 Nov</td></tr>
+        <tr id="s5"><td>5</td><td><a href="https://www.edwardtufte.com/notebook/columbia-accident-investigation-board-the-boeing-powerpoint-slide/">Tufte, the Columbia slide</a></td><td>Notebook post</td><td>Key warning buried in a bullet</td><td>own text</td><td>9 Nov</td></tr>
+        <tr id="s6"><td>6</td><td><a href="https://www.cambridge.org/core/books/abs/cambridge-handbook-of-multimedia-learning/principles-for-reducing-extraneous-processing-in-multimedia-learning-coherence-signaling-redundancy-spatial-contiguity-and-temporal-contiguity-principles/C98AB3A6CE760DD63C048936EA0B3B44">Mayer, Cambridge Handbook of Multimedia Learning</a></td><td>Coherence chapter</td><td>Cutting extras helped in 23 of 23 tests (count differs by edition)</td><td>second-hand (abstract and search summary)</td><td>10 Nov</td></tr>
+        <tr id="s7"><td>7</td><td><a href="http://www.uxmatters.com/mt/archives/2007/04/book-review-information-dashboard-design.php">Few, Information Dashboard Design</a></td><td>Ch. 1–3</td><td>One screen; detail behind a click</td><td>second-hand</td><td>9 Nov</td></tr>
+        <tr id="s8"><td>8</td><td><a href="https://www.duarte.com/resources/books/slidedocs/">Duarte, Slidedocs</a></td><td>Introduction</td><td>Documents read alone should be dense</td><td>own text</td><td>9 Nov</td></tr>
+        <tr id="s9"><td>9</td><td><a href="https://behavioralscientist.org/when-writing-for-busy-readers-less-is-more/">Rogers &amp; Lasky-Fink, Writing for Busy Readers</a></td><td>Article “Less is more”</td><td>49 vs 127 words: 4.8% vs 2.7% replies, 7,002 people</td><td>own text</td><td>10 Nov</td></tr>
+        <tr id="s10"><td>10</td><td><a href="https://mickmel.substack.com/p/notes-from-smart-brevity-from-jim">VandeHei et al., Smart Brevity</a></td><td>“One big thing”</td><td>Lead with the point</td><td>summary</td><td>9 Nov</td></tr>
+        <tr id="s11"><td>11</td><td><a href="https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders">Bezos, 2017 letter</a></td><td>Section on memos</td><td>Amazon uses written memos, not slides</td><td>own text</td><td>10 Nov</td></tr>
+        <tr id="s12"><td>12</td><td><a href="https://www.abajournal.com/columns/article/should-the-bottom-line-be-up-front-only-with-context-says-bryan-garner">Garner on bottom line up front</a>; <a href="https://en.wikipedia.org/wiki/BLUF_(communication)">US Army AR 25-50</a></td><td>Column; para 1-36</td><td>Bottom line first, with its question</td><td>own text + second-hand</td><td>9 Nov</td></tr>
+        <tr id="s13"><td>13</td><td><a href="https://www.antoinebuteau.com/lessons-from-joseph-m-williams-joseph-bizup/">Williams, Style</a></td><td>Clarity lessons</td><td>Problem, cost, answer</td><td>summary</td><td>9 Nov</td></tr>
+        <tr id="s14"><td>14</td><td><a href="https://hbr.org/2011/06/the-big-idea-before-you-make-that-big-decision">Kahneman, Lovallo &amp; Sibony, HBR</a></td><td>June 2011</td><td>The 12 questions</td><td>own text, read in full</td><td>9 Nov</td></tr>
+        <tr id="s15"><td>15</td><td><a href="https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-case-for-behavioral-strategy">Lovallo &amp; Sibony, McKinsey Quarterly</a></td><td>March 2010</td><td>1,048 decisions; process six times analysis</td><td>second-hand (page timed out)</td><td>9 Nov</td></tr>
+        <tr id="s16"><td>16</td><td><a href="https://www.strategy-business.com/article/How-noisy-is-your-company">Kahneman, Sibony &amp; Sunstein, Noise</a></td><td>Decision hygiene</td><td>Set criteria first; score each separately</td><td>second-hand</td><td>9 Nov</td></tr>
+        <tr id="s17"><td>17</td><td><a href="https://www.lesswrong.com/posts/d67EB6eRZEToAmyqW/book-review-decisive-by-chip-and-dan-heath">Review of Heath, Decisive</a>; <a href="https://news.osu.edu/half-of-business-decisions-fail-because-of-managements-blunders-new-study-finds/">Nutt study news</a></td><td>Decisive ch. 2</td><td>52% vs 32% failure; about half of decisions fail</td><td>second-hand; not found in Nutt’s paper</td><td>10 Nov</td></tr>
+        <tr id="s18"><td>18</td><td><a href="https://archive.phf.org/resourcestools/Documents/Pre_Mortem_Analysis.pdf">Klein, pre-mortem</a></td><td>HBR, Sept 2007</td><td>Imagine failure first and list reasons</td><td>second-hand</td><td>9 Nov</td></tr>
+        <tr id="s19"><td>19</td><td><a href="https://archive.dni.gov/files/documents/ICD/ICD-203.pdf">US intelligence analysis standard (ICD 203)</a></td><td>Standards 1–3, 6</td><td>Source every judgment; facts apart from judgments</td><td>own text, read in full</td><td>9 Nov</td></tr>
+        <tr id="s20"><td>20</td><td><a href="https://www.bain.com/insights/rapid-tool-to-clarify-decision-accountability/">Bain, decision roles</a></td><td>Insight article</td><td>One person decides; the only firm-published method found</td><td>own text</td><td>9 Nov</td></tr>
+        <tr id="s21"><td>21</td><td><a href="https://www.valuebasedmanagement.net/methods_kepner-tregoe_matrix.html">Kepner-Tregoe</a></td><td>Decision analysis</td><td>Must-pass first, then points</td><td>second-hand</td><td>9 Nov</td></tr>
+        <tr id="s22"><td>22</td><td><a href="https://www.boardintelligence.com/en-us/blog/the-definitive-guide-to-decision-papers">Board Intelligence, decision papers</a></td><td>Guide, options section</td><td>Include “do nothing”; ask comes early</td><td>own text</td><td>10 Nov</td></tr>
+        <tr id="s23"><td>23</td><td><a href="https://github.com/tyroneross/pyramid-principle">tyroneross</a> · <a href="https://github.com/sruthir28/enterprise-ai-skills">sruthir28</a> · <a href="https://github.com/zairuilab/consulting-deck">zairuilab</a> · skills research</td><td>SKILL.md and LICENSE files</td><td>No skill meets all five needs with permission to copy</td><td>own text</td><td>10 Nov</td></tr>
+        <tr id="s24"><td>24</td><td><a href="https://digital.gov/guides/plain-language/writing">US plain-language guidelines</a></td><td>Writing guide</td><td>Plain words; most important first</td><td>own text</td><td>9 Nov</td></tr>
+        <tr id="s25"><td>25</td><td>Independent review of version 2 (separate AI agent)</td><td>Not published</td><td>Found 7 rule breaks, 2 unsupported numbers, 1 false claim</td><td>own work</td><td>10 Nov</td></tr>
+        <tr id="s26"><td>26</td><td>Second independent review (separate AI agent, read the tyroneross code)</td><td>Not published</td><td>Scores of 815 / 755 / 755; case for adapting</td><td>own work</td><td>10 Nov</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</details>
+</div>
+
+</div>
+
+<script>
+// A source link inside a closed section opens that section first.
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#s"]');
+  if (!a) return;
+  const row = document.getElementById(a.getAttribute('href').slice(1));
+  const sec = row && row.closest('details');
+  if (sec && !sec.open) sec.open = true;
+});
+</script>
+~~~~~

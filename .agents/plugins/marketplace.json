@@ -57,7 +57,7 @@
       "description": "Most vibe-coded apps look the same. Every screen has to clear a real design bar and reuse your best components, and a note on one screen fixes all of them."
     },
     {
-      "name": "cto",
+      "name": "off-grid-cto",
       "source": {
         "source": "local",
         "path": "./cto"
