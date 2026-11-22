@@ -18,8 +18,8 @@ It worked on your laptop and broke on your phone. Every release gets tried on re
 npx skills add off-grid-ai/skills --skill ship-it try-it-on-my-phone run-on-any-device release-day whats-new
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install launch@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add launch@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install off-grid-launch@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add off-grid-launch@off-grid-ai`.
 
 Some of these skills call skills in other sets. To get everything working together, install every set (see the main README).
 

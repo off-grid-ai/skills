@@ -44,13 +44,13 @@ npx skills add off-grid-ai/skills
 **Claude Code**
 ```bash
 claude plugin marketplace add off-grid-ai/skills
-for s in review testing codebase design off-grid-cto launch growth revenue games; do claude plugin install $s@off-grid-ai; done
+for s in off-grid-review off-grid-testing off-grid-codebase off-grid-design off-grid-cto off-grid-launch off-grid-growth off-grid-revenue off-grid-games; do claude plugin install $s@off-grid-ai; done
 ```
 
 **Codex**
 ```bash
 codex plugin marketplace add off-grid-ai/skills
-for s in review testing codebase design off-grid-cto launch growth revenue games; do codex plugin add $s@off-grid-ai; done
+for s in off-grid-review off-grid-testing off-grid-codebase off-grid-design off-grid-cto off-grid-launch off-grid-growth off-grid-revenue off-grid-games; do codex plugin add $s@off-grid-ai; done
 ```
 
 Each set is its own plugin, so you can drop any you don't want. Skills call each other across sets, so installing all 9 is the safe choice.

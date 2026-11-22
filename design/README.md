@@ -16,8 +16,8 @@ Most vibe-coded apps look the same. Every screen has to clear a real design bar 
 npx skills add off-grid-ai/skills --skill make-it-look-expensive match-the-design fix-it-everywhere
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install design@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add design@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install off-grid-design@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add off-grid-design@off-grid-ai`.
 
 Some of these skills call skills in other sets. To get everything working together, install every set (see the main README).
 

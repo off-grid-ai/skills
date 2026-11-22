@@ -18,8 +18,8 @@ Your landing page reads like ChatGPT wrote it. With these, your copy sounds like
 npx skills add off-grid-ai/skills --skill make-it-sell sound-human write-like-me get-cited-by-ai find-threads-to-join
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install growth@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add growth@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install off-grid-growth@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add off-grid-growth@off-grid-ai`.
 
 Some of these skills call skills in other sets. To get everything working together, install every set (see the main README).
 

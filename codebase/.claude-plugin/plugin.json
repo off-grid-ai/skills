@@ -1,5 +1,5 @@
 {
-  "name": "codebase",
+  "name": "off-grid-codebase",
   "version": "1.2.0",
   "description": "You inherit a codebase nobody fully understands, and every change is a guess. Your AI maps it first, shows you what each change will break, and adds tests before it touches anything risky.",
   "author": {
