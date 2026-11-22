@@ -2,6 +2,7 @@
   "sets": [
     {
       "dir": "review",
+      "plugin": "off-grid-review",
       "title": "Review like a senior engineer, without reading code",
       "pitch": "Your AI changes 50 files and you can't tell what broke. You get one page with every screen it touched, before and after, and only the calls that need you.",
       "skills": [
@@ -33,6 +34,7 @@
     },
     {
       "dir": "testing",
+      "plugin": "off-grid-testing",
       "title": "Your AI stops breaking things that already worked",
       "pitch": "You fix one bug and two old features break. Every change gets tested by tapping through your app like a real user, with no mocks hiding the breakage.",
       "skills": [
@@ -60,6 +62,7 @@
     },
     {
       "dir": "codebase",
+      "plugin": "off-grid-codebase",
       "title": "Change old code without breaking it",
       "pitch": "You inherit a codebase nobody fully understands, and every change is a guess. Your AI maps it first, shows you what each change will break, and adds tests before it touches anything risky.",
       "skills": [
@@ -95,6 +98,7 @@
     },
     {
       "dir": "design",
+      "plugin": "off-grid-design",
       "title": "UI that looks like Stripe's designers made it",
       "pitch": "Most vibe-coded apps look the same. Every screen has to clear a real design bar and reuse your best components, and a note on one screen fixes all of them.",
       "skills": [
@@ -114,6 +118,7 @@
     },
     {
       "dir": "cto",
+      "plugin": "off-grid-cto",
       "title": "An AI that thinks like your CTO",
       "pitch": "No CTO? Your AI picks what's urgent, tells you when you're wrong, keeps building overnight and picks up any old chat where you left it.",
       "skills": [
@@ -141,6 +146,7 @@
     },
     {
       "dir": "launch",
+      "plugin": "off-grid-launch",
       "title": "Launch like a real startup",
       "pitch": "It worked on your laptop and broke on your phone. Every release gets tried on real phones first, then ships with notes people actually read.",
       "skills": [
@@ -168,6 +174,7 @@
     },
     {
       "dir": "growth",
+      "plugin": "off-grid-growth",
       "title": "Get users without ads",
       "pitch": "Your landing page reads like ChatGPT wrote it. With these, your copy sounds like a person, it sells, and AI search starts naming you.",
       "skills": [
@@ -195,6 +202,7 @@
     },
     {
       "dir": "revenue",
+      "plugin": "off-grid-revenue",
       "title": "Know what makes you money",
       "pitch": "You have Stripe, analytics and store numbers but no idea what to change. You get the three moves that should grow revenue most, and big calls laid out on one page.",
       "skills": [
@@ -222,6 +230,7 @@
     },
     {
       "dir": "games",
+      "plugin": "off-grid-games",
       "title": "Make a game like a studio would",
       "pitch": "Making a game alone with AI? You get a director, an art director and a QA team that playtests every scene.",
       "skills": [

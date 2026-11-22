@@ -4,7 +4,7 @@
 // Writes:
 //   .claude-plugin/marketplace.json      Claude Code: /plugin marketplace add off-grid-ai/skills
 //   .agents/plugins/marketplace.json     Codex:       codex plugin marketplace add off-grid-ai/skills
-//   <set>/.claude-plugin/plugin.json      one plugin per set
+//   <set>/.claude-plugin/plugin.json      one plugin per set (skills live in <set>/skills/<name>/SKILL.md)
 //   <set>/.codex-plugin/plugin.json
 // `npx skills add off-grid-ai/skills` needs no manifest: it finds every SKILL.md itself.
 import fs from 'node:fs';
@@ -17,10 +17,11 @@ const owner = { name: 'Off Grid AI', url: 'https://github.com/off-grid-ai' };
 
 const catalog = JSON.parse(fs.readFileSync(path.join(root, 'scripts', 'catalog.json'), 'utf8'));
 const sets = catalog.sets
-  .map(({ dir }) => {
-    const name = dir;
-    const skills = fs.readdirSync(path.join(root, dir))
-      .filter((s) => fs.existsSync(path.join(root, dir, s, 'SKILL.md')))
+  .map(({ dir, plugin }) => {
+    // plugin name can differ from the folder (the Claude directory needs distinct names: off-grid-<folder>)
+    const name = plugin || dir;
+    const skills = fs.readdirSync(path.join(root, dir, 'skills'))
+      .filter((s) => fs.existsSync(path.join(root, dir, 'skills', s, 'SKILL.md')))
       .sort();
     const readme = fs.existsSync(path.join(root, dir, 'README.md'))
       ? fs.readFileSync(path.join(root, dir, 'README.md'), 'utf8') : '';
@@ -45,7 +46,7 @@ for (const s of sets) {
     repository: 'https://github.com/off-grid-ai/skills',
     license: 'MIT',
     keywords: ['agent-skills', ...s.skills],
-    skills: './',
+    skills: './skills/',
   };
   write(`${s.dir}/.claude-plugin/plugin.json`, manifest);
   write(`${s.dir}/.codex-plugin/plugin.json`, manifest);

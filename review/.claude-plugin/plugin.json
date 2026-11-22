@@ -1,5 +1,5 @@
 {
-  "name": "review",
+  "name": "off-grid-review",
   "version": "1.2.0",
   "description": "Your AI changes 50 files and you can't tell what broke. You get one page with every screen it touched, before and after, and only the calls that need you.",
   "author": {
@@ -18,5 +18,5 @@
     "safe-to-merge",
     "show-me"
   ],
-  "skills": "./"
+  "skills": "./skills/"
 }

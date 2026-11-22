@@ -3,7 +3,8 @@
 If a user says "install the skills from github.com/off-grid-ai/skills", pick the first method that fits your environment and install every set unless they name one.
 
 1. **You are Claude Code.** Run `/plugin marketplace add off-grid-ai/skills`, then `/plugin install <set>@off-grid-ai`
-   for each set the user wants (sets: review, testing, codebase, design, cto, launch, growth, revenue, games). From a shell:
+   for each set the user wants (sets: off-grid-review, off-grid-testing, off-grid-codebase, off-grid-design, off-grid-cto, off-grid-launch,
+   off-grid-growth, off-grid-revenue, off-grid-games). From a shell:
    `claude plugin marketplace add off-grid-ai/skills` and `claude plugin install <set>@off-grid-ai`.
 2. **You are Codex.** Run `codex plugin marketplace add off-grid-ai/skills`, then `codex plugin add <set>@off-grid-ai`.
 3. **Node is available (any agent).** Run `npx skills add off-grid-ai/skills` and choose skills and agents, or
@@ -19,7 +20,12 @@ Each skill is a folder with a `SKILL.md` (instructions, with `name` and `descrip
 user names them (`/graph-engineering` or `/be-my-cto` in Claude Code, or "use the graph-engineering skill" anywhere).
 
 ## Working on this repo
-- One folder per set (``, ...), one folder per skill inside it. The skill folder name equals its
-  `name:` frontmatter.
+- One folder per set (`review/`, `testing/`, ...), and each skill at `<set>/skills/<name>/SKILL.md`. The skill
+  folder name equals its `name:` frontmatter. Each set folder is published as the plugin `off-grid-<folder>` (set by
+  `plugin` in `scripts/catalog.json`), so its name never clashes with another publisher's.
+- Each set folder is submitted to the Claude plugin directory on its own, so a set folder may only hold Markdown,
+  plain text, JSON, YAML and PNG/JPEG/GIF/WebP/ICO images, plus `.claude-plugin/icon.png`. No scripts, HTML or
+  executables: a skill that needs one keeps it as `<file>.md` holding the code in a `~~~~~` fence, and its SKILL.md
+  says how to write it out ("Bundled files"). Pictures for the README go in `assets/`.
 - After adding, removing or moving a skill, run `node scripts/build-manifests.mjs` to rebuild the Claude Code and
   Codex manifests, then `claude plugin validate .`.
