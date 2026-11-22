@@ -18,7 +18,7 @@ const owner = { name: 'Off Grid AI', url: 'https://github.com/off-grid-ai' };
 const catalog = JSON.parse(fs.readFileSync(path.join(root, 'scripts', 'catalog.json'), 'utf8'));
 const sets = catalog.sets
   .map(({ dir, plugin }) => {
-    // plugin name can differ from the folder (the Claude directory needs distinct names, e.g. cto -> off-grid-cto)
+    // plugin name can differ from the folder (the Claude directory needs distinct names: off-grid-<folder>)
     const name = plugin || dir;
     const skills = fs.readdirSync(path.join(root, dir, 'skills'))
       .filter((s) => fs.existsSync(path.join(root, dir, 'skills', s, 'SKILL.md')))

@@ -18,8 +18,8 @@ You inherit a codebase nobody fully understands, and every change is a guess. Yo
 npx skills add off-grid-ai/skills --skill learn-this-codebase blast-radius tests-for-old-code audit-a-module stay-in-the-lines plan-from-scratch deploy-without-fear
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install codebase@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add codebase@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install off-grid-codebase@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add off-grid-codebase@off-grid-ai`.
 
 Some of these skills call skills in other sets. To get everything working together, install every set (see the main README).
 

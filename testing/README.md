@@ -18,8 +18,8 @@ You fix one bug and two old features break. Every change gets tested by tapping 
 npx skills add off-grid-ai/skills --skill test-like-a-user bug-trap dont-break-it fix-it-for-real click-everything
 ```
 
-Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install testing@off-grid-ai`.
-Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add testing@off-grid-ai`.
+Claude Code: `/plugin marketplace add off-grid-ai/skills` then `/plugin install off-grid-testing@off-grid-ai`.
+Codex: `codex plugin marketplace add off-grid-ai/skills` then `codex plugin add off-grid-testing@off-grid-ai`.
 
 Some of these skills call skills in other sets. To get everything working together, install every set (see the main README).
 
