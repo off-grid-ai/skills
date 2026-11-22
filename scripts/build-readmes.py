@@ -11,18 +11,19 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 cat = json.load(open(os.path.join(ROOT, "scripts", "catalog.json")))
 sets = cat["sets"]
 total = sum(len(s["skills"]) for s in sets)
-plug = lambda s: s["dir"]
+plug = lambda s: s.get("plugin", s["dir"])
 
 
 def table(s, prefix=""):
     rows = ["| Skill | What you get |", "| --- | --- |"]
     for name, line in s["skills"]:
-        rows.append(f"| [**{name}**]({prefix}{name}) | {line} |")
+        rows.append(f"| [**{name}**]({prefix}skills/{name}) | {line} |")
     return "\n".join(rows)
 
 
-img = lambda s, pre="": (f"![How {s['title'].lower()} works]({pre}how-it-works.png)\n\n"
-                         if os.path.exists(os.path.join(ROOT, s["dir"], "how-it-works.png")) else "")
+# Set pictures live in assets/sets, outside the plugin folders (each set folder is submitted to the Claude directory on its own).
+img = lambda s, pre="../": (f"![How {s['title'].lower()} works]({pre}assets/sets/{s['dir']}-how-it-works.png)\n\n"
+                            if os.path.exists(os.path.join(ROOT, "assets", "sets", s["dir"] + "-how-it-works.png")) else "")
 
 for s in sets:
     body = f"""# {s['title']}
@@ -46,14 +47,13 @@ Some of these skills call skills in other sets. To get everything working togeth
 """
     open(os.path.join(ROOT, s["dir"], "README.md"), "w").write(body)
 
-img = lambda s, pre="": (f"![How {s['title'].lower()} works]({pre}how-it-works.png)\n\n"
-                         if os.path.exists(os.path.join(ROOT, s["dir"], "how-it-works.png")) else "")
+
 sections = "\n\n".join(
-    f"### [{s['title']}]({s['dir']})\n\n{s['pitch']}\n\n{img(s, s['dir'] + '/')}{table(s, s['dir'] + '/')}" for s in sets)
+    f"### [{s['title']}]({s['dir']})\n\n{s['pitch']}\n\n{img(s, '')}{table(s, s['dir'] + '/')}" for s in sets)
 hero = ("![How it works: you ask for a change, your agent maps everything it touches, makes it, checks it, and hands you one page with only the calls that need you](assets/how-it-works.png)\n\n"
         if os.path.exists(os.path.join(ROOT, "assets", "how-it-works.png")) else "")
 
-where = {n: f"{s['dir']}/{n}" for s in sets for n, _ in s["skills"]}
+where = {n: f"{s['dir']}/skills/{n}" for s in sets for n, _ in s["skills"]}
 hooks = "\n".join(f"- [{s['title']}]({s['dir']})" for s in sets)
 
 readme = f"""# Stop babysitting your AI. Make it build, test and ship like a senior team.

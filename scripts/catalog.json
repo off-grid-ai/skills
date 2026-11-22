@@ -114,6 +114,7 @@
     },
     {
       "dir": "cto",
+      "plugin": "off-grid-cto",
       "title": "An AI that thinks like your CTO",
       "pitch": "No CTO? Your AI picks what's urgent, tells you when you're wrong, keeps building overnight and picks up any old chat where you left it.",
       "skills": [
