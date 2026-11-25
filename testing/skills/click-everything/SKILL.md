@@ -68,7 +68,7 @@ E2E         test files added, and what each one pins down
 
 State the denominator. "Swept 23 of 23 Workspace routes" is evidence; "swept Workspace" is not.
 
-If you want the user to see the screens, publish them with `show-me` and point at each problem with numbered marks.
+If you want the user to see the screens, put them on one review page and point at each problem with numbered marks.
 
 ## The verification standard
 

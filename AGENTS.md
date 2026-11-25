@@ -17,7 +17,7 @@ If a user says "install the skills from github.com/off-grid-ai/skills", pick the
 
 Each skill is a folder with a `SKILL.md` (instructions, with `name` and `description` frontmatter) and sometimes
 `references/` or `scripts/`. Skills load on demand when the user's request matches the description, or when the
-user names them (`/graph-engineering` or `/be-my-cto` in Claude Code, or "use the graph-engineering skill" anywhere).
+user names them (`/code-check` or `/be-my-cto` in Claude Code, or "use the code-check skill" anywhere).
 
 ## Working on this repo
 - One folder per set (`review/`, `testing/`, ...), and each skill at `<set>/skills/<name>/SKILL.md`. The skill

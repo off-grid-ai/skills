@@ -1,7 +1,7 @@
 {
   "name": "off-grid-review",
   "version": "1.2.0",
-  "description": "Your AI changes 50 files and you can't tell what broke. You get one page with every screen it touched, before and after, and only the calls that need you.",
+  "description": "Your AI changes 50 files and you can't tell what broke. Every change gets a pass or fail against one clear bar, and every review comment gets answered and fixed before it merges.",
   "author": {
     "name": "Off Grid AI",
     "url": "https://github.com/off-grid-ai"
@@ -12,11 +12,8 @@
   "keywords": [
     "agent-skills",
     "code-check",
-    "graph-engineering",
-    "graph-engineering-loop",
     "never-twice",
-    "safe-to-merge",
-    "show-me"
+    "safe-to-merge"
   ],
   "skills": "./skills/"
 }

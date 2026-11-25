@@ -1,7 +1,5 @@
 # Stop babysitting your AI. Make it build, test and ship like a senior team.
 
-[![graph-engineering on a real change: every screen the AI changed, before and after on one page. 105 screens from one ask across 7 apps, and only the calls that need you](assets/graph-engineering-demo.gif)](assets/graph-engineering-demo.mp4)
-
 These are the skills I use every day. I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) on my own with them, and it reached 250,000+ downloads on 7 platforms without spending a dollar on ads. Install them and your AI works the way mine does.
 
 [![Off Grid AI, built by one person with these skills: 250,000+ organic downloads on 7 platforms](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
@@ -65,11 +63,6 @@ It links every skill into each agent it finds on your machine. Run it again to u
 
 ## Try these first
 
-**[graph-engineering](review/skills/graph-engineering): review a change across your whole app on one page.** Ask for one change and you see every place it touches, every changed screen before and after, and only the calls that need you. [graph-engineering-loop](review/skills/graph-engineering-loop) learns the rule behind each call and applies it everywhere.
-
-
-> *"Use graph-engineering to rename Folders to Projects across the app."*
-
 **[test-like-a-user](testing/skills/test-like-a-user): tests that catch what your users would hit.** It opens the real screen, taps the real button and checks what you'd see. No mocks of your own code, so a green test means it really works.
 
 > *"/test-like-a-user the checkout flow"*
@@ -82,19 +75,16 @@ It links every skill into each agent it finds on your machine. Run it again to u
 
 > *"/resume-any-chat the onboarding redesign"*
 
-## All 49 skills
+## All 41 skills
 
 ### [Review like a senior engineer, without reading code](review)
 
-Your AI changes 50 files and you can't tell what broke. You get one page with every screen it touched, before and after, and only the calls that need you.
+Your AI changes 50 files and you can't tell what broke. Every change gets a pass or fail against one clear bar, and every review comment gets answered and fixed before it merges.
 
 ![How review like a senior engineer, without reading code works](assets/sets/review-how-it-works.png)
 
 | Skill | What you get |
 | --- | --- |
-| [**graph-engineering**](review/skills/graph-engineering) | Ask for one change. See every place it touches, every screen before and after, on one page. |
-| [**graph-engineering-loop**](review/skills/graph-engineering-loop) | Answer a few calls once. It learns your rule, applies it everywhere, and asks you less next time. |
-| [**show-me**](review/skills/show-me) | Every screen of your app on one page. Pin a note on the exact spot, like Figma comments. |
 | [**safe-to-merge**](review/skills/safe-to-merge) | Your pull request gets every review comment answered and fixed until it's safe to merge. |
 | [**code-check**](review/skills/code-check) | A pass or fail on every change before it ships, against one clear bar. |
 | [**never-twice**](review/skills/never-twice) | Every review teaches your AI, so the same mistake never comes back. |
@@ -137,7 +127,6 @@ Most vibe-coded apps look the same. Every screen has to clear a real design bar 
 | --- | --- |
 | [**make-it-look-expensive**](design/skills/make-it-look-expensive) | A design bar every screen has to clear before you see it: spacing, states, motion, polish. |
 | [**match-the-design**](design/skills/match-the-design) | It builds from your component library with its animations, so no screen looks one-off. |
-| [**fix-it-everywhere**](design/skills/fix-it-everywhere) | Leave notes on 3 screens. It turns them into one rule and fixes every screen. |
 
 ### [An AI that thinks like your CTO](cto)
 
@@ -148,7 +137,6 @@ No CTO? Your AI picks what's urgent, tells you when you're wrong, keeps building
 | Skill | What you get |
 | --- | --- |
 | [**be-my-cto**](cto/skills/be-my-cto) | Your AI decides what's urgent, does the clear work, and only asks you the real calls. |
-| [**build-while-you-sleep**](cto/skills/build-while-you-sleep) | Several AI builders work at once while one checks everything that lands. |
 | [**argue-with-me**](cto/skills/argue-with-me) | Your AI argues back with facts instead of agreeing with your worst ideas. |
 | [**resume-any-chat**](cto/skills/resume-any-chat) | Pick up any past chat by its name and carry on. Works across Claude Code accounts and Codex. |
 | [**no-fluff**](cto/skills/no-fluff) | Short answers, result first, no essays. |
@@ -189,11 +177,8 @@ You have Stripe, analytics and store numbers but no idea what to change. You get
 
 | Skill | What you get |
 | --- | --- |
-| [**grow-my-revenue**](revenue/skills/grow-my-revenue) | Connect Stripe and your analytics. Get the three moves that grow revenue most. |
-| [**help-me-decide**](revenue/skills/help-me-decide) | Any big decision on one page: the answer first, every claim sourced, options scored. |
 | [**weekly-wins**](revenue/skills/weekly-wins) | What you shipped this week against last week, and what's next. |
 | [**pick-the-best-ai-model**](revenue/skills/pick-the-best-ai-model) | The best AI models for your app on every device, backed by public benchmarks. |
-| [**mission-control**](revenue/skills/mission-control) | One page of everything in flight across your projects, with what needs you on top. |
 
 ### [Make a game like a studio would](games)
 
@@ -212,7 +197,7 @@ Making a game alone with AI? You get a director, an art director and a QA team t
 | [**devlog**](games/skills/devlog) | Push, document and show off your progress. |
 | [**game-calls**](games/skills/game-calls) | Straight answers when you're making game decisions. |
 
-## Get all 49
+## Get all 41
 
 ```bash
 npx skills add off-grid-ai/skills

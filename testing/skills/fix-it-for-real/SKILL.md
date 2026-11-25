@@ -16,7 +16,7 @@ Sometimes the user wants the code finished with no time spent on side runs. When
 - Run nothing beyond compile and static checks: no probes, no autoplay, no test harness, no private copy of the services, no headless game.
 - The allowed checks only read files: the compiler or type checker on what you touched (for example `node --check`, `tsc --noEmit`, `godot --headless --check-only`, a C# or C++ build) and the project's rules-check script. A file that doesn't load is never left in the tree.
 - A probe the fix needs may be written but not run by you. Commit small and often, and name the probe in the commit so someone can run it later.
-- Testing is grouped and run by whoever owns it (see `build-while-you-sleep`).
+- Testing is grouped and run by whoever owns it.
 
 ## Change the real tree, never a copy
 

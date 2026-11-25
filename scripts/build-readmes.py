@@ -58,8 +58,6 @@ hooks = "\n".join(f"- [{s['title']}]({s['dir']})" for s in sets)
 
 readme = f"""# Stop babysitting your AI. Make it build, test and ship like a senior team.
 
-[![graph-engineering on a real change: every screen the AI changed, before and after on one page. 105 screens from one ask across 7 apps, and only the calls that need you](assets/graph-engineering-demo.gif)](assets/graph-engineering-demo.mp4)
-
 These are the skills I use every day. I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) on my own with them, and it reached 250,000+ downloads on 7 platforms without spending a dollar on ads. Install them and your AI works the way mine does.
 
 [![Off Grid AI, built by one person with these skills: 250,000+ organic downloads on 7 platforms](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
@@ -113,11 +111,6 @@ It links every skill into each agent it finds on your machine. Run it again to u
 
 ## Try these first
 
-**[graph-engineering](%(ge)s): review a change across your whole app on one page.** Ask for one change and you see every place it touches, every changed screen before and after, and only the calls that need you. [graph-engineering-loop](%(gel)s) learns the rule behind each call and applies it everywhere.
-
-
-> *"Use graph-engineering to rename Folders to Projects across the app."*
-
 **[test-like-a-user](%(tlu)s): tests that catch what your users would hit.** It opens the real screen, taps the real button and checks what you'd see. No mocks of your own code, so a green test means it really works.
 
 > *"/test-like-a-user the checkout flow"*
@@ -151,6 +144,6 @@ Or paste "Install the skills from github.com/off-grid-ai/skills" into your agent
 - MIT licensed. Third-party files keep their own licenses (see `NOTICE` files).
 
 Made by [Mac](https://github.com/alichherawalla). Follow me on GitHub for new skills as they ship.
-""" % dict(ge=where["graph-engineering"], gel=where["graph-engineering-loop"], tlu=where["test-like-a-user"], awm=where["argue-with-me"], rac=where["resume-any-chat"])
+""" % dict(tlu=where["test-like-a-user"], awm=where["argue-with-me"], rac=where["resume-any-chat"])
 open(os.path.join(ROOT, "README.md"), "w").write(readme)
 print("README +", len(sets), "set READMEs,", total, "skills")
