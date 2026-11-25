@@ -66,7 +66,7 @@ These are the skills I use every day. I built [Off Grid AI](https://github.com/o
 
 Vibe coding gets you a demo in an afternoon. Then your AI breaks things that already worked, every screen looks like every other AI app, and you're asked to approve 50 changed files you can't read.
 
-Each skill is a short playbook your agent reads before it starts, so it tests every change in your real app and checks the design before you see anything. What you get back is one page with every screen before and after, and only the decisions that need you. They're free, MIT licensed, and work in Claude Code, Codex, Cursor and 60+ other agents.
+Each skill is a short playbook your agent reads before it starts, so it tests every change in your real app and checks it before you see anything. They're free, MIT licensed, and work in Claude Code, Codex, Cursor and 60+ other agents.
 
 {hooks}
 
@@ -115,13 +115,13 @@ It links every skill into each agent it finds on your machine. Run it again to u
 
 > *"/test-like-a-user the checkout flow"*
 
-**[argue-with-me](%(awm)s): an AI that tells you when you're wrong.** It checks the facts and keeps your whole goal in view instead of agreeing with whatever you said last.
+**[blast-radius](%(br)s): know what a change breaks before you make it.** It finds everything that depends on the file or function you're about to touch, scores the risk, and stops for your yes when it's high.
 
-> *"/argue-with-me we should rewrite the backend in Rust"*
+> *"/blast-radius before I change the auth middleware"*
 
-**[resume-any-chat](%(rac)s): never lose a chat again.** Find any past session by its name, even from another account or from Codex, and carry on where it stopped.
+**[safe-to-merge](%(stm)s): pull requests that are actually ready.** It audits the diff, answers every review comment, fixes behind the checks and re-reviews until nothing blocking is left.
 
-> *"/resume-any-chat the onboarding redesign"*
+> *"/safe-to-merge this PR"*
 
 ## All {total} skills
 
@@ -144,6 +144,6 @@ Or paste "Install the skills from github.com/off-grid-ai/skills" into your agent
 - MIT licensed. Third-party files keep their own licenses (see `NOTICE` files).
 
 Made by [Mac](https://github.com/alichherawalla). Follow me on GitHub for new skills as they ship.
-""" % dict(tlu=where["test-like-a-user"], awm=where["argue-with-me"], rac=where["resume-any-chat"])
+""" % dict(tlu=where["test-like-a-user"], br=where["blast-radius"], stm=where["safe-to-merge"])
 open(os.path.join(ROOT, "README.md"), "w").write(readme)
 print("README +", len(sets), "set READMEs,", total, "skills")

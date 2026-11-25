@@ -18,8 +18,8 @@ description: Your agent changes code in small, additive, checked commits that ne
    spans.
 4. **Push with hooks.** Never `--no-verify`. If the repo uses submodules and you committed inside one, commit the
    new submodule pointer in the parent repo too and push both, submodule first.
-5. **No worktrees unless asked.** If the user asks for one, write out and run `lean-worktree.sh <dir>` from the
-   `be-my-cto` skill (its "Worktrees" section has the command) before installing dependencies, so the worktree shares `node_modules` with the
+5. **No worktrees unless asked.** If the user asks for one, link it to the main checkout's
+   `node_modules` before installing dependencies, so the worktree shares `node_modules` with the
    main checkout.
 6. **Never wait.** Long jobs (builds, full test runs, installs) run in the background. Carry on and resume when
    they finish.

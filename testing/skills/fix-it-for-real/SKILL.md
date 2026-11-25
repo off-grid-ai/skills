@@ -65,7 +65,7 @@ Every change follows these. A plan that breaks one isn't approved.
 - **Consolidating is expected; no fallbacks.** Rewrites toward these principles are welcome. The new code replaces the old in the same change: no switch back to the old path, no two systems doing one job. Carry every behaviour over (nothing lost) and delete the old code. These rewrites are exempt from "additive" below.
 - **One interface per behaviour.** For example, everything that moves goes through one mover that asks the navigation system for the route; nothing else tweens or sets a position to travel. Scenes, moods and reactions are data rows, never new hand-written functions.
 - **Check the rules.** If the project has a rules-check script or lint rules for these principles, run it before committing. A breach is fixed, not added to the known-breach list (that list only shrinks). If there is none, suggest one.
-- **Proof includes behaviour.** Compiling isn't working. Every change to AI, characters or other behaviour passes a behaviour probe (for example: distinct activities, no repeats, no over-long holds, pools not empty) before it is committed. See `prove-it` for games and `bug-trap` for apps.
+- **Proof includes behaviour.** Compiling isn't working. Every change to AI, characters or other behaviour passes a behaviour probe (for example: distinct activities, no repeats, no over-long holds, pools not empty) before it is committed. See `bug-trap`.
 
 ## Working rules
 

@@ -3,8 +3,7 @@
 If a user says "install the skills from github.com/off-grid-ai/skills", pick the first method that fits your environment and install every set unless they name one.
 
 1. **You are Claude Code.** Run `/plugin marketplace add off-grid-ai/skills`, then `/plugin install <set>@off-grid-ai`
-   for each set the user wants (sets: off-grid-review, off-grid-testing, off-grid-codebase, off-grid-design, off-grid-cto, off-grid-launch,
-   off-grid-growth, off-grid-revenue, off-grid-games). From a shell:
+   for each set the user wants (sets: off-grid-review, off-grid-testing, off-grid-codebase). From a shell:
    `claude plugin marketplace add off-grid-ai/skills` and `claude plugin install <set>@off-grid-ai`.
 2. **You are Codex.** Run `codex plugin marketplace add off-grid-ai/skills`, then `codex plugin add <set>@off-grid-ai`.
 3. **Node is available (any agent).** Run `npx skills add off-grid-ai/skills` and choose skills and agents, or
@@ -17,7 +16,7 @@ If a user says "install the skills from github.com/off-grid-ai/skills", pick the
 
 Each skill is a folder with a `SKILL.md` (instructions, with `name` and `description` frontmatter) and sometimes
 `references/` or `scripts/`. Skills load on demand when the user's request matches the description, or when the
-user names them (`/code-check` or `/be-my-cto` in Claude Code, or "use the code-check skill" anywhere).
+user names them (`/code-check` or `/blast-radius` in Claude Code, or "use the code-check skill" anywhere).
 
 ## Working on this repo
 - One folder per set (`review/`, `testing/`, ...), and each skill at `<set>/skills/<name>/SKILL.md`. The skill
