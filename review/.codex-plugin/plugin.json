@@ -4,7 +4,7 @@
   "description": "Your AI changes 50 files and you can't tell what broke. Every change gets a pass or fail against one clear bar, and every review comment gets answered and fixed before it merges.",
   "author": {
     "name": "Off Grid AI",
-    "url": "https://github.com/off-grid-ai"
+    "url": "https://www.wednesday.is/mcp/"
   },
   "homepage": "https://github.com/off-grid-ai/skills",
   "repository": "https://github.com/off-grid-ai/skills",

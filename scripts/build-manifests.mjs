@@ -13,7 +13,7 @@ import path from 'node:path';
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
 const version = pkg.version;
-const owner = { name: 'Off Grid AI', url: 'https://github.com/off-grid-ai' };
+const owner = { name: 'Off Grid AI', url: 'https://www.wednesday.is/mcp/' };
 
 const catalog = JSON.parse(fs.readFileSync(path.join(root, 'scripts', 'catalog.json'), 'utf8'));
 const sets = catalog.sets

@@ -60,7 +60,7 @@ readme = f"""# Stop babysitting your AI. Make it build, test and ship like a sen
 
 These are the skills I use every day. I built [Off Grid AI](https://github.com/off-grid-ai/OGAM) on my own with them, and it reached 250,000+ downloads on 7 platforms without spending a dollar on ads. Install them and your AI works the way mine does.
 
-[![Off Grid AI, built by one person with these skills: 250,000+ organic downloads on 7 platforms](assets/built-with-these-skills.png)](https://github.com/alichherawalla)
+[![Off Grid AI, built by one person with these skills: 250,000+ organic downloads on 7 platforms](assets/built-with-these-skills.png)](https://www.wednesday.is/mcp/)
 
 ## What these skills do
 
@@ -70,7 +70,9 @@ Each skill is a short playbook your agent reads before it starts, so it tests ev
 
 {hooks}
 
-{hero}## Install in one line
+{hero}Rather not install anything? Add the free [Wednesday MCP](https://www.wednesday.is/mcp/) to Claude, Claude Code, Cursor or Codex. It takes a minute.
+
+## Install in one line
 
 Paste this into your agent:
 
@@ -140,7 +142,7 @@ Or paste "Install the skills from github.com/off-grid-ai/skills" into your agent
 - Each skill is a folder with a `SKILL.md`, plain Markdown your agent reads when your request matches it. Nothing runs until you ask.
 - Review pages publish as Claude Artifacts when you have them, and as a local HTML page when you don't.
 - Skills mention each other by name. Install the whole set to get everything working together.
-- The codebase skills started at [Wednesday Solutions](https://wednesday.is) and now need nothing else installed.
+- The codebase skills started at [Wednesday](https://www.wednesday.is/mcp/) and now need nothing else installed.
 - MIT licensed. Third-party files keep their own licenses (see `NOTICE` files).
 
 Made by [Mac](https://github.com/alichherawalla). Follow me on GitHub for new skills as they ship.
