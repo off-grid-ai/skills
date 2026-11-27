@@ -4,7 +4,7 @@
   "description": "You inherit a codebase nobody fully understands, and every change is a guess. Your AI maps it first, shows you what each change will break, and adds tests before it touches anything risky.",
   "author": {
     "name": "Off Grid AI",
-    "url": "https://github.com/off-grid-ai"
+    "url": "https://www.wednesday.is/mcp/"
   },
   "homepage": "https://github.com/off-grid-ai/skills",
   "repository": "https://github.com/off-grid-ai/skills",
